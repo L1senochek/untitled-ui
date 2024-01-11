@@ -26,10 +26,11 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
     
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    // "paths": {
+    //   "@/*": ["./src/*"],
+    //   "@/styles/*": ["./src/styles/*"],
+    // }
   },
-  "include": ["src"],
+  // "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
