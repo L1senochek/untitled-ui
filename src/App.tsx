@@ -1,10 +1,8 @@
-function App() {
-  return (
-    <div>
-      <h1>UI KIT</h1>
-      <div>wrapper</div>
-    </div>
-  );
-}
+import { RouterProvider } from "react-router";
+import Router from "@/components/Router/Router";
+
+const App = (): JSX.Element => {
+  return <RouterProvider router={Router} />;
+};
 
 export default App;
