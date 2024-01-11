@@ -25,10 +25,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1280px;
-  min-height: 100vh;
-  height: 100vh;
+  width: 98%;
+  height: 98vh;
   margin: 0 auto;
   padding: 0.8rem;
   text-align: center;
@@ -39,7 +37,8 @@ body {
   flex-direction: column;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  max-width: 1280px;
+  max-height: 100vh;
   margin: 0;
 }
 
