@@ -1,0 +1,21 @@
+@import '@/styles/variables.scss';
+
+.font {
+  display: flex;
+  flex-direction: column;
+  font-family: work-sans;
+  &.spacemono {
+    font-family: monospace;
+  }
+  &.worksans {
+    font-family: work-sans;
+  }
+  &__title {
+    padding: 5%;
+  }
+  &__items {
+    & > * {
+      padding: 5%;
+    }
+  }
+}
