@@ -6,11 +6,12 @@ const UIKitLayout: React.FC = (): JSX.Element => {
   console.log(location);
   return (
     <>
-      <header>UI KIT Layout</header>
+      <header>
+        <h2>UI KIT Layout</h2>
+      </header>
       <main className={styles.main}>
         <Outlet />
       </main>
-      <footer>footer</footer>
     </>
   );
 };
