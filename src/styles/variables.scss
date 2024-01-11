@@ -1,3 +1,28 @@
 $main-color: #fffffff5;
+$description-color: #929599;
+$background-color: #242424;
+$background-color-second: #0d0d0d;
+$second-color: #d2a8ff;
+$third-color: #b6e3ff;
+$fourth-color: #ffa657;
+$fifth-color: #aff5b4;
+$sixth-color: #646cff;
+$seventh-color: #3fb950;
+$eighth-color: #2e6837d9;
+
 
 $error-message-padding: 3vw 0;
+
+// btn: 
+$border-radius: 5px;
+$border-width: 2px;
+$border-style: solid;
+$background-color-btn: $seventh-color;
+// btn:hover
+$background-color-btn-hover: $eighth-color;
+$box-shadow-btn: 0 0 15px 1px $background-color-btn-hover;
+$text-shadow-btn: 0 0 30px rgb(0 12 2 / 93%);
+
+// transition
+$transition-sec: 0.5s;
+$transitionAll: all $transition-sec ease;
