@@ -7,9 +7,9 @@ const UIKit: React.FC = (): JSX.Element => {
     <div className={styles.uikit}>
       <h2 className={styles.uikit__title}>UI KIT</h2>
       <div className={styles.uikit__wrapper}>
-        {uiKitElements.map((element) => {
+        {uiKitElements.map((element, index) => {
           return(
-            <div className={styles.uikit__border}>
+            <div className={styles.uikit__border} key={index}>
               {element}
             </div>
           )

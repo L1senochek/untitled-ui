@@ -3,12 +3,12 @@
 .font {
   display: flex;
   flex-direction: column;
-  font-family: work-sans;
+  width: 100%;
   &.spacemono {
-    font-family: monospace;
+    font-family: $font-family-monospace;
   }
   &.worksans {
-    font-family: work-sans;
+    font-family: $font-family-work-sans;
   }
   &__title {
     padding: 5%;
