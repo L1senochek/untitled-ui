@@ -1,14 +1,28 @@
-$main-color: #fffffff5;
-$description-color: #929599;
-$background-color: #242424;
-$background-color-second: #0d0d0d;
-$second-color: #d2a8ff;
-$third-color: #b6e3ff;
-$fourth-color: #ffa657;
-$fifth-color: #aff5b4;
-$sixth-color: #646cff;
-$seventh-color: #3fb950;
+$main-color: #FFFFFF;
+$second-color: #858584;
+$third-color: #2B2B2B;
+$fourth-color: #3B3B3B;
+$fifth-color: #A259FF;
+$sixth-color: #377DF7;
+$seventh-color: #FF6250;
 $eighth-color: #2e6837d9;
+
+//gradient:
+$gradient-one: linear-gradient(to bottom right, $fifth-color, $sixth-color);
+$gradient-two: linear-gradient(to bottom right, $fifth-color, $seventh-color);
+
+//background:
+$background-color: $third-color;
+$background-color-secondary: $fourth-color;
+
+$background-image-gradient-one: radial-gradient(
+  ellipse at 30% 10%,
+  $fifth-color,
+  $sixth-color
+);
+
+$text-color: $main-color;
+$caption-label-color: $second-color;
 
 //fonts:
 $font-family-monospace: 'Space Mono', monospace;
@@ -17,14 +31,20 @@ $font-family-work-sans: 'Work Sans', sans-serif;
 $error-message-padding: 3vw 0;
 
 // btn: 
-$border-radius: 5px;
-$border-width: 2px;
-$border-style: solid;
-$background-color-btn: $seventh-color;
+$border-radius-btn: 20px;
+$border-width-btn: 2px;
+$border-style-btn: solid;
+$background-color-btn: $fifth-color;
+$gap-btn: 30px;
+$height-btn-primary: 72px;
+$height-btn-secondary: 60px;
+$height-btn-tertiary: 46px;
+$padding-btn-primary: 0px 50px;
+$padding-btn-secondary: 0px 30px;
+$padding-btn-tertiary: 0px 30px;
+
 // btn:hover
-$background-color-btn-hover: $eighth-color;
-$box-shadow-btn: 0 0 15px 1px $background-color-btn-hover;
-$text-shadow-btn: 0 0 30px rgb(0 12 2 / 93%);
+$transform-btn-hover: scale(0.95);
 
 // transition
 $transition-sec: 0.5s;

@@ -30,10 +30,13 @@ export const uiKitElements = [
   <div>Caption</div>
 </div>
 </div>,
-<>
-  <h2>button:</h2>
-  <Btn>btn</Btn>
-</>, 
+<div className={styles.btns}>
+  <h2>Button:</h2>
+  <Btn variantBtn="primary">Button</Btn>
+  <Btn variantBtn="primary" outlined>Button</Btn>
+  <Btn variantBtn="secondary">Button</Btn>
+  <Btn variantBtn="tertiary">Button</Btn>
+</div>, 
 <div>3</div>,
 <div>4</div>
 ];

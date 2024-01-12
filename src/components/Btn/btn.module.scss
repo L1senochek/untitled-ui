@@ -2,28 +2,41 @@
 
 .btn,
 button {
-  border-radius: 8px;
-  border: $border-width $border-style transparent;
-  padding: 0.6em 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-btn;
+  border: $border-width-btn $border-style-btn transparent;
+  gap: $gap-btn;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   color: $main-color;
   background-color: $background-color-btn;
-  transition:
-    border-color $transition-sec,
-    box-shadow $transition-sec,
-    text-shadow $transition-sec,
-    color $transition-sec;
+  transition: transform $transition-sec;
   cursor: pointer;
+  &.primary {
+    height: $height-btn-primary;
+    padding: $padding-btn-primary;
+  }
+  &.secondary {
+    height: $height-btn-secondary;
+    padding: $padding-btn-secondary;
+  }
+  &.tertiary {
+    height: $height-btn-tertiary;
+    padding: $padding-btn-tertiary;
+  }
+  &.outlined {
+    border-color: $fifth-color;
+    background-color: transparent;
+    color: $main-color;
+  }
 }
 
 @media (hover: hover) {
   button:hover,
   .btn:hover {
-    border-color: $background-color-btn-hover;
-    box-shadow: $box-shadow-btn;
-    text-shadow: $text-shadow-btn;
-    color: $fifth-color;
+    transform: $transform-btn-hover;
   }
 }
