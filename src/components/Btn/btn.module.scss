@@ -16,15 +16,12 @@ button {
   transition: transform $transition-sec;
   cursor: pointer;
   &.primary {
-    height: $height-btn-primary;
     padding: $padding-btn-primary;
   }
   &.secondary {
-    height: $height-btn-secondary;
     padding: $padding-btn-secondary;
   }
   &.tertiary {
-    height: $height-btn-tertiary;
     padding: $padding-btn-tertiary;
   }
   &.outlined {

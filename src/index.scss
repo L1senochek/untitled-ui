@@ -9,7 +9,7 @@ html {
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: $font-family-monospace, $font-family-work-sans, Helvetica, Arial;
   line-height: 1.5;
   font-weight: 400;
 
@@ -45,8 +45,23 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 12px;
 }
 
 a {
