@@ -1,6 +1,6 @@
-import { Link, useRouteError } from "react-router-dom";
-import styles from "./error.module.scss";
-import { INITIAL_PATH } from "@/utils/const/const";
+import { Link, useRouteError } from 'react-router-dom';
+import styles from './error.module.scss';
+import { INITIAL_PATH } from '@/utils/const/const';
 
 const ErrorMessage: React.FC = (): JSX.Element => {
   const error = useRouteError() as Error;

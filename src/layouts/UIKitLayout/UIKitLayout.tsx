@@ -1,5 +1,5 @@
-import { Outlet, useLocation } from "react-router";
-import styles from "./uikitlayout.module.scss";
+import { Outlet, useLocation } from 'react-router';
+import styles from './uikitlayout.module.scss';
 
 const UIKitLayout: React.FC = (): JSX.Element => {
   const location = useLocation();

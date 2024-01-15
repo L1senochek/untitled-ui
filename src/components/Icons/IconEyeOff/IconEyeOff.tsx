@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./icon-eye-off.module.scss";
+import React from 'react';
+import styles from './icon-eye-off.module.scss';
 
 const IconEyeOff: React.FC = (): JSX.Element => {
   return (
@@ -7,7 +7,7 @@ const IconEyeOff: React.FC = (): JSX.Element => {
       <svg
         width="80px"
         height="80px"
-        className={styles["icon-eye-off"]}
+        className={styles['icon-eye-off']}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
-import { Outlet, useLocation } from "react-router";
-import styles from "./layout.module.scss";
+import { Outlet, useLocation } from 'react-router';
+import styles from './layout.module.scss';
 
 const MainLayout: React.FC = (): JSX.Element => {
   const location = useLocation();

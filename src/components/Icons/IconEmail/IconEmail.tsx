@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./icon-email.module.scss";
+import React from 'react';
+import styles from './icon-email.module.scss';
 
 const IconEmail: React.FC = (): JSX.Element => {
   return (
@@ -9,7 +9,7 @@ const IconEmail: React.FC = (): JSX.Element => {
         height="16"
         viewBox="0 0 20 16"
         fill="none"
-        className={styles["email"]}
+        className={styles['email']}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

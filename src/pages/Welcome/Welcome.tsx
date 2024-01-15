@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import styles from "./welcome.module.scss";
-import { UI_KIT_PATH } from "@/utils/const/const";
+import { Link } from 'react-router-dom';
+import styles from './welcome.module.scss';
+import { UI_KIT_PATH } from '@/utils/const/const';
 
 const Welcome = () => {
   return (

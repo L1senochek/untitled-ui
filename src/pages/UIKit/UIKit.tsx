@@ -1,5 +1,5 @@
-import styles from "./uikit.module.scss";
-import { uiKitElements } from "@/utils/uiKitElements/uiKitElements";
+import styles from './uikit.module.scss';
+import { uiKitElements } from '@/utils/uiKitElements/uiKitElements';
 
 const UIKit: React.FC = (): JSX.Element => {
   return (

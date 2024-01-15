@@ -1,7 +1,7 @@
-@import "@/styles/variables.scss";
-@import "@/styles/mixin/flex-direction-column.scss";
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
 
-@include flex-direction-column(".error");
+@include flex-direction-column('.error');
 
 .error {
   justify-content: center;

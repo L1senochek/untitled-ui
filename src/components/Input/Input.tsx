@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react';
 // import { useFormContext } from "react-hook-form";
-import styles from "./input.module.scss";
-import IInput from "@/model/components/Input/Input";
-import Btn from "@/components/Btn/Btn";
-import IconEyeOn from "@/components/Icons/IconEyeOn/IconEyeOn";
-import IconEyeOff from "@/components/Icons/IconEyeOff/IconEyeOff";
-import IconAlertCircle from "@/components/Icons/IconAlertCircle/IconAlertCircle";
-import IconEmail from "@/components/Icons/IconEmail/IconEmail";
+import styles from './input.module.scss';
+import IInput from '@/model/components/Input/Input';
+import Btn from '@/components/Btn/Btn';
+import IconEyeOn from '@/components/Icons/IconEyeOn/IconEyeOn';
+import IconEyeOff from '@/components/Icons/IconEyeOff/IconEyeOff';
+import IconAlertCircle from '@/components/Icons/IconAlertCircle/IconAlertCircle';
+import IconEmail from '@/components/Icons/IconEmail/IconEmail';
 
 const Input: React.FC<IInput> = ({
   // registerInput,
@@ -20,36 +20,36 @@ const Input: React.FC<IInput> = ({
   // const methods = useFormContext();
   // const { register, formState } = methods;
   // const errorMessage = formState.errors[registerInput]?.message || '';
-  const errorMessage = "error";
+  const errorMessage = 'error';
 
   return (
     <div
       className={`${styles.input}${
-        classNameWrapper ? ` ${classNameWrapper}` : ""
+        classNameWrapper ? ` ${classNameWrapper}` : ''
       }`}
     >
       {titleLabel && (
         <h3
           className={`${styles.input__title}${
-            classNameLabel ? ` ${classNameLabel}` : ""
+            classNameLabel ? ` ${classNameLabel}` : ''
           }`}
         >
           {titleLabel}
         </h3>
       )}
-      {props.type === "password" && (
+      {props.type === 'password' && (
         <div
           className={`${styles.input__password} ${
-            errorMessage ? styles.error : ""
+            errorMessage ? styles.error : ''
           }`}
         >
           <input
             {...props}
             className={`${styles.input__password_input}${
-              errorMessage ? ` ${styles.error}` : ""
+              errorMessage ? ` ${styles.error}` : ''
             }`}
             // {...register(registerInput, registerValidation)}
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
           />
           <Btn
             type="button"
@@ -62,35 +62,35 @@ const Input: React.FC<IInput> = ({
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type === "email" && (
+      {props.type === 'email' && (
         <div
           className={`${styles.input__email} ${
-            errorMessage ? styles.error : ""
+            errorMessage ? styles.error : ''
           }`}
         >
           <IconEmail />
           <input
             {...props}
             className={`${styles.input__email_input}${
-              errorMessage ? ` ${styles.error}` : ""
+              errorMessage ? ` ${styles.error}` : ''
             }`}
             // {...register(registerInput, registerValidation)}
           />
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type !== "email" && props.type !== "password" && (
+      {props.type !== 'email' && props.type !== 'password' && (
         <input
           {...props}
           className={`${styles.input__email_input}${
-            errorMessage ? ` ${styles.error}` : ""
+            errorMessage ? ` ${styles.error}` : ''
           }`}
           // {...register(registerInput, registerValidation)}
         />
       )}
       <h3
         className={`${styles.input__error}${
-          errorMessage ? ` ${styles.input__error_visible}` : ""
+          errorMessage ? ` ${styles.input__error_visible}` : ''
         }`}
       >
         {errorMessage.toString()}

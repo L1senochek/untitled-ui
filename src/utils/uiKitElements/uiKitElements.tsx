@@ -1,9 +1,9 @@
-import Btn from "@/components/Btn/Btn";
-import styles from "./uikitelements.module.scss";
-import Input from "@/components/Input/Input";
+import Btn from '@/components/Btn/Btn';
+import styles from './uikitelements.module.scss';
+import Input from '@/components/Input/Input';
 
 export const uiKitElements = [
-  <div className={`${styles.font} ${styles.spacemono}`}>
+  <div className={`${styles.font} ${styles.spacemono}`} key={0}>
     <h2 className={styles.font__title}>
       <span>Font: </span>
       <span>Space Mono</span>
@@ -19,7 +19,7 @@ export const uiKitElements = [
     </div>
   </div>,
 
-  <div className={`${styles.font} ${styles.worksans}`}>
+  <div className={`${styles.font} ${styles.worksans}`} key={1}>
     <h2 className={styles.font__title}>
       <span>Font: </span>
       <span>Work Sans</span>
@@ -34,7 +34,7 @@ export const uiKitElements = [
       <div>Caption</div>
     </div>
   </div>,
-  <div className={styles.btns}>
+  <div className={styles.btns} key={2}>
     <h2>Button:</h2>
     <Btn variantBtn="primary">Button</Btn>
     <Btn variantBtn="primary" outlined>
@@ -43,10 +43,10 @@ export const uiKitElements = [
     <Btn variantBtn="secondary">Button</Btn>
     <Btn variantBtn="tertiary">Button</Btn>
   </div>,
-  <div className={styles.input}>
+  <div className={styles.input} key={3}>
     <h2>Input:</h2>
     <Input titleLabel="Email" type="email" placeholder="example@example.com" />
     <Input titleLabel="Password" type="password" placeholder="password" />
   </div>,
-  <div>4</div>,
+  <div key={4}>4</div>,
 ];

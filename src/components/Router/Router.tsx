@@ -4,21 +4,21 @@ import {
   SIGN_UP_PATH,
   UI_KIT_PATH,
   WELCOME_PATH,
-} from "@/utils/const/const";
+} from '@/utils/const/const';
 import {
   Navigate,
   Route,
   createBrowserRouter,
   createRoutesFromElements,
-} from "react-router-dom";
-import MainLayout from "@/layouts/MainLayout/MainLayout";
-import ErrorMessage from "@/components/ErrorMessage/ErrorMessage";
-import Welcome from "@/pages/Welcome/Welcome";
-import SignUp from "@/pages/SignUp/SignUp";
-import SignIn from "@/pages/SignIn/SignIn";
-import NotFound from "../NotFound/NotFound";
-import UIKitLayout from "@/layouts/UIKitLayout/UIKitLayout";
-import UIKit from "@/pages/UIKit/UIKit";
+} from 'react-router-dom';
+import MainLayout from '@/layouts/MainLayout/MainLayout';
+import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
+import Welcome from '@/pages/Welcome/Welcome';
+import SignUp from '@/pages/SignUp/SignUp';
+import SignIn from '@/pages/SignIn/SignIn';
+import NotFound from '../NotFound/NotFound';
+import UIKitLayout from '@/layouts/UIKitLayout/UIKitLayout';
+import UIKit from '@/pages/UIKit/UIKit';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,8 +41,8 @@ const Router = createBrowserRouter(
       >
         <Route path={UI_KIT_PATH} element={<UIKit />} />
       </Route>
-    </>,
-  ),
+    </>
+  )
 );
 
 export default Router;

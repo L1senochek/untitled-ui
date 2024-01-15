@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { INITIAL_PATH } from "@/utils/const/const";
-import styles from "./notfound.module.scss";
+import { Link } from 'react-router-dom';
+import { INITIAL_PATH } from '@/utils/const/const';
+import styles from './notfound.module.scss';
 
 const NotFound: React.FC = (): JSX.Element => {
   return (
