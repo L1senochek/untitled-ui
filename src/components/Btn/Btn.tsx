@@ -16,7 +16,9 @@ const Btn: React.FC<IBtn> = ({
         variantBtn === 'tertiary' ? ` ${styles.tertiary}` : ''
       }${outlined ? ` ${styles.outlined}` : ''}${
         variantBtn === 'none' ? ` ${styles.none}` : ''
-      }${className ? ` ${className}` : ''}`}
+      }${className ? ` ${className}` : ''}${
+        props.disabled ? ` ${styles.disabled}` : ''
+      }`}
       {...props}
     >
       {props.children}

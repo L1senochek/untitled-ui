@@ -38,7 +38,13 @@ export const uiKitElements = [
   <div className={styles.btns} key={2}>
     <h2>Button:</h2>
     <Btn variantBtn="primary">Button</Btn>
+    <Btn variantBtn="primary" disabled>
+      Button
+    </Btn>
     <Btn variantBtn="primary" outlined>
+      Button
+    </Btn>
+    <Btn variantBtn="primary" outlined disabled>
       Button
     </Btn>
     <Btn variantBtn="secondary">Button</Btn>

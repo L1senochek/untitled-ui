@@ -14,8 +14,10 @@ html {
   font-weight: 400;
 
   color-scheme: dark light;
-  color: $main-color;
-  background-color: #242424;
+  // color: $main-color;
+  color: $gray-color-900;
+  // background-color: #242424;
+  background-color: $gray-color-25;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

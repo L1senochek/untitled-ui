@@ -222,7 +222,9 @@ $error-message-padding: 3vw 0;
 $border-radius-btn: 8px;
 $border-width-btn: 2px;
 $border-style-btn: solid;
-$background-color-btn: $fifth-color;
+$background-color-btn: $brand-color-700;
+$background-color-btn-outlined: $brand-color-100;
+$color-btn-outlined: $brand-color-700;
 $gap-btn: 8px;
 $height-btn-primary: 72px;
 $height-btn-secondary: 60px;
@@ -231,9 +233,17 @@ $padding-btn-primary: 16px 28px;
 $padding-btn-secondary: 10px 18px;
 $padding-btn-tertiary: 8px 14px;
 $padding-btn-none: 0px;
+// btn disabled:
+$background-color-btn-disabled: $brand-color-200;
+$background-color-btn-outlined-disabled: $brand-color-25;
+$color-btn-outlined-disabled: $brand-color-300;
 
 // btn:hover
 $transform-btn-hover: scale(0.95);
+$background-color-btn-hover: $brand-color-600;
+$box-shadow-btn: 0 0 7px 1px $brand-color-300;
+$background-color-btn-outlined-hover: $brand-color-50;
+$box-shadow-btn-outlined: 0 0 7px 1px $brand-color-200;
 
 // transition
 $transition-sec: 0.5s;
