@@ -1,4 +1,4 @@
-@import '@/styles/variables.scss';
+@import "@/styles/variables.scss";
 
 .font {
   display: flex;
@@ -25,4 +25,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  background-color: $gray-color-25;
 }

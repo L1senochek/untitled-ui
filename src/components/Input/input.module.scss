@@ -1,0 +1,90 @@
+@import "@/styles/variables.scss";
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-input-wrapper;
+  &__title {
+    display: flex;
+    color: $gray-color-700;
+  }
+  &__password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-input;
+    border-color: $border-color-input;
+    border-width: $border-width-input;
+    border-style: $border-style-input;
+    gap: $gap-input;
+    padding: $padding-input;
+    &_input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border-color: transparent;
+      outline: none;
+    }
+    &_btn {
+      padding: 0px;
+      background-color: transparent;
+      & > svg {
+        width: 20px;
+        height: 20px;
+      }
+      & > svg > path {
+        stroke: $gray-color-500;
+      }
+    }
+    &.error {
+      border-color: $error-color-300;
+      & > :last-child > g > path {
+        stroke: $error-color-500;
+      }
+    }
+    &:focus-within {
+      box-shadow: $box-shadow-input;
+    }
+  }
+  &__email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-input;
+    border-color: $border-color-input;
+    border-width: $border-width-input;
+    border-style: $border-style-input;
+    gap: $gap-input;
+    padding: $padding-input;
+    &_input {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border-color: transparent;
+      outline: none;
+    }
+    &.error {
+      border-color: $error-color-300;
+      & > :last-child > g > path {
+        stroke: $error-color-500;
+      }
+    }
+    &:focus-within {
+      box-shadow: $box-shadow-input;
+    }
+  }
+  &__input {
+    display: flex;
+    color: $gray-color-900;
+  }
+  &__error {
+    color: $error-color-500;
+    visibility: hidden;
+    opacity: 0;
+    height: $height-error;
+  }
+  &__error_visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
