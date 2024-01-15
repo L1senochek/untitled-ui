@@ -7,6 +7,7 @@ import IconEyeOn from '@/components/Icons/IconEyeOn/IconEyeOn';
 import IconEyeOff from '@/components/Icons/IconEyeOff/IconEyeOff';
 import IconAlertCircle from '@/components/Icons/IconAlertCircle/IconAlertCircle';
 import IconEmail from '@/components/Icons/IconEmail/IconEmail';
+import IconSearch from '@/components/Icons/IconSearch/IconSearch';
 
 const Input: React.FC<IInput> = ({
   // registerInput,
@@ -14,13 +15,14 @@ const Input: React.FC<IInput> = ({
   classNameWrapper,
   titleLabel,
   classNameLabel,
+  errorMessage,
   ...props
 }): JSX.Element => {
   const [showPassword, setShowPassword] = useState(false);
   // const methods = useFormContext();
   // const { register, formState } = methods;
   // const errorMessage = formState.errors[registerInput]?.message || '';
-  const errorMessage = 'error';
+  // const errorMessage = 'error';
 
   return (
     <div
@@ -79,21 +81,29 @@ const Input: React.FC<IInput> = ({
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type !== 'email' && props.type !== 'password' && (
-        <input
-          {...props}
-          className={`${styles.input__input}${
-            errorMessage ? ` ${styles.error}` : ''
-          }`}
-          // {...register(registerInput, registerValidation)}
-        />
+      {props.type === 'search' && (
+        <div className={`${styles.input__wrapper} ${styles.search}`}>
+          <IconSearch />
+          <input {...props} className={`${styles.input__wrapper_input}`} />
+        </div>
       )}
+      {props.type !== 'email' &&
+        props.type !== 'password' &&
+        props.type !== 'search' && (
+          <input
+            {...props}
+            className={`${styles.input__input}${
+              errorMessage ? ` ${styles.error}` : ''
+            }`}
+            // {...register(registerInput, registerValidation)}
+          />
+        )}
       <h3
         className={`${styles.input__error}${
           errorMessage ? ` ${styles.input__error_visible}` : ''
         }`}
       >
-        {errorMessage.toString()}
+        {errorMessage?.toString()}
       </h3>
     </div>
   );

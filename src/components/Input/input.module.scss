@@ -35,6 +35,9 @@
       & > svg > path {
         stroke: $gray-color-500;
       }
+      &:focus {
+        box-shadow: none;
+      }
     }
     &.error {
       border-color: $error-color-300;
@@ -76,5 +79,17 @@
   &__error_visible {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  .input {
+    &__wrapper {
+      &_btnPass:hover {
+        transform: $transform-btn-hover;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
   }
 }

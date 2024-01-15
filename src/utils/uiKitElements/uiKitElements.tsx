@@ -53,7 +53,12 @@ export const uiKitElements = [
   <div className={styles.input} key={3}>
     <h2>Input:</h2>
     <Input titleLabel="Email" type="email" placeholder="example@example.com" />
-    <Input titleLabel="Password" type="password" placeholder="password" />
+    <Input
+      titleLabel="Password"
+      type="password"
+      placeholder="password"
+      errorMessage="error"
+    />
     <Input titleLabel="search" type="search" placeholder="search" />
   </div>,
   <div className={styles.textarea} key={4}>

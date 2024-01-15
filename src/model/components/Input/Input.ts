@@ -6,6 +6,7 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   classNameWrapper?: string;
   titleLabel?: string;
   classNameLabel?: string;
+  errorMessage?: string;
   error?: object;
 }
 
