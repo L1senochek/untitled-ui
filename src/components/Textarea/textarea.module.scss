@@ -1,0 +1,36 @@
+@import '@/styles/variables.scss';
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  &__input {
+    width: 320px;
+    height: 128px;
+    resize: none;
+    color: $gray-color-900;
+    border-radius: $border-radius-textarea;
+    border-color: $border-color-textarea;
+    border-width: $border-width-textarea;
+    border-style: $border-style-textarea;
+    padding: $padding-textarea;
+    &.error {
+      border-color: $error-color-300;
+    }
+    &:focus {
+      box-shadow: $box-shadow-textarea;
+      &.error {
+        box-shadow: $box-shadow-textarea-error;
+      }
+    }
+  }
+  &__error {
+    color: $error-color-500;
+    visibility: hidden;
+    opacity: 0;
+    height: $height-error;
+  }
+  &__error_visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

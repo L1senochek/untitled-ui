@@ -248,4 +248,14 @@ $gap-input-wrapper: 6px;
 $gap-input: 8px;
 $padding-input: 10px 14px;
 $height-error: 20px;
-$box-shadow-input: 0 0 7px 1px $error-color-300;
+$box-shadow-input: 0 0 7px 1px $brand-color-300;
+$box-shadow-input-error: 0 0 7px 1px $error-color-300;
+
+// textarea 
+$border-radius-textarea: 8px;
+$border-width-textarea: 1px;
+$border-style-textarea: solid;
+$border-color-textarea: $gray-color-300;
+$padding-textarea: 10px 14px;
+$box-shadow-textarea: 0 0 7px 1px $brand-color-300;
+$box-shadow-textarea-error: 0 0 7px 1px $error-color-300;

@@ -39,13 +39,13 @@ const Input: React.FC<IInput> = ({
       )}
       {props.type === 'password' && (
         <div
-          className={`${styles.input__password} ${
-            errorMessage ? styles.error : ''
+          className={`${styles.input__wrapper} ${styles.password}${
+            errorMessage ? ` ${styles.error}` : ''
           }`}
         >
           <input
             {...props}
-            className={`${styles.input__password_input}${
+            className={`${styles.input__wrapper_input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
             // {...register(registerInput, registerValidation)}
@@ -54,7 +54,7 @@ const Input: React.FC<IInput> = ({
           <Btn
             type="button"
             variantBtn="none"
-            className={styles.input__password_btn}
+            className={styles.input__wrapper_btnPass}
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? <IconEyeOn /> : <IconEyeOff />}
@@ -64,14 +64,14 @@ const Input: React.FC<IInput> = ({
       )}
       {props.type === 'email' && (
         <div
-          className={`${styles.input__email} ${
-            errorMessage ? styles.error : ''
+          className={`${styles.input__wrapper} ${styles.email}${
+            errorMessage ? ` ${styles.error}` : ''
           }`}
         >
           <IconEmail />
           <input
             {...props}
-            className={`${styles.input__email_input}${
+            className={`${styles.input__wrapper_input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
             // {...register(registerInput, registerValidation)}
@@ -82,7 +82,7 @@ const Input: React.FC<IInput> = ({
       {props.type !== 'email' && props.type !== 'password' && (
         <input
           {...props}
-          className={`${styles.input__email_input}${
+          className={`${styles.input__input}${
             errorMessage ? ` ${styles.error}` : ''
           }`}
           // {...register(registerInput, registerValidation)}

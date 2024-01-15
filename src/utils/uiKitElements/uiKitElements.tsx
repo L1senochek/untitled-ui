@@ -1,6 +1,7 @@
 import Btn from '@/components/Btn/Btn';
 import styles from './uikitelements.module.scss';
 import Input from '@/components/Input/Input';
+import Textarea from '@/components/Textarea/Textarea';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -47,6 +48,14 @@ export const uiKitElements = [
     <h2>Input:</h2>
     <Input titleLabel="Email" type="email" placeholder="example@example.com" />
     <Input titleLabel="Password" type="password" placeholder="password" />
+    <Input titleLabel="search" type="search" placeholder="search" />
   </div>,
-  <div key={4}>4</div>,
+  <div className={styles.textarea} key={4}>
+    <h2>Textarea:</h2>
+    <Textarea placeholder="Enter a description..." />
+    <Textarea
+      placeholder="Enter a description..."
+      errorMessage="this an a error"
+    />
+  </div>,
 ];
