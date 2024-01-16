@@ -1,0 +1,44 @@
+@import '@/styles/variables.scss';
+
+.toggle {
+  display: flex;
+  &__btn {
+    width: $toggle-width;
+    height: $toggle-height;
+    border-radius: $toggle-border-radius;
+    padding: $toggle-padding;
+    &.true {
+      background-color: $toggle-background-color;
+    }
+    &.false {
+      background-color: $toggle-background-color-false;
+    }
+    &.disabled {
+      background-color: $toggle-background-color-disabled;
+    }
+    &_switcher {
+      position: relative;
+      width: $toggle-switcher-width;
+      height: $toggle-switcher-height;
+      background-color: $toggle-switcher-background-color;
+      border-radius: $toggle-switcher-border-radius;
+      transition: right $transition-sec;
+      &.true {
+        right: -10px;
+      }
+      &.false {
+        right: 10px;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .toggle {
+    &__btn {
+      &.disabled {
+        background-color: $toggle-background-color-disabled;
+      }
+    }
+  }
+}

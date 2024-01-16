@@ -2,6 +2,7 @@ import Btn from '@/components/Btn/Btn';
 import styles from './uikitelements.module.scss';
 import Input from '@/components/Input/Input';
 import Textarea from '@/components/Textarea/Textarea';
+import Toggle from '@/components/Toggle/Toggle';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -68,5 +69,10 @@ export const uiKitElements = [
       placeholder="Enter a description..."
       errorMessage="this an a error"
     />
+  </div>,
+  <div className={styles.toggle} key={5}>
+    <h2>Toggle:</h2>
+    <Toggle />
+    <Toggle disabled />
   </div>,
 ];
