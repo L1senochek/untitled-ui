@@ -8,32 +8,37 @@ const Checkbox: React.FC<ICheckbox> = ({
   labelProps,
   inputProps,
 }): JSX.Element => {
-  const [isChecked, setChecked] = useState(false);
+  const [isChecked, setChecked] = useState(inputProps?.checked || false);
 
   const handleChecked = (): void => setChecked(!isChecked);
 
   return (
     <div className={styles.checkbox}>
-      <div className={styles.checkbox__container}>
-        <label
+      <div
+        className={`${styles.checkbox__container}${
+          inputProps?.disabled ? ` ${styles.disabled}` : ''
+        }`}
+      >
+        <div
           className={`${styles.checkbox__checkmark} ${
             isChecked ? styles.checked : ''
-          }`}
-          {...labelProps}
+          } ${inputProps?.disabled ? styles.disabled : ''}`}
         >
           <IconCheckMark />
-        </label>
+        </div>
         <input
-          className={styles.checkbox__input}
+          className={`${styles.checkbox__input}${
+            inputProps?.disabled ? ` ${styles.disabled}` : ''
+          }`}
           type="checkbox"
           checked={isChecked}
           onChange={handleChecked}
           {...inputProps}
         />
       </div>
-      <p className={styles.checkbox__title}>
-        {labelTitle}: {isChecked ? 'true' : 'false'}
-      </p>
+      <label className={styles.checkbox__title} {...labelProps}>
+        {labelTitle}
+      </label>
     </div>
   );
 };

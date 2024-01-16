@@ -82,6 +82,11 @@ export const uiKitElements = [
       labelProps={{ htmlFor: 'firstCheckbox' }}
       inputProps={{ id: 'firstCheckbox' }}
     />
-    <Checkbox labelTitle="exmple" />
+    <Checkbox labelTitle="exmple checked" inputProps={{ checked: true }} />
+    <Checkbox labelTitle="exmple disabled" inputProps={{ disabled: true }} />
+    <Checkbox
+      labelTitle="disabled checked"
+      inputProps={{ disabled: true, checked: true }}
+    />
   </div>,
 ];

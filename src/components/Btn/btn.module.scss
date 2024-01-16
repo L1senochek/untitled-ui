@@ -15,7 +15,7 @@ button {
   background-color: $background-color-btn;
   transition: transform $transition-sec,
   background-color $transition-sec,
-  box-shadow $transition-sec ;
+  box-shadow $transition-sec;
   cursor: pointer;
   &.primary {
     padding: $padding-btn-primary;

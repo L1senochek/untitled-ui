@@ -7,7 +7,6 @@
     height: $toggle-height;
     border-radius: $toggle-border-radius;
     padding: $toggle-padding;
-    transition: background-color $transition-sec;
     &.true {
       background-color: $toggle-background-color;
     }
@@ -29,16 +28,6 @@
       }
       &.false {
         right: 10px;
-      }
-    }
-  }
-}
-
-@media (hover: hover) {
-  .toggle {
-    &__btn {
-      &.disabled {
-        background-color: $toggle-background-color-disabled;
       }
     }
   }
