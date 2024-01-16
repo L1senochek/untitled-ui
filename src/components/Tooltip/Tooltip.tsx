@@ -1,15 +1,12 @@
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 import styles from './tooltip.module.scss';
 import IconHelp from '@/components/Icons/IconHelp/IconHelp';
+import ITooltip from '@/model/components/Tooltip/Tooltip';
 
-const Tooltip: React.FC<{ content: ReactNode; dark?: true }> = ({
-  content,
-  dark = false,
-}) => {
+const Tooltip: React.FC<ITooltip> = ({ content, dark = false }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseEnter = () => setShowTooltip(true);
-
   const handleMouseLeave = () => setShowTooltip(false);
 
   return (

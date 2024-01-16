@@ -9,7 +9,9 @@
     border-radius: $checkbox-border-radius;
     width: 20px;
     height: 20px;
-    transition: box-shadow $transition-sec, transform $transition-sec;
+    transition:
+      box-shadow $transition-sec,
+      transform $transition-sec;
   }
   &__checkmark {
     display: flex;
@@ -23,7 +25,10 @@
     border-style: solid;
     border-color: $gray-color-300;
     border-radius: $checkbox-border-radius;
-    transition: opacity $transition-sec, background-color $transition-sec, border-color $transition-sec;
+    transition:
+      opacity $transition-sec,
+      background-color $transition-sec,
+      border-color $transition-sec;
     &.disabled {
       background-color: $brand-color-200;
     }
@@ -42,7 +47,7 @@
       }
     }
   }
-  &__input{
+  &__input {
     opacity: 0;
     width: 20px;
     height: 20px;
@@ -51,7 +56,7 @@
       cursor: not-allowed;
     }
   }
-  &__title{
+  &__title {
     padding-left: 10px;
   }
 }

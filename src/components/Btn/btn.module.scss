@@ -13,9 +13,10 @@ button {
   font-family: inherit;
   color: $main-color;
   background-color: $background-color-btn;
-  transition: transform $transition-sec,
-  background-color $transition-sec,
-  box-shadow $transition-sec;
+  transition:
+    transform $transition-sec,
+    background-color $transition-sec,
+    box-shadow $transition-sec;
   cursor: pointer;
   &.primary {
     padding: $padding-btn-primary;
