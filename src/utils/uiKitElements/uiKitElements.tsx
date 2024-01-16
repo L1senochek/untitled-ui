@@ -3,6 +3,7 @@ import styles from './uikitelements.module.scss';
 import Input from '@/components/Input/Input';
 import Textarea from '@/components/Textarea/Textarea';
 import Toggle from '@/components/Toggle/Toggle';
+import Checkbox from '@/components/Checkbox/Checkbox';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -74,5 +75,13 @@ export const uiKitElements = [
     <h2>Toggle:</h2>
     <Toggle />
     <Toggle disabled />
+  </div>,
+  <div className={styles.checkbox} key={6}>
+    <h2>Checkboxes:</h2>
+    <Checkbox
+      labelProps={{ htmlFor: 'firstCheckbox' }}
+      inputProps={{ id: 'firstCheckbox' }}
+    />
+    <Checkbox labelTitle="exmple" />
   </div>,
 ];
