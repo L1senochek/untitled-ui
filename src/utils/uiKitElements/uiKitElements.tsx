@@ -5,6 +5,7 @@ import Textarea from '@/components/Textarea/Textarea';
 import Toggle from '@/components/Toggle/Toggle';
 import Checkbox from '@/components/Checkbox/Checkbox';
 import Tooltip from '@/components/Tooltip/Tooltip';
+import ProgressBar from '@/components/ProgressBar/ProgressBar';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -97,5 +98,9 @@ export const uiKitElements = [
     <Tooltip content="tooltip" />
     <h3>dark:</h3>
     <Tooltip content="tooltip" dark />
+  </div>,
+  <div className={styles.progressbar} key={8}>
+    <h2>Progress bar:</h2>
+    <ProgressBar maxValue={4} value={2} />
   </div>,
 ];

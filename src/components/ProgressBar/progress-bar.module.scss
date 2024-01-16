@@ -1,0 +1,14 @@
+@import '@/styles/variables.scss';
+
+.progressbar {
+  width: 320px;
+  height: 8px;
+  background-color: $gray-color-100;
+  border-radius: 8px;
+  overflow: hidden;
+  &__progress {
+    height: 100%;
+    background-color: $brand-color-600;
+    transition: width 0.3s ease;
+  }
+}
