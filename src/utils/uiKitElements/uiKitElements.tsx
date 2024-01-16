@@ -4,6 +4,7 @@ import Input from '@/components/Input/Input';
 import Textarea from '@/components/Textarea/Textarea';
 import Toggle from '@/components/Toggle/Toggle';
 import Checkbox from '@/components/Checkbox/Checkbox';
+import Tooltip from '@/components/Tooltip/Tooltip';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -88,5 +89,12 @@ export const uiKitElements = [
       labelTitle="disabled checked"
       inputProps={{ disabled: true, checked: true }}
     />
+  </div>,
+  <div className={styles.tooltip} key={7}>
+    <h2>Tooltip:</h2>
+    <h3>light:</h3>
+    <Tooltip content="tooltip" />
+    <h3>dark:</h3>
+    <Tooltip content="tooltip" dark />
   </div>,
 ];
