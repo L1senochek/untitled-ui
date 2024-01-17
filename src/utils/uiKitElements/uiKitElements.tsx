@@ -101,6 +101,8 @@ export const uiKitElements = [
   </div>,
   <div className={styles.progressbar} key={8}>
     <h2>Progress bar:</h2>
-    <ProgressBar maxValue={4} value={2} />
+    <ProgressBar maxValue={4} value={1} />
+    <ProgressBar maxValue={10} value={4} label="%" />
+    <ProgressBar maxValue={10} value={7} label="example" />
   </div>,
 ];

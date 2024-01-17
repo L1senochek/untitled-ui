@@ -1,7 +1,7 @@
 interface IProgressBar {
   value: number;
   maxValue: number;
-  label?: string;
+  label?: '%' | string;
 }
 
 export default IProgressBar;

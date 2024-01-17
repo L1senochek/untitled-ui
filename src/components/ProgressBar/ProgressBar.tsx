@@ -16,11 +16,17 @@ const ProgressBar: React.FC<IProgressBar> = ({
 
   return (
     <div className={styles.progressbar}>
-      <div
-        className={styles.progressbar__progress}
-        style={{ width: `${progress}%` }}
-      ></div>
-      {label && <label>{label}</label>}
+      <div className={styles.progressbar__wrapper}>
+        <div
+          className={styles.progressbar__progress}
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+      {label && (
+        <label className={styles.progressbar__label}>
+          {label === '%' ? `${progress}%` : label}
+        </label>
+      )}
     </div>
   );
 };
