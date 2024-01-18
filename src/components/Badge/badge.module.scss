@@ -1,0 +1,30 @@
+@import '@/styles/variables.scss';
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  background-color: $brand-color-50;
+  border-radius: 16px;
+  &__title {
+    color: $brand-color-700;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (hover: hover) {
+  .badge:hover {
+    cursor: pointer;
+  }
+}

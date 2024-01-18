@@ -1,0 +1,23 @@
+@import '@/styles/variables.scss';
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  & > path {
+    stroke-width: 2;
+    stroke: $brand-color-700;
+  }
+  &.up {
+    rotate: (0deg);
+  }
+  &.right {
+    rotate: (90deg);
+  }
+  &.down {
+    rotate: (180deg);
+  }
+  &.left {
+    rotate: (270deg);
+  }
+}

@@ -49,3 +49,25 @@
     margin: 2% 0;
   }
 }
+
+.badges {
+  &__badgeright {
+    background-color: $blue-color-50 !important;
+    &_title {
+      color: $blue-color-700 !important;
+    }
+  }
+  &__arrow {
+    &_up {
+      width: 12px !important;
+      height: 12px !important;
+    }
+    &_right {
+      width: 12px !important;
+      height: 12px !important;
+      & > path {
+        stroke: $blue-color-500 !important;
+      }
+    }
+  }
+}

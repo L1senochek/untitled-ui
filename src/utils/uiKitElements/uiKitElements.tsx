@@ -6,6 +6,9 @@ import Toggle from '@/components/Toggle/Toggle';
 import Checkbox from '@/components/Checkbox/Checkbox';
 import Tooltip from '@/components/Tooltip/Tooltip';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
+import Badge from '@/components/Badge/Badge';
+import IconArrow from '@/components/Icons/IconArrow/IconArrow';
+import IconPlus from '@/components/Icons/IconPlus/IconPlus';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -63,6 +66,7 @@ export const uiKitElements = [
       placeholder="password"
       errorMessage="error"
     />
+    <Input type="text" placeholder="example text" />
     <Input titleLabel="search" type="search" placeholder="search" />
   </div>,
   <div className={styles.textarea} key={4}>
@@ -106,5 +110,32 @@ export const uiKitElements = [
     <ProgressBar maxValue={10} value={7} label="example" />
     <ProgressBar maxValue={10} value={5} circles />
     <ProgressBar maxValue={10} value={1} circles />
+  </div>,
+  <div className={styles.badges} key={9}>
+    <h2>Badges:</h2>
+    <Badge title="Label" />
+    <Badge
+      title="Label"
+      childrenLeft={
+        <IconArrow direction="up" className={styles.badges__arrow_up} />
+      }
+    />
+    <Badge
+      title="Label"
+      badgeClass={styles.badges__badgeright}
+      badgeTitleClass={styles.badges__badgeright_title}
+      childrenRight={
+        <IconArrow direction="right" className={styles.badges__arrow_right} />
+      }
+    />
+    <Badge title="Label" childrenRight={<IconArrow direction="down" />} />
+    <Badge
+      title="Label"
+      badgeClass={styles.badges__badgeright}
+      badgeTitleClass={styles.badges__badgeright_title}
+      childrenRight={<IconArrow direction="left" />}
+    />
+    <Badge title="Label" childrenRight={<IconPlus direction="x" />} />
+    <Badge title="Label" childrenRight={<IconPlus direction="plus" />} />
   </div>,
 ];
