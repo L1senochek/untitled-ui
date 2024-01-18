@@ -43,3 +43,9 @@
   justify-content: space-evenly;
   height: 100%;
 }
+
+.progressbar {
+  & > * {
+    margin: 2% 0;
+  }
+}

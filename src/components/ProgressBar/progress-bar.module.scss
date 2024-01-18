@@ -15,10 +15,22 @@
   }
   &__progress {
     height: 100%;
+    border-radius: 4px;
     background-color: $brand-color-600;
-    transition: width 0.3s ease;
+    transition: width $transition-sec ease;
   }
   &__label {
     margin-left: 12px;
+    color: $gray-color-900;
+    font-family: $font-family-work-sans;
+  }
+  &.circles {
+    min-width: 280px;
+    min-height: 280px;
+    position: relative;
+  }
+  &.circles > &__wrapper {
+    height: 100%;
+    background-color: transparent;
   }
 }

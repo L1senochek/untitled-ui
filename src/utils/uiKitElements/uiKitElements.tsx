@@ -104,5 +104,7 @@ export const uiKitElements = [
     <ProgressBar maxValue={4} value={1} />
     <ProgressBar maxValue={10} value={4} label="%" />
     <ProgressBar maxValue={10} value={7} label="example" />
+    <ProgressBar maxValue={10} value={5} circles />
+    <ProgressBar maxValue={10} value={1} circles />
   </div>,
 ];

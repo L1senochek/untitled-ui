@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__circles {
+    rotate: -90deg;
+  }
+  &__background {
+    fill: none;
+    stroke: $gray-color-100;
+  }
+  &__fill {
+    fill: none;
+    stroke: $brand-color-600;
+    stroke-linecap: round;
+    transition: width $transition-sec ease;
+  }
+  &__percent {
+    position: absolute;
+    color: $gray-color-900;
+    font-size: 38px;
+    font-family: $font-family-work-sans;
+  }
+}
