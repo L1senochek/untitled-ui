@@ -9,6 +9,8 @@ import ProgressBar from '@/components/ProgressBar/ProgressBar';
 import Badge from '@/components/Badge/Badge';
 import IconArrow from '@/components/Icons/IconArrow/IconArrow';
 import IconPlus from '@/components/Icons/IconPlus/IconPlus';
+import Dropdown from '@/components/Dropdown/Dropdown';
+import IconSearch from '@/components/Icons/IconSearch/IconSearch';
 
 export const uiKitElements = [
   <div className={`${styles.font} ${styles.spacemono}`} key={0}>
@@ -137,5 +139,14 @@ export const uiKitElements = [
     />
     <Badge title="Label" childrenRight={<IconPlus direction="x" />} />
     <Badge title="Label" childrenRight={<IconPlus direction="plus" />} />
+  </div>,
+  <div className={styles.dropdown} key={10}>
+    <h2>Dropdown:</h2>
+    {/* <Dropdown options={['user1', 'user2', 'user3', 'us4', 'us5', 'us6']} /> */}
+    <Dropdown
+      options={['user1', 'user2', 'user3', 'us4', 'us5', 'us6']}
+      label="search"
+      icon={<IconSearch />}
+    />
   </div>,
 ];

@@ -288,3 +288,18 @@ $toggle-switcher-border-radius: 50%;
 
 $checkbox-background-color: $brand-color-600;
 $checkbox-border-radius: 50%;
+
+// dropdown
+
+$min-width-dropdown: 320px;
+$gap-dropdown: 6px;
+$border-radius-dropdown: 8px;
+$border-width-dropdown: 1px;
+$border-style-dropdown: solid;
+$border-color-dropdown: $gray-color-300;
+$gap-dropdown-input: 6px;
+$padding-input-horizontal: 14px;
+$padding-input-vertical: 10px;
+$font-size-input: 24px;
+$box-shadow-input: 0 0 7px 1px $brand-color-300;
+$border-color-options: $gray-color-100;

@@ -1,0 +1,102 @@
+@import '@/styles/variables.scss';
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: $min-width-dropdown;
+  gap: $gap-dropdown;
+  &__label {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: $gray-color-700;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: $gap-dropdown-input;
+    border-radius: $border-radius-dropdown;
+    border-width: $border-width-dropdown;
+    border-style: $border-style-dropdown;
+    border-color: $border-color-dropdown;
+    padding: $padding-input-vertical $padding-input-horizontal;
+    font-size: $font-size-input;
+    color: $gray-color-900;
+    &:focus-within {
+      box-shadow: $box-shadow-input;
+    }
+  }
+  &__wrapper:focus + &__options,
+  &__wrapper.focused + &__options {
+    max-height: 320px;
+    min-width: 320px;
+    opacity: 1;
+    margin-top: 64px;
+  }
+  &__wrapper.label.focused + &__options {
+    margin-top: 88px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: $border-radius-dropdown;
+    border-width: $border-width-dropdown;
+    border-style: $border-style-dropdown;
+    border-color: $border-color-options;
+    box-shadow: 0 0 14px 1px $gray-color-200;
+    z-index: 11;
+    max-height: 0px;
+    max-width: 320px;
+    background-color: $gray-color-25;
+    overflow: hidden;
+    overflow-y: auto;
+    opacity: 0;
+    transition: max-height 1s ease;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-input-vertical $padding-input-horizontal;
+    cursor: pointer;
+    &.focused {
+      background-color: $gray-color-100;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-grow: 1;
+  }
+  &__checkmark {
+    display: flex;
+    width: 20px;
+    height: 12px;
+    border-color: $brand-color-600;
+    border-style: solid;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    rotate: -45deg;
+  }
+}
+
+@media (hover: hover) {
+  .dropdown {
+    &__item:hover {
+      background-color: $gray-color-100;
+    }
+  }
+}
