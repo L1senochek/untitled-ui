@@ -105,7 +105,7 @@ const Dropdown: React.FC<IDropdown> = ({
         <input
           {...rest}
           value={currentOption || searchTerm || ''}
-          autoComplete="off"
+          autoComplete="on"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           onFocus={handleInputFocus}

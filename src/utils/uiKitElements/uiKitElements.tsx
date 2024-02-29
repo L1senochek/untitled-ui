@@ -44,6 +44,7 @@ export const uiKitElements = [
       <div>Caption</div>
     </div>
   </div>,
+
   <div className={styles.btns} key={2}>
     <h2>Button:</h2>
     <Btn variantBtn="primary">Button</Btn>
@@ -59,6 +60,7 @@ export const uiKitElements = [
     <Btn variantBtn="secondary">Button</Btn>
     <Btn variantBtn="tertiary">Button</Btn>
   </div>,
+
   <div className={styles.input} key={3}>
     <h2>Input:</h2>
     <Input titleLabel="Email" type="email" placeholder="example@example.com" />
@@ -71,6 +73,7 @@ export const uiKitElements = [
     <Input type="text" placeholder="example text" />
     <Input titleLabel="search" type="search" placeholder="search" />
   </div>,
+
   <div className={styles.textarea} key={4}>
     <h2>Textarea:</h2>
     <Textarea placeholder="Enter a description..." />
@@ -79,11 +82,13 @@ export const uiKitElements = [
       errorMessage="this an a error"
     />
   </div>,
+
   <div className={styles.toggle} key={5}>
     <h2>Toggle:</h2>
     <Toggle />
     <Toggle disabled />
   </div>,
+
   <div className={styles.checkbox} key={6}>
     <h2>Checkboxes:</h2>
     <Checkbox
@@ -98,6 +103,7 @@ export const uiKitElements = [
       inputProps={{ disabled: true, checked: true }}
     />
   </div>,
+
   <div className={styles.tooltip} key={7}>
     <h2>Tooltip:</h2>
     <h3>light:</h3>
@@ -105,6 +111,7 @@ export const uiKitElements = [
     <h3>dark:</h3>
     <Tooltip content="tooltip" dark />
   </div>,
+
   <div className={styles.progressbar} key={8}>
     <h2>Progress bar:</h2>
     <ProgressBar maxValue={4} value={1} />
@@ -113,6 +120,7 @@ export const uiKitElements = [
     <ProgressBar maxValue={10} value={5} circles />
     <ProgressBar maxValue={10} value={1} circles />
   </div>,
+
   <div className={styles.badges} key={9}>
     <h2>Badges:</h2>
     <Badge title="Label" />
@@ -140,11 +148,14 @@ export const uiKitElements = [
     <Badge title="Label" childrenRight={<IconPlus direction="x" />} />
     <Badge title="Label" childrenRight={<IconPlus direction="plus" />} />
   </div>,
+
   <div className={styles.dropdown} key={10}>
     <h2>Dropdown:</h2>
-    {/* <Dropdown options={['user1', 'user2', 'user3', 'us4', 'us5', 'us6']} /> */}
     <Dropdown
-      options={['user1', 'user2', 'user3', 'us4', 'us5', 'us6']}
+      options={['test1', 'test2', 'test3', 't4', 't5', 't6', 't7', 't8', 't9']}
+    />
+    <Dropdown
+      options={['user1', 'user2', 'user3', 'us4', 'us5', 'us6', 'us7']}
       label="search"
       icon={<IconSearch />}
     />

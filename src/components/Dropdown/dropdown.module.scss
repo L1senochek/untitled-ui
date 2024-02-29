@@ -66,8 +66,20 @@
     overflow-y: auto;
     opacity: 0;
     transition: max-height 1s ease;
+    &::-webkit-scrollbar {
+      background-color: $gray-color-200;
+      width: $width-scrollbar;
+      border-radius: $border-radius-scrollbar;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-color-300;
+      width: $width-scrollbar;
+      border-radius: $border-radius-scrollbar;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background-color: $gray-color-400;
+    }
   }
-
   &__item {
     display: flex;
     justify-content: space-between;
