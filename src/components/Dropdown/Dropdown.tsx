@@ -98,8 +98,8 @@ const Dropdown: React.FC<IDropdown> = ({
       )}
       <div
         className={`${styles.dropdown__wrapper}${
-          label ? ` ${styles['label']}` : ''
-        }${isInputFocused ? ` ${styles['focused']}` : ''}`}
+          label ? ` ${styles.label}` : ''
+        }${isInputFocused ? ` ${styles.focused}` : ''}`}
       >
         {icon && <div className={styles.dropdown__icon}>{icon}</div>}
         <input

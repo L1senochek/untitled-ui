@@ -32,10 +32,6 @@
     max-height: 320px;
     min-width: 320px;
     opacity: 1;
-    margin-top: 64px;
-  }
-  &__wrapper.label.focused + &__options {
-    margin-top: 88px;
   }
   &__icon {
     display: flex;
@@ -60,11 +56,11 @@
     box-shadow: 0 0 14px 1px $gray-color-200;
     z-index: 11;
     max-height: 0px;
-    max-width: 320px;
+    min-width: 320px;
+    margin-top: 64px;
     background-color: $gray-color-25;
     overflow: hidden;
     overflow-y: auto;
-    opacity: 0;
     transition: max-height 1s ease;
     &::-webkit-scrollbar {
       background-color: $gray-color-200;
@@ -79,6 +75,10 @@
     &::-webkit-scrollbar-thumb:active {
       background-color: $gray-color-400;
     }
+  }
+  &__wrapper.label.focused + &__options,
+  &__wrapper.label + &__options {
+    margin-top: 88px;
   }
   &__item {
     display: flex;
