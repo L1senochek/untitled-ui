@@ -2,4 +2,9 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
+  &__leftside {
+    display: flex;
+    gap: 40px;
+  }
 }

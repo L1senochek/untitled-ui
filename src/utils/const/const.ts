@@ -1,5 +1,13 @@
 export const INITIAL_PATH = '/';
-export const WELCOME_PATH = '/welcome';
+export const HOME_PATH = '/home';
 export const UI_KIT_PATH = '/ui-kit';
 export const SIGN_UP_PATH = '/sign-up';
 export const SIGN_IN_PATH = '/sign-in';
+export const PRODUCTS_PATH = '/products';
+export const PRICING_PATH = '/pricing';
+export const VIDEO_TUTORIALS_PATH = '/video-tutorials';
+export const CONTACTS_PATH = '/contacts';
+export const BLOGS_PATH = '/blogs';
+export const ABOUT_US_PATH = '/about-us';
+export const LEGAL_PATH = '/legal';
+export const FAQ_PATH = '/faq';
