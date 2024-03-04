@@ -1,0 +1,74 @@
+@import '@/styles/variables.scss';
+
+.btn,
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-btn;
+  border: $border-width-btn $border-style-btn transparent;
+  gap: $gap-btn;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: $main-color;
+  background-color: $background-color-btn;
+  transition:
+    transform $transition-sec,
+    background-color $transition-sec,
+    box-shadow $transition-sec;
+  cursor: pointer;
+  &.primary {
+    padding: $padding-btn-primary;
+  }
+  &.secondary {
+    padding: $padding-btn-secondary;
+  }
+  &.tertiary {
+    padding: $padding-btn-tertiary;
+  }
+  &.none {
+    padding: $padding-btn-none;
+  }
+  &:focus {
+    box-shadow: $box-shadow-btn;
+  }
+  &.disabled {
+    background-color: $background-color-btn-disabled;
+  }
+  &.outlined {
+    border-color: $background-color-btn-outlined;
+    background-color: $background-color-btn-outlined;
+    color: $color-btn-outlined;
+    &:focus {
+      box-shadow: $box-shadow-btn;
+    }
+    &.disabled {
+      background-color: $background-color-btn-outlined-disabled;
+      color: $color-btn-outlined-disabled;
+    }
+  }
+}
+
+@media (hover: hover) {
+  button:hover,
+  .btn:hover {
+    transform: $transform-btn-hover;
+    background-color: $background-color-btn-hover;
+    box-shadow: $box-shadow-btn;
+    &.disabled {
+      cursor: not-allowed;
+      transform: none;
+      background-color: $background-color-btn-disabled;
+      box-shadow: none;
+    }
+    &.outlined {
+      background-color: $background-color-btn-outlined-hover;
+      box-shadow: $box-shadow-btn-outlined;
+    }
+    &.outlined.disabled {
+      background-color: $background-color-btn-outlined-disabled;
+      box-shadow: none;
+    }
+  }
+}

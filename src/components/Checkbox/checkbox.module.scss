@@ -1,0 +1,81 @@
+@import '@/styles/variables.scss';
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    display: flex;
+    border-radius: $checkbox-border-radius;
+    width: 20px;
+    height: 20px;
+    transition:
+      box-shadow $transition-sec,
+      transform $transition-sec;
+  }
+  &__checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray-color-300;
+    border-radius: $checkbox-border-radius;
+    transition:
+      opacity $transition-sec,
+      background-color $transition-sec,
+      border-color $transition-sec;
+    &.disabled {
+      background-color: $brand-color-200;
+    }
+    & > * {
+      opacity: 0;
+      transition: opacity $transition-sec;
+    }
+    &.checked {
+      background-color: $checkbox-background-color;
+      opacity: 1;
+      & > * {
+        opacity: 1;
+      }
+      &.disabled {
+        background-color: $brand-color-200;
+      }
+    }
+  }
+  &__input {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+  &__title {
+    padding-left: 10px;
+  }
+}
+
+@media (hover: hover) {
+  .checkbox {
+    &__container:hover {
+      transform: $transform-btn-hover;
+      box-shadow: $box-shadow-btn;
+      &.disabled {
+        box-shadow: none;
+        transform: none;
+      }
+    }
+    &__container:hover > &__checkmark {
+      border-color: $gray-color-600;
+      &.disabled {
+        border-color: $gray-color-300;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '@/styles/variables.scss';
+
+.help {
+  & > g > path {
+    stroke: $gray-color-400;
+    transition: stroke $transition-sec;
+  }
+}

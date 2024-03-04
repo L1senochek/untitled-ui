@@ -1,0 +1,73 @@
+@import '@/styles/variables.scss';
+
+.font {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &.spacemono {
+    font-family: $font-family-monospace;
+  }
+  &.worksans {
+    font-family: $font-family-work-sans;
+  }
+  &__title {
+    padding: 5%;
+  }
+  &__items {
+    & > * {
+      padding: 5%;
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  & > * {
+    margin: 5%;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.progressbar {
+  & > * {
+    margin: 2% 0;
+  }
+}
+
+.badges {
+  &__badgeright {
+    background-color: $blue-color-50 !important;
+    &_title {
+      color: $blue-color-700 !important;
+    }
+  }
+  &__arrow {
+    &_up {
+      width: 12px !important;
+      height: 12px !important;
+    }
+    &_right {
+      width: 12px !important;
+      height: 12px !important;
+      & > path {
+        stroke: $blue-color-500 !important;
+      }
+    }
+  }
+}
