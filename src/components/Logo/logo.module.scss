@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss';
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__title {
+    font-family: $font-family-work-sans;
+    color: $gray-color-900;
+  }
+}
