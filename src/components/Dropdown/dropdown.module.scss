@@ -31,6 +31,7 @@
   &__wrapper.focused + &__options {
     max-height: 320px;
     min-width: 320px;
+    border-width: $border-width-dropdown;
     opacity: 1;
   }
   &__icon {
@@ -50,7 +51,6 @@
     flex-direction: column;
     position: absolute;
     border-radius: $border-radius-dropdown;
-    border-width: $border-width-dropdown;
     border-style: $border-style-dropdown;
     border-color: $border-color-options;
     box-shadow: 0 0 14px 1px $gray-color-200;
