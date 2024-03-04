@@ -42,7 +42,6 @@ const Dropdown: React.FC<IDropdown> = ({
   }, [focusedIndex]);
 
   useEffect(() => {
-    console.log(currentOption);
     if (onSelect) {
       onSelect(currentOption);
     }
@@ -71,7 +70,6 @@ const Dropdown: React.FC<IDropdown> = ({
   };
 
   const handleOptionClick = (option: string, index: number) => {
-    console.log(option, index);
     setCurrentOption(option);
     setFocusedIndex(index);
   };
