@@ -1,11 +1,8 @@
-import './App.css'
+import { RouterProvider } from 'react-router';
+import Router from '@/components/Router/Router';
 
-function App() { 
-  return (
-    <>
-      
-    </>
-  )
-}
+const App = (): JSX.Element => {
+  return <RouterProvider router={Router} />;
+};
 
-export default App
+export default App;

@@ -1,0 +1,17 @@
+@import '@/styles/variables.scss';
+
+.icon {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  & > path {
+    stroke-width: 1.5;
+    stroke: $brand-color-700;
+  }
+  &.plus {
+    rotate: (45deg);
+  }
+  &.x {
+    rotate: (0deg);
+  }
+}

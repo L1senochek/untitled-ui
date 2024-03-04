@@ -1,0 +1,76 @@
+@import '@/styles/variables.scss';
+@import '@/styles/base/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+:root {
+  font-family: $font-family-monospace, $font-family-work-sans, Helvetica, Arial;
+  line-height: 1.5;
+  font-weight: 400;
+
+  // color-scheme: dark light;
+  // color: $main-color;
+  color: $gray-color-900;
+  // background-color: #242424;
+  background-color: $gray-color-25;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 98%;
+  height: 98vh;
+  margin: 0 auto;
+  padding: 1%;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  max-width: 1280px;
+  max-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
