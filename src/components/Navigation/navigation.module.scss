@@ -8,6 +8,7 @@
   align-items: center;
   &__items {
     display: flex;
+    align-items: center;
     gap: 32px;
   }
   &__item {

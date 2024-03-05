@@ -3,8 +3,17 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   &__leftside {
     display: flex;
+    align-items: center;
     gap: 40px;
+  }
+  &__rightside {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__btn {
   }
 }
