@@ -1,0 +1,64 @@
+@import '@/styles/variables.scss';
+
+.burgermenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  &__bar {
+    width: 100%;
+    height: 2px;
+    background-color: $gray-color-700;
+    margin-bottom: 6px;
+    transition: transform $transition-sec ease;
+  }
+  &__cross {
+    &.burgermenu__bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    &.burgermenu__bar:nth-child(2) {
+      opacity: 0;
+    }
+    &.burgermenu__bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+  }
+  &__items {
+    display: flex;
+    background-color: $gray-color-50;
+    padding: 20px;
+    position: absolute;
+    right: 1px;
+    margin: 25px 0;
+    width: 35%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow-dropdownnavitem;
+    border-radius: 5px;
+    & > nav > ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    & > nav > ul > li > div > div {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .burgermenu {
+    &__items {
+      width: 70%;
+    }
+  }
+}

@@ -30,7 +30,7 @@
     border-radius: $border-radius-dropdown;
     border-style: $border-style-dropdown;
     border-color: $border-color-options;
-    box-shadow: 0 0 14px 1px $gray-color-200;
+    box-shadow: $box-shadow-dropdownnavitem;
     background-color: $gray-color-50;
     opacity: 0;
     transform: scaleY(0);

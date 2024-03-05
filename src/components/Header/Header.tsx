@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from '@/components/Logo/Logo';
 import Navigation from '@/components/Navigation/Navigation';
-import Btn from '@/components/Btn/Btn';
 import styles from './header.module.scss';
-import { Link, useNavigate } from 'react-router-dom';
-import { INITIAL_PATH, SIGN_IN_PATH, SIGN_UP_PATH } from '@/utils/const/const';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { selectAuth, setAuth } from '@/store/slices/authSlice/authSlice';
+import { Link } from 'react-router-dom';
+import { INITIAL_PATH } from '@/utils/const/const';
+import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
+import HeaderNavigationBtn from '@/components/HeaderNavigationBtn/HeaderNavigationBtn';
 
 const Header: React.FC = (): JSX.Element => {
-  const isAuth = useAppSelector(selectAuth);
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
-  const signOutClick = () => {
-    dispatch(setAuth(false));
-  };
+  const handleResize = () => setWindowWidth(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -23,36 +25,10 @@ const Header: React.FC = (): JSX.Element => {
         <Link to={INITIAL_PATH}>
           <Logo />
         </Link>
-        <Navigation />
+        {windowWidth > 1000 && <Navigation />}
       </div>
       <div className={styles.header__rightside}>
-        {!isAuth ? (
-          <>
-            <Btn
-              variantBtn="tertiary"
-              className={styles.header__btn}
-              onClick={() => navigate(SIGN_IN_PATH)}
-              outlined
-            >
-              Log In
-            </Btn>
-            <Btn
-              variantBtn="tertiary"
-              className={styles.header__btn}
-              onClick={() => navigate(SIGN_UP_PATH)}
-            >
-              Sign Up
-            </Btn>
-          </>
-        ) : (
-          <Btn
-            variantBtn="tertiary"
-            className={styles.header__btn}
-            onClick={signOutClick}
-          >
-            Sign Out
-          </Btn>
-        )}
+        {windowWidth > 1000 ? <HeaderNavigationBtn /> : <BurgerMenu />}
       </div>
     </header>
   );
