@@ -4,10 +4,10 @@ import IconHelp from '@/components/Icons/IconHelp/IconHelp';
 import ITooltip from '@/model/components/Tooltip/Tooltip';
 
 const Tooltip: React.FC<ITooltip> = ({ content, dark = false }) => {
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
-  const handleMouseEnter = () => setShowTooltip(true);
-  const handleMouseLeave = () => setShowTooltip(false);
+  const handleMouseEnter = (): void => setShowTooltip(true);
+  const handleMouseLeave = (): void => setShowTooltip(false);
 
   return (
     <div className={styles.tooltip}>

@@ -8,7 +8,9 @@ const Checkbox: React.FC<ICheckbox> = ({
   labelProps,
   inputProps,
 }): JSX.Element => {
-  const [isChecked, setChecked] = useState(inputProps?.checked || false);
+  const [isChecked, setChecked] = useState<boolean>(
+    inputProps?.checked || false
+  );
 
   const handleChecked = (): void => setChecked(!isChecked);
 

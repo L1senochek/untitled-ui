@@ -1,4 +1,4 @@
-interface IDropdownItems {
+export interface IDropdownItems {
   item: string;
   path: string;
   icon?: React.ReactNode;

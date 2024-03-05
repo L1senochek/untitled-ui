@@ -23,7 +23,7 @@ const Dropdown: React.FC<IDropdown> = ({
   const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
   useEffect(() => {
-    const filtered = options.filter((option: string) =>
+    const filtered = options.filter((option: string): boolean =>
       option.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredOptions(filtered);
@@ -47,7 +47,7 @@ const Dropdown: React.FC<IDropdown> = ({
     }
   }, [currentOption, onSelect]);
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>): void => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       setFocusedIndex((prevIndex) =>
@@ -69,20 +69,20 @@ const Dropdown: React.FC<IDropdown> = ({
     }
   };
 
-  const handleOptionClick = (option: string, index: number) => {
+  const handleOptionClick = (option: string, index: number): void => {
     setCurrentOption(option);
     setFocusedIndex(index);
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setSearchTerm(e.target.value);
     setFocusedIndex(null);
     setCurrentOption(e.target.value);
   };
 
-  const handleInputFocus = () => setIsInputFocused(true);
+  const handleInputFocus = (): void => setIsInputFocused(true);
 
-  const handleInputBlur = () => {
+  const handleInputBlur = (): void => {
     setIsInputFocused(false);
     setFocusedIndex(null);
   };

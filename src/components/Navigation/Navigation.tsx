@@ -1,17 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './navigation.module.scss';
-import {
-  ABOUT_US_PATH,
-  BLOGS_PATH,
-  CONTACTS_PATH,
-  FAQ_PATH,
-  HOME_PATH,
-  LEGAL_PATH,
-  PRICING_PATH,
-  VIDEO_TUTORIALS_PATH,
-} from '@/utils/const/const';
+import { HOME_PATH, PRICING_PATH } from '@/utils/const/const';
 import DropdownNavItem from '@/components/DropdownNavItem/DropdownNavItem';
+import { productsArr, resoursesArr } from './navItems/navItems';
 
 const Navigation: React.FC = (): JSX.Element => {
   return (
@@ -29,24 +21,10 @@ const Navigation: React.FC = (): JSX.Element => {
           </NavLink>
         </li>
         <li className={styles.navigation__item}>
-          <DropdownNavItem
-            titleNav="Products"
-            items={[
-              { item: 'Tutorials', path: VIDEO_TUTORIALS_PATH },
-              { item: 'Contacts', path: CONTACTS_PATH },
-              { item: 'FAQs', path: FAQ_PATH },
-            ]}
-          />
+          <DropdownNavItem titleNav="Products" items={productsArr} />
         </li>
         <li className={styles.navigation__item}>
-          <DropdownNavItem
-            titleNav="Resourses"
-            items={[
-              { item: 'Blogs', path: BLOGS_PATH },
-              { item: 'About us', path: ABOUT_US_PATH },
-              { item: 'Legal', path: LEGAL_PATH },
-            ]}
-          />
+          <DropdownNavItem titleNav="Resourses" items={resoursesArr} />
         </li>
         <li className={styles.navigation__item}>
           <NavLink

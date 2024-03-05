@@ -5,6 +5,7 @@
 
 .dropdownnavitem {
   color: $gray-color-500;
+  font-family: $font-family-work-sans;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -24,6 +25,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
+    max-width: 320px;
     margin-top: 32px;
     border-radius: $border-radius-dropdown;
     border-style: $border-style-dropdown;
@@ -42,8 +44,28 @@
     }
   }
   &__item {
+    display: flex;
     padding: 15px 20px;
     color: $gray-color-500;
+    gap: 16px;
+  }
+  &__leftside {
+    & > svg {
+      max-width: 20px;
+    }
+  }
+  &__rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    & > * {
+      display: flex;
+      text-align: left;
+    }
+    & > h2 {
+      color: $gray-color-900;
+    }
   }
 }
 

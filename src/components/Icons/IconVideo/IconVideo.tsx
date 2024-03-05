@@ -4,17 +4,24 @@ import styles from './icon-video.module.scss';
 const IconVideo: React.FC = (): JSX.Element => {
   return (
     <svg
-      width="12"
-      height="8"
-      viewBox="0 0 12 8"
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={styles.video}
     >
       <path
-        d="M1 1.5L6 6.5L11 1.5"
-        stroke="#667085"
-        strokeWidth="1.67"
+        d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+        stroke="#7F56D9"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9 7L15 11L9 15V7Z"
+        stroke="#7F56D9"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
