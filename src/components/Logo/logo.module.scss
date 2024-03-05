@@ -10,3 +10,11 @@
     color: $gray-color-900;
   }
 }
+
+@media (max-width: 1040px) {
+  .logo {
+    &__title {
+      font-size: 24px;
+    }
+  }
+}

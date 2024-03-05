@@ -40,3 +40,11 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .navigation {
+    &__items {
+      font-size: 20px;
+    }
+  }
+}
