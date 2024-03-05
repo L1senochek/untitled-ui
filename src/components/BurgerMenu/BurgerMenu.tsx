@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './burger-menu.module.scss';
 import Navigation from '@/components/Navigation/Navigation';
+import HeaderNavigationBtn from '../HeaderNavigationBtn/HeaderNavigationBtn';
 
 const BurgerMenu: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ const BurgerMenu: React.FC = () => {
       {isMenuOpen && (
         <div className={styles.burgermenu__items}>
           <Navigation />
+          <HeaderNavigationBtn />
         </div>
       )}
     </div>
