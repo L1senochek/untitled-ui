@@ -22,7 +22,7 @@
   .container {
     &__icons {
       & > a:hover > svg > path {
-        fill: $brand-color-200;
+        fill: #fff;
       }
     }
   }

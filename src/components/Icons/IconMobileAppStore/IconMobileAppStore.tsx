@@ -12,7 +12,15 @@ const IconMobileAppStore: React.FC = (): JSX.Element => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect x="0.5" y="0.5" width="134" height="39" rx="6.5" fill="black" />
-      <rect x="0.5" y="0.5" width="134" height="39" rx="6.5" stroke="#A6A6A6" />
+      <rect
+        x="0.5"
+        y="0.5"
+        width="134"
+        height="39"
+        rx="6.5"
+        stroke="#A6A6A6"
+        className={styles.appstore__border}
+      />
       <path
         d="M81.5257 19.2009V21.4919H80.0896V22.9943H81.5257V28.0993C81.5257 29.8425 82.3143 30.5397 84.2981 30.5397C84.6468 30.5397 84.9788 30.4982 85.2693 30.4484V28.9626C85.0203 28.9875 84.8626 29.0041 84.5887 29.0041C83.7005 29.0041 83.3104 28.589 83.3104 27.6428V22.9943H85.2693V21.4919H83.3104V19.2009H81.5257Z"
         fill="white"
