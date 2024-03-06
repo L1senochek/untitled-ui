@@ -33,10 +33,32 @@
   &__leftside {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     &_header {
       display: flex;
+    }
+    &_wrapperlinks {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    &_wrapperemail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      & > div > div > div {
+        background-color: $brand-color-25;
+      }
+    }
+    &_wrapperbtns {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      & > button {
+        padding: 11px 18px;
+      }
     }
   }
 }

@@ -21,7 +21,7 @@
 @media (hover: hover) {
   .container {
     &__icons {
-      & > a:hover > svg > path {
+      & > a > svg:hover > path {
         fill: #fff;
       }
     }

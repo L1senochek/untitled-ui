@@ -3,16 +3,16 @@
 .footer {
   display: flex;
   flex-direction: column;
-  padding: 40px 80px 0 80px;
-  gap: 64px;
+  padding: 30px 80px;
+  gap: 40px;
   background-color: $brand-color-800;
   &::before {
     content: '';
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
-    margin-top: -40px;
+    height: -webkit-fill-available;
+    margin-top: -30px;
     background-color: $brand-color-800;
     z-index: -1;
   }
