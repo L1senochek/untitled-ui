@@ -6,9 +6,24 @@
   align-items: center;
   &__text {
     color: $brand-color-300;
+    font-family: $font-family-monospace, Helvetica, Arial;
   }
   &__icons {
     display: flex;
+    align-items: center;
     gap: 24px;
+    & > a:hover > svg > path {
+      transition: fill $transition-sec ease;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .container {
+    &__icons {
+      & > a:hover > svg > path {
+        fill: $brand-color-200;
+      }
+    }
   }
 }

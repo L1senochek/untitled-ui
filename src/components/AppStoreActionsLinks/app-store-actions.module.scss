@@ -1,0 +1,52 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: $gray-color-25;
+  &__rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $brand-color-200;
+    gap: 32px;
+    & > div > h1 {
+      font-size: 24px;
+      color: $gray-color-25;
+    }
+  }
+  &__supporttext {
+    display: flex;
+    width: 64%;
+    text-align: left;
+    word-spacing: 3px;
+  }
+  &__links {
+    display: flex;
+    gap: 32px;
+    & > a {
+      color: $gray-color-25;
+      transition: color $transition-sec ease;
+    }
+  }
+  &__leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    &_header {
+      display: flex;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .container {
+    &__links {
+      & > a:hover {
+        color: $brand-color-200;
+      }
+    }
+  }
+}
