@@ -8,6 +8,7 @@ import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
 import HeaderNavigationBtn from '@/components/HeaderNavigationBtn/HeaderNavigationBtn';
 
 const Header: React.FC = (): JSX.Element => {
+  const [isSticky, setIsSticky] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   const handleResize = (): void => setWindowWidth(window.innerWidth);
@@ -19,8 +20,21 @@ const Header: React.FC = (): JSX.Element => {
     };
   }, []);
 
+  useEffect((): (() => void) => {
+    const handleScroll = (): void => {
+      window.scrollY > 0 ? setIsSticky(true) : setIsSticky(false);
+    };
+    window.onscroll = handleScroll;
+
+    return (): void => {
+      window.onscroll = null;
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header}${isSticky ? ` ${styles.sticky}` : ''}`}
+    >
       <div className={styles.header__leftside}>
         <Link to={INITIAL_PATH}>
           <Logo />
