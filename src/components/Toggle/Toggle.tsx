@@ -4,7 +4,7 @@ import Btn from '@/components/Btn/Btn';
 import styles from './toggle.module.scss';
 
 const Toggle: React.FC<IToggle> = ({ disabled = false }): JSX.Element => {
-  const [isToggled, setToggle] = useState(false);
+  const [isToggled, setToggle] = useState<boolean>(false);
 
   const handleToggle = (): void => setToggle(!isToggled);
 

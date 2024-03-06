@@ -1,9 +1,9 @@
 import {
+  HOME_PATH,
   INITIAL_PATH,
   SIGN_IN_PATH,
   SIGN_UP_PATH,
   UI_KIT_PATH,
-  WELCOME_PATH,
 } from '@/utils/const/const';
 import {
   Navigate,
@@ -13,7 +13,7 @@ import {
 } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout/MainLayout';
 import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
-import Welcome from '@/pages/Welcome/Welcome';
+import Home from '@/pages/Home/Home';
 import SignUp from '@/pages/SignUp/SignUp';
 import SignIn from '@/pages/SignIn/SignIn';
 import NotFound from '../NotFound/NotFound';
@@ -28,8 +28,8 @@ const Router = createBrowserRouter(
         element={<MainLayout />}
         errorElement={<ErrorMessage />}
       >
-        <Route path="" element={<Navigate to={WELCOME_PATH} />} />
-        <Route path={WELCOME_PATH} index element={<Welcome />} />
+        <Route path="" element={<Navigate to={HOME_PATH} />} />
+        <Route path={HOME_PATH} index element={<Home />} />
         <Route path={SIGN_UP_PATH} element={<SignUp />} />
         <Route path={SIGN_IN_PATH} element={<SignIn />} />
         <Route path="*" element={<NotFound />} />

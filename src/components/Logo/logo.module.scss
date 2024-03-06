@@ -1,0 +1,20 @@
+@import '@/styles/variables.scss';
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  &__title {
+    font-family: $font-family-work-sans;
+    color: $gray-color-900;
+  }
+}
+
+@media (max-width: 1040px) {
+  .logo {
+    &__title {
+      font-size: 24px;
+    }
+  }
+}

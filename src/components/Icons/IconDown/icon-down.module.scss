@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+
+.down {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  transition: rotate $transition-sec ease;
+  & > path {
+    stroke-width: 1.67;
+    stroke: $gray-color-500;
+    transition: stroke $transition-sec ease;
+  }
+  &.up {
+    rotate: (-180deg);
+  }
+}

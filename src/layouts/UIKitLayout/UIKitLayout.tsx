@@ -1,13 +1,18 @@
-import { Outlet, useLocation } from 'react-router';
+import { Outlet } from 'react-router';
 import styles from './uikitlayout.module.scss';
+import IconLogo from '@/components/Icons/IconLogo/IconLogo';
+import { Link } from 'react-router-dom';
+import { INITIAL_PATH } from '@/utils/const/const';
 
 const UIKitLayout: React.FC = (): JSX.Element => {
-  const location = useLocation();
-  console.log(location);
   return (
     <>
-      <header>
+      <header className={styles.header}>
+        <Link to={INITIAL_PATH}>
+          <IconLogo />
+        </Link>
         <h2>UI KIT Layout</h2>
+        <div></div>
       </header>
       <main className={styles.main}>
         <Outlet />

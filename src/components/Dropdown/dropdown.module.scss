@@ -61,7 +61,7 @@
     background-color: $gray-color-25;
     overflow: hidden;
     overflow-y: auto;
-    transition: max-height 1s ease;
+    transition: max-height $transition-sec ease;
     &::-webkit-scrollbar {
       background-color: $gray-color-200;
       width: $width-scrollbar;
