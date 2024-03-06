@@ -1,0 +1,19 @@
+@import '@/styles/variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px 0 80px;
+  gap: 64px;
+  background-color: $brand-color-800;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 64px - 40px);
+    margin-top: -40px;
+    background-color: $brand-color-800;
+    z-index: -1;
+  }
+}

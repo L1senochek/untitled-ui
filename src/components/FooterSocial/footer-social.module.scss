@@ -1,0 +1,14 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__text {
+    color: $brand-color-300;
+  }
+  &__icons {
+    display: flex;
+    gap: 24px;
+  }
+}
