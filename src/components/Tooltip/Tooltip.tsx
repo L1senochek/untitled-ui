@@ -3,7 +3,10 @@ import styles from './tooltip.module.scss';
 import IconHelp from '@/components/Icons/IconHelp/IconHelp';
 import ITooltip from '@/model/components/Tooltip/Tooltip';
 
-const Tooltip: React.FC<ITooltip> = ({ content, dark = false }) => {
+const Tooltip: React.FC<ITooltip> = ({
+  content,
+  dark = false,
+}): JSX.Element => {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
   const handleMouseEnter = (): void => setShowTooltip(true);

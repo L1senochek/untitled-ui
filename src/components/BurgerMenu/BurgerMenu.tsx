@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation/Navigation';
 import HeaderNavigationBtn from '../HeaderNavigationBtn/HeaderNavigationBtn';
 import { useLocation } from 'react-router';
 
-const BurgerMenu: React.FC = () => {
+const BurgerMenu: React.FC = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
@@ -17,7 +17,7 @@ const BurgerMenu: React.FC = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     document.addEventListener('mousedown', handleClickOutside);
 
     return (): void => {
@@ -25,7 +25,7 @@ const BurgerMenu: React.FC = () => {
     };
   }, []);
 
-  useEffect(() => {
+  useEffect((): void => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 

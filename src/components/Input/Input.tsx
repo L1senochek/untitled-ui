@@ -18,7 +18,7 @@ const Input: React.FC<IInput> = ({
   errorMessage,
   ...props
 }): JSX.Element => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
   // const methods = useFormContext();
   // const { register, formState } = methods;
   // const errorMessage = formState.errors[registerInput]?.message || '';

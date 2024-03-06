@@ -6,11 +6,11 @@ import { selectAuth, setAuth } from '@/store/slices/authSlice/authSlice';
 import Btn from '@/components/Btn/Btn';
 
 const HeaderNavigationBtn: React.FC = (): JSX.Element => {
-  const isAuth = useAppSelector(selectAuth);
+  const isAuth = useAppSelector<boolean>(selectAuth);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const signOutClick = () => {
+  const signOutClick = (): void => {
     dispatch(setAuth(false));
   };
 

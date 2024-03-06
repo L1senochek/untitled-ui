@@ -22,14 +22,14 @@ const Dropdown: React.FC<IDropdown> = ({
   const optionsRef = useRef<HTMLDivElement>(null);
   const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
-  useEffect(() => {
+  useEffect((): void => {
     const filtered = options.filter((option: string): boolean =>
       option.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredOptions(filtered);
   }, [searchTerm, options]);
 
-  useEffect(() => {
+  useEffect((): void => {
     if (optionsRef.current && focusedIndex !== null) {
       const focusedItem = optionsRef.current.children[focusedIndex];
       if (focusedItem) {
@@ -41,7 +41,7 @@ const Dropdown: React.FC<IDropdown> = ({
     }
   }, [focusedIndex]);
 
-  useEffect(() => {
+  useEffect((): void => {
     if (onSelect) {
       onSelect(currentOption);
     }

@@ -10,11 +10,11 @@ import HeaderNavigationBtn from '@/components/HeaderNavigationBtn/HeaderNavigati
 const Header: React.FC = (): JSX.Element => {
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
-  const handleResize = () => setWindowWidth(window.innerWidth);
+  const handleResize = (): void => setWindowWidth(window.innerWidth);
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     window.addEventListener('resize', handleResize);
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
