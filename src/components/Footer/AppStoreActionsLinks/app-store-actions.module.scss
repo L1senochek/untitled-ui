@@ -72,3 +72,34 @@
     }
   }
 }
+
+@media (max-width: 875px) {
+  .container {
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    &__rightside {
+      align-items: center;
+    }
+    &__leftside {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    &__leftside {
+      &_wrapperbtns {
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+      }
+    }
+  }
+}

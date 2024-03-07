@@ -6,7 +6,7 @@ import AppStoreActionsLinks from '@/components/Footer/AppStoreActionsLinks/AppSt
 const Footer: React.FC = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__container}>
+      <div className={`${styles.footer__container} ${styles.actions}`}>
         <AppStoreActionsLinks />
       </div>
       <div className={styles.footer__container}>

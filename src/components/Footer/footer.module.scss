@@ -16,4 +16,33 @@
     background-color: $brand-color-800;
     z-index: -1;
   }
+  &__container {
+    display: flex;
+  }
+}
+
+@media (max-width: 875px) {
+  .footer {
+    padding: 30px;
+    &__container {
+      &.actions {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .footer {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    &::before {
+      margin-top: -10px;
+    }
+  }
 }

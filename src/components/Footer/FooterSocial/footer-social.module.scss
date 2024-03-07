@@ -27,3 +27,16 @@
     }
   }
 }
+
+@media (max-width: 875px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
+}
