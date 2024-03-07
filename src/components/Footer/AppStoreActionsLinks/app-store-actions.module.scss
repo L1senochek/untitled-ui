@@ -90,6 +90,17 @@
     &__leftside {
       align-items: center;
     }
+    &__supporttext {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    &__supporttext {
+      width: 100%;
+    }
   }
 }
 
