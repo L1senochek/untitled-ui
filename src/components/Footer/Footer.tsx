@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './footer.module.scss';
-import FooterSocial from '@/components/FooterSocial/FooterSocial';
-import AppStoreActionsLinks from '@/components/AppStoreActionsLinks/AppStoreActionsLinks';
+import FooterSocial from '@/components/Footer/FooterSocial/FooterSocial';
+import AppStoreActionsLinks from '@/components/Footer/AppStoreActionsLinks/AppStoreActionsLinks';
 
 const Footer: React.FC = (): JSX.Element => {
   return (

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Logo from '@/components/Logo/Logo';
-import Navigation from '@/components/Navigation/Navigation';
+import Navigation from '@/components/Header/Navigation/Navigation';
 import styles from './header.module.scss';
 import { Link } from 'react-router-dom';
 import { INITIAL_PATH } from '@/utils/const/const';
-import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
-import HeaderNavigationBtn from '@/components/HeaderNavigationBtn/HeaderNavigationBtn';
+import BurgerMenu from '@/components/Header/BurgerMenu/BurgerMenu';
+import HeaderNavigationBtn from '@/components/Header/HeaderNavigationBtn/HeaderNavigationBtn';
 
 const Header: React.FC = (): JSX.Element => {
   const [isSticky, setIsSticky] = useState<boolean>(false);
