@@ -1,0 +1,37 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.topsection');
+@include flex-direction-column('.topsection__container');
+
+.topsection {
+  width: 100%;
+  padding: 96px 0;
+  gap: 64px;
+  &__container {
+    gap: 48px;
+  }
+  &__textwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  &__heading {
+    color: $gray-color-900;
+    font-size: 64px;
+    font-weight: bolder;
+  }
+  &__supportingtext {
+    max-width: 768px;
+    color: $gray-color-500;
+  }
+  &__btns {
+    display: flex;
+    gap: 12px;
+  }
+  &__img {
+    max-width: 768px;
+    max-height: 448.5px;
+  }
+}
