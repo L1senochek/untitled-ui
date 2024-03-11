@@ -1,0 +1,10 @@
+@import '@/styles/variables.scss';
+
+.wrapperbtns {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  & > button {
+    padding: 11px 18px;
+  }
+}

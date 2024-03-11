@@ -53,14 +53,6 @@
         background-color: $brand-color-25;
       }
     }
-    &_wrapperbtns {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      & > button {
-        padding: 11px 18px;
-      }
-    }
   }
 }
 

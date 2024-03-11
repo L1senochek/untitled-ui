@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { FAQ_PATH, LEGAL_PATH, PRICING_PATH } from '@/utils/const/const';
 import IconMobileAppStore from '@/components/Icons/IconMobileAppStore/IconMobileAppStore';
 import IconMobileGooglePlay from '@/components/Icons/IconMobileGooglePlay/IconMobileGooglePlay';
-import Input from '@/components/Input/Input';
-import Btn from '@/components/Btn/Btn';
+import EmailSubscribe from './EmailSubscribe/EmailSubscribe';
 
 const AppStoreActionsLinks: React.FC = (): JSX.Element => {
   return (
@@ -26,12 +25,7 @@ const AppStoreActionsLinks: React.FC = (): JSX.Element => {
       <div className={styles.container__leftside}>
         <div className={styles.container__leftside_wrapperemail}>
           <h2>Stay up to date</h2>
-          <div className={styles.container__leftside_wrapperbtns}>
-            <Input type="email" placeholder="Enter your email" />
-            <Btn variantBtn="secondary" outlined>
-              Subscribe
-            </Btn>
-          </div>
+          <EmailSubscribe />
         </div>
         <h2 className={styles.container__leftside_header}>Get the app</h2>
         <div className={styles.container__leftside_wrapperlinks}>
