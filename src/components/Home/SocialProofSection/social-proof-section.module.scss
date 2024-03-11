@@ -1,0 +1,33 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.socialproof');
+
+.socialproof {
+  align-items: stretch;
+  width: 100%;
+  gap: 32px;
+  padding-bottom: 96px;
+  &__text {
+    color: $gray-color-500;
+  }
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__companylogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &_img {
+      background-size: cover;
+    }
+    &_name {
+      color: $gray-color-900;
+      font-weight: 900;
+      font-family: $font-family-monospace;
+      font-style: italic;
+    }
+  }
+}
