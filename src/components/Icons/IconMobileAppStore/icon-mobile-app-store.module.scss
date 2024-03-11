@@ -1,0 +1,19 @@
+@import '@/styles/variables.scss';
+
+.appstore {
+  width: 135px;
+  height: 40px;
+  fill: none;
+  &__border {
+    stroke: rgb(166, 166, 166);
+    transition: stroke $transition-sec ease;
+  }
+}
+
+@media (hover: hover) {
+  .appstore {
+    &:hover > &__border {
+      stroke: rgb(255 255 255);
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './burger-menu.module.scss';
-import Navigation from '@/components/Navigation/Navigation';
-import HeaderNavigationBtn from '../HeaderNavigationBtn/HeaderNavigationBtn';
+import Navigation from '@/components/Header/Navigation/Navigation';
+import HeaderNavigationBtn from '@/components/Header/HeaderNavigationBtn/HeaderNavigationBtn';
 import { useLocation } from 'react-router';
 
 const BurgerMenu: React.FC = (): JSX.Element => {

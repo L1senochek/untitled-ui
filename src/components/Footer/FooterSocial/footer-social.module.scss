@@ -1,0 +1,43 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &__text {
+    color: $brand-color-300;
+    font-family: $font-family-monospace, Helvetica, Arial;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    & > a:hover > svg > path {
+      transition: fill $transition-sec ease;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .container {
+    &__icons {
+      & > a > svg:hover > path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 875px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
+}
