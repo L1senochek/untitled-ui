@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss';
+
+.book {
+  width: 25px;
+  height: 24px;
+  fill: none;
+  & > path {
+    stroke-width: 2;
+    stroke: $brand-color-600;
+  }
+}

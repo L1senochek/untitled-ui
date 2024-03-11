@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss';
+
+.documentation {
+  width: 19px;
+  height: 22px;
+  fill: none;
+  & > path {
+    stroke-width: 2;
+    stroke: $brand-color-600;
+  }
+}

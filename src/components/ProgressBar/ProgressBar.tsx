@@ -8,10 +8,10 @@ const ProgressBar: React.FC<IProgressBar> = ({
   maxValue,
   label = '',
   circles = false,
-}) => {
-  const [progress, setProgress] = useState(0);
+}): JSX.Element => {
+  const [progress, setProgress] = useState<number>(0);
 
-  useEffect(() => {
+  useEffect((): void => {
     const calculatedProgress = (value / maxValue) * 100;
     setProgress(calculatedProgress);
   }, [maxValue, value]);

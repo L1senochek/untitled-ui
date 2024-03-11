@@ -1,0 +1,50 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.navigation__link');
+
+.navigation {
+  display: flex;
+  align-items: center;
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  &__item {
+    display: flex;
+    cursor: pointer;
+  }
+  &__link {
+    color: $gray-color-500;
+    &.active {
+      color: $gray-color-700;
+    }
+    &.active > .navigation__line {
+      opacity: 1;
+      border: 1px $gray-color-700 solid;
+    }
+  }
+  &__line {
+    opacity: 0;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+@media (hover: hover) {
+  .navigation {
+    &__item:hover,
+    &__link:hover {
+      color: $gray-color-700;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    &__items {
+      font-size: 20px;
+    }
+  }
+}

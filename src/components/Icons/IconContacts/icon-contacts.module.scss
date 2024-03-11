@@ -1,0 +1,11 @@
+@import '@/styles/variables.scss';
+
+.contacts {
+  width: 24px;
+  height: 20px;
+  fill: none;
+  & > path {
+    stroke-width: 2;
+    stroke: $brand-color-600;
+  }
+}

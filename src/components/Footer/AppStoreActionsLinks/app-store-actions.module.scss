@@ -1,0 +1,109 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  color: $gray-color-25;
+  &__rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $brand-color-200;
+    gap: 32px;
+    & > div > h1 {
+      font-size: 24px;
+      color: $gray-color-25;
+    }
+  }
+  &__supporttext {
+    display: flex;
+    width: 64%;
+    text-align: left;
+    word-spacing: 3px;
+  }
+  &__links {
+    display: flex;
+    gap: 32px;
+    & > a {
+      color: $gray-color-25;
+      transition: color $transition-sec ease;
+    }
+  }
+  &__leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    &_header {
+      display: flex;
+    }
+    &_wrapperlinks {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    &_wrapperemail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      & > div > div > div {
+        background-color: $brand-color-25;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .container {
+    &__links {
+      & > a:hover {
+        color: $brand-color-200;
+      }
+    }
+  }
+}
+
+@media (max-width: 875px) {
+  .container {
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    &__rightside {
+      align-items: center;
+    }
+    &__leftside {
+      align-items: center;
+    }
+    &__supporttext {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    &__supporttext {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    &__leftside {
+      &_wrapperbtns {
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+      }
+    }
+  }
+}
