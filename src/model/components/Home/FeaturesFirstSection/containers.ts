@@ -8,6 +8,7 @@ interface IContainers {
     subheading: string;
     checkItems: ICheckItems[];
   };
+  imgMockup: string;
   img: string;
   alt: string;
 }

@@ -1,0 +1,151 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.featuressection');
+@include flex-direction-column('.featuressection__containertitle');
+
+.featuressection {
+  gap: 96px;
+  width: 100%;
+  &__containertitle {
+    gap: 20px;
+  }
+  &__subheading {
+    font-size: 16px;
+    font-weight: 600;
+    color: $brand-color-600;
+    line-height: 24px;
+  }
+  &__heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: $gray-color-900;
+    line-height: 44px;
+  }
+  &_text {
+    font-size: 20px;
+    font-weight: 400;
+    color: $gray-color-500;
+    line-height: 30px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 96px;
+    padding: 0 32px;
+    width: 100%;
+    min-height: 512px;
+    &.right {
+      flex-direction: row-reverse;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 40%;
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    &_iconwrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background-color: $brand-color-100;
+      border-radius: 28px;
+      border-color: $brand-color-50;
+      border-width: 8px;
+      border-style: solid;
+      & > svg > path {
+        stroke: $brand-color-600;
+      }
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    &_heading {
+      display: flex;
+      text-align: left;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 38px;
+      color: $gray-color-900;
+    }
+    &_supportingtext {
+      display: flex;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $gray-color-500;
+    }
+    &_checkitems {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    &_item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    &_checkmarkwrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-left: 16px;
+      background-color: $brand-color-100;
+      border-radius: 14px;
+      border-style: solid;
+      & > svg > path {
+        stroke: $brand-color-600;
+      }
+    }
+    &_checktext {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $gray-color-500;
+      text-wrap: nowrap;
+    }
+  }
+  &__contentimg {
+    width: 100%;
+    height: 100%;
+    & > img {
+      box-shadow: 0px 32px 64px -12px #10182824;
+      width: 768px;
+      height: 512px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      border-radius: 10px;
+    }
+    & > img.left {
+      left: 45%;
+      transition: left 1s;
+      &.scrolling {
+        left: 51%;
+      }
+    }
+    & > img.right {
+      left: 0%;
+      transition: left 1s;
+      &.scrolling {
+        left: -10%;
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
+import IconBarChart from '@/components/Icons/IconBarChart/IconBarChart';
 import IconEmail from '@/components/Icons/IconEmail/IconEmail';
+import IconZap from '@/components/Icons/IconZap/IconZap';
 import ICheckItems from '@/model/components/Home/FeaturesFirstSection/checkItems';
 import IContainers from '@/model/components/Home/FeaturesFirstSection/containers';
 
@@ -29,31 +31,32 @@ export const containers: IContainers[] = [
         'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',
       checkItems: checkItemsShareTeamInboxes,
     },
+    imgMockup: './src/assets/img/ScreenMockupWelcomeBack.png',
     img: './src/assets/img/ScreenWelcomeBack.png',
     alt: 'ScreenWelcomeBack',
   },
   {
     content: {
-      // icon: <IconZap />,
-      icon: <IconEmail />,
+      icon: <IconZap />,
       heading: 'Deliver instant answers',
       subheading:
         'An all-in-one customer service platform that helps you balance everything your customers need to be happy.',
       checkItems: checkItemsDeliverInstantAnswers,
     },
-    img: '',
-    alt: '',
+    imgMockup: './src/assets/img/ScreenMockupCustomers.png',
+    img: './src/assets/img/ScreenCustomers.png',
+    alt: 'ScreenCustomers',
   },
   {
     content: {
-      // icon: <IconBarChart />,
-      icon: <IconEmail />,
+      icon: <IconBarChart />,
       heading: 'Manage your team with reports',
       subheading:
         'Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.',
       checkItems: checkItemsManageTeam,
     },
-    img: '',
-    alt: '',
+    imgMockup: './src/assets/img/ScreenMockupOrganizationOverview.png',
+    img: './src/assets/img/ScreenOrganizationOverview.png',
+    alt: 'ScreenOrganizationOverview',
   },
 ];
