@@ -1,11 +1,23 @@
 import styles from './top-section.module.scss';
 import Btn from '@/components/Btn/Btn';
 import IconVideo from '@/components/Icons/IconVideo/IconVideo';
+import ICursorPosition from '@/model/components/Home/topSection/cursorPosition';
 import { SIGN_UP_PATH, VIDEO_TUTORIALS_PATH } from '@/utils/const/const';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
 const TopSection: React.FC = (): JSX.Element => {
   const navigate = useNavigate();
+  const [isZoomed, setIsZoomed] = useState<boolean>(false);
+  const [cursorPosition, setCursorPosition] = useState<ICursorPosition>({
+    x: 0,
+    y: 0,
+  });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>): void => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    setCursorPosition({ x: e.clientX, y: e.clientY + scrollTop });
+  };
 
   return (
     <div className={styles.topsection}>
@@ -36,10 +48,21 @@ const TopSection: React.FC = (): JSX.Element => {
       </div>
       <div className={styles.topsection__container}>
         <img
-          className={styles.topsection__img}
+          className={`${styles.topsection__img}${
+            isZoomed ? ` ${styles.zoomed}` : ''
+          }`}
           alt="Macbook Pro 16"
           src="./src/assets/img/MacbookPro16.png"
+          onMouseEnter={() => setIsZoomed(true)}
+          onMouseLeave={() => setIsZoomed(false)}
+          onMouseMove={handleMouseMove}
         />
+        {isZoomed && (
+          <div
+            className={styles.topsection__img_circle}
+            style={{ left: cursorPosition.x, top: cursorPosition.y }}
+          />
+        )}
       </div>
     </div>
   );
