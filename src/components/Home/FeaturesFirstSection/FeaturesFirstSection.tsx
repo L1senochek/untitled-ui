@@ -85,12 +85,12 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
           </div>
           <div
             className={`${styles.featuressection__contentimg}${
-              index % 2 === 0 ? ` ${styles.left}` : ` ${styles.right}`
+              index % 2 === 0 ? ` ${styles.right}` : ` ${styles.left}`
             }`}
           >
             <img
               className={`${
-                index % 2 === 0 ? ` ${styles.left}` : ` ${styles.right}`
+                index % 2 === 0 ? ` ${styles.right}` : ` ${styles.left}`
               }${scrolling ? ` ${styles.scrolling}` : ''}`}
               src={container.imgMockup}
               alt={container.alt}

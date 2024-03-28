@@ -21,4 +21,8 @@ export const companyLogo: ICompanyLogo[] = [
     img: './src/assets/svg/companyLogo/Company=Quotient.svg',
     name: 'Quotient',
   },
+  {
+    img: './src/assets/svg/companyLogo/Company=Hourglass.svg',
+    name: 'Hourglass',
+  },
 ];
