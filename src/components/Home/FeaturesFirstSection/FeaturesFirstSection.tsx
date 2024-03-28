@@ -2,30 +2,30 @@ import styles from './features-first-section.module.scss';
 import IconCheckMark from '@/components/Icons/IconCheckMark/IconCheckMark';
 import { containers } from './checkItems/checkItems';
 import ICheckItems from '@/model/components/Home/FeaturesFirstSection/checkItems';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const FeaturesFirstSection: React.FC = (): JSX.Element => {
+  const featuresSectionRef = useRef<HTMLDivElement>(null);
   const [scrolling, setScrolling] = useState<boolean>(false);
 
   useEffect((): (() => void) => {
     const handleScroll = (): void => {
-      const parentTop =
-        document
-          .querySelector(`.${styles.featuressection}`)
-          ?.getBoundingClientRect().top ?? 0;
-
-      parentTop <= 0 ? setScrolling(true) : setScrolling(false);
+      if (featuresSectionRef.current) {
+        const parentTop =
+          featuresSectionRef.current.getBoundingClientRect().top;
+        setScrolling(parentTop <= 0);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    return (): void => {
+    return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <div className={styles.featuressection}>
+    <div className={styles.featuressection} ref={featuresSectionRef}>
       <div className={styles.featuressection__containertitle}>
         <h2 className={styles.featuressection__subheading}>Features</h2>
         <h1 className={styles.featuressection__heading}>
@@ -65,7 +65,9 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
               {container.content.checkItems.map(
                 (item: ICheckItems, index: number) => (
                   <div
-                    className={styles.featuressection__content_item}
+                    className={`${styles.featuressection__content_item}${
+                      scrolling ? ` ${styles.animate}` : ''
+                    }`}
                     key={item.text + index}
                   >
                     <div
