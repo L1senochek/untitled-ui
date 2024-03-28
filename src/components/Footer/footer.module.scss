@@ -6,13 +6,16 @@
   padding: 30px 80px;
   gap: 40px;
   background-color: $brand-color-800;
+  position: relative;
   &::before {
     content: '';
     position: absolute;
-    left: 0;
+    overflow: hidden;
     width: 100%;
-    height: -webkit-fill-available;
-    margin-top: -30px;
+    height: 100%;
+    top: 0;
+    left: -100vw;
+    width: 1000vw;
     background-color: $brand-color-800;
     z-index: -1;
   }

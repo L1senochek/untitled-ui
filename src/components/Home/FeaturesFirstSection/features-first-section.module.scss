@@ -33,7 +33,6 @@
     align-items: center;
     position: relative;
     gap: 96px;
-    // padding: 0 32px;
     width: 100%;
     min-height: 512px;
     &.left {
@@ -170,14 +169,14 @@
       border-radius: 10px;
     }
     & > img.left {
-      left: 0%;
+      left: -4%;
       transition: left 1s;
       &.scrolling {
         left: -10%;
       }
     }
     & > img.right {
-      right: 0%;
+      right: -4%;
       transition: right 1s;
       &.scrolling {
         right: -10%;
