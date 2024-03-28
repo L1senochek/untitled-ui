@@ -46,7 +46,11 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
           <div className={styles.featuressection__content}>
             <div className={styles.featuressection__content_wrapper}>
               <div className={styles.featuressection__content_iconwrapper}>
-                {container.content.icon}
+                <div
+                  className={styles.featuressection__content_iconwrapper_pulse}
+                >
+                  {container.content.icon}
+                </div>
               </div>
               <div className={styles.featuressection__content_text}>
                 <h1 className={styles.featuressection__content_heading}>
