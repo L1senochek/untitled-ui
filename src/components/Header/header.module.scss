@@ -2,8 +2,9 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
   position: sticky;
   top: 0;
   padding: 0.5%;
@@ -13,8 +14,28 @@
     background-color $transition-sec ease,
     padding $transition-sec ease;
   &.sticky {
+    position: fixed;
+    min-width: 320px;
+    max-width: calc(1280px - 4%);
+    width: 96%;
     background-color: $gray-color-50;
     padding: 1%;
+    &::before {
+      content: '';
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      top: 0;
+      left: -100vw;
+      width: 1000vw;
+      background-color: $gray-color-50;
+      z-index: -1;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__leftside {
     display: flex;
