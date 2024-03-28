@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './dropdown-nav-item.module.scss';
 import { Link } from 'react-router-dom';
 import IDropdownNavItem, {
@@ -13,28 +13,18 @@ const DropdownNavItem: React.FC<IDropdownNavItem> = ({
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside = (event: MouseEvent): void => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
-    ) {
-      setIsDropdownOpen(false);
-    }
-  };
-
+  const handleMouseEnter = (): void => setIsDropdownOpen(true);
+  const handleMouseLeave = (): void => setIsDropdownOpen(false);
   const handleLinkClick = (): void => setIsDropdownOpen(false);
   const toggleDropdown = (): void => setIsDropdownOpen(!isDropdownOpen);
 
-  useEffect((): (() => void) => {
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return (): void => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
   return (
-    <div ref={dropdownRef} className={styles.dropdownnavitem}>
+    <div
+      ref={dropdownRef}
+      className={styles.dropdownnavitem}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div
         className={`${styles.dropdownnavitem__wrapper} ${
           isDropdownOpen ? styles.open : ''
