@@ -33,10 +33,10 @@
     align-items: center;
     position: relative;
     gap: 96px;
-    padding: 0 32px;
+    // padding: 0 32px;
     width: 100%;
     min-height: 512px;
-    &.right {
+    &.left {
       flex-direction: row-reverse;
     }
   }
@@ -45,6 +45,11 @@
     flex-direction: column;
     gap: 32px;
     max-width: 45%;
+    padding-left: 32px;
+    &.left {
+      padding-left: 0;
+      padding-right: 32px;
+    }
     &_wrapper {
       display: flex;
       flex-direction: column;
@@ -208,7 +213,7 @@
   .featuressection {
     &__container {
       flex-direction: column;
-      &.right {
+      &.left {
         flex-direction: column;
       }
     }

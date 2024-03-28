@@ -19,7 +19,7 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
 
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -40,10 +40,14 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
         <div
           key={index}
           className={`${styles.featuressection__container}${
-            index % 2 !== 0 ? ` ${styles.right}` : ''
+            index % 2 !== 0 ? ` ${styles.left}` : ''
           }`}
         >
-          <div className={styles.featuressection__content}>
+          <div
+            className={`${styles.featuressection__content}${
+              index % 2 !== 0 ? ` ${styles.left}` : ''
+            }`}
+          >
             <div className={styles.featuressection__content_wrapper}>
               <div className={styles.featuressection__content_iconwrapper}>
                 <div
