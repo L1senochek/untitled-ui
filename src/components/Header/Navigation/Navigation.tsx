@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './navigation.module.scss';
 import { HOME_PATH, PRICING_PATH } from '@/utils/const/const';
-import DropdownNavItem from '@/components/DropdownNavItem/DropdownNavItem';
+import DropdownNavItem from '@/components/Header/Navigation/DropdownNavItem/DropdownNavItem';
 import { productsArr, resoursesArr } from './navItems/navItems';
 
 const Navigation: React.FC = (): JSX.Element => {
