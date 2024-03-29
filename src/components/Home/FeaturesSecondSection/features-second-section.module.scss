@@ -1,0 +1,24 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.featuressection');
+
+.featuressection {
+  padding: 96px 0;
+  gap: 64px;
+  width: 100%;
+  &__badges {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 32px;
+    &_img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+}

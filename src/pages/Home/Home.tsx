@@ -4,6 +4,7 @@ import { UI_KIT_PATH } from '@/utils/const/const';
 import TopSection from '@/components/Home/TopSection/TopSection';
 import SocialProofSection from '@/components/Home/SocialProofSection/SocialProofSection';
 import FeaturesFirstSection from '@/components/Home/FeaturesFirstSection/FeaturesFirstSection';
+import FeaturesSecondSection from '@/components/Home/FeaturesSecondSection/FeaturesSecondSection';
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -11,7 +12,7 @@ const Home: React.FC = (): JSX.Element => {
       <TopSection />
       <SocialProofSection />
       <FeaturesFirstSection />
-      <Link to={UI_KIT_PATH}>UI KIT PATH</Link>
+      <FeaturesSecondSection />
     </div>
   );
 };

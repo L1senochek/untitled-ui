@@ -1,8 +1,9 @@
+import { useEffect, useRef, useState } from 'react';
 import styles from './features-first-section.module.scss';
 import IconCheckMark from '@/components/Icons/IconCheckMark/IconCheckMark';
 import { containers } from './checkItems/checkItems';
 import ICheckItems from '@/model/components/Home/FeaturesFirstSection/checkItems';
-import { useEffect, useRef, useState } from 'react';
+import ContentSubheading from '../ContentSubheading/ContentSubheading';
 
 const FeaturesFirstSection: React.FC = (): JSX.Element => {
   const featuresSectionRef = useRef<HTMLDivElement>(null);
@@ -26,16 +27,11 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
 
   return (
     <div className={styles.featuressection} ref={featuresSectionRef}>
-      <div className={styles.featuressection__containertitle}>
-        <h2 className={styles.featuressection__subheading}>Features</h2>
-        <h1 className={styles.featuressection__heading}>
-          Analytics that feels like it’s from the future
-        </h1>
-        <p className={styles.featuressection__text}>
-          Powerful, self-serve product and growth analytics to help you convert,
-          engage, and retain more users. Trusted by over 4,000 startups.
-        </p>
-      </div>
+      <ContentSubheading
+        subheading="Features"
+        heading="Analytics that feels like it’s from the future"
+        text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups."
+      />
       {containers.map((container, index) => (
         <div
           key={index}
