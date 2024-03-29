@@ -11,6 +11,7 @@
   max-width: 768px;
   min-width: 320px;
   gap: 20px;
+  padding: 0 20px;
   &__subheading {
     font-size: 16px;
     font-weight: 600;
@@ -28,5 +29,11 @@
     font-weight: 400;
     color: $gray-color-500;
     line-height: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    max-width: max-content;
   }
 }
