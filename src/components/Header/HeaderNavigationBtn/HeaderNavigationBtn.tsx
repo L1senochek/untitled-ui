@@ -19,19 +19,19 @@ const HeaderNavigationBtn: React.FC = (): JSX.Element => {
       {!isAuth ? (
         <>
           <Btn
-            variantBtn="tertiary"
+            variantBtn="secondary"
             onClick={() => navigate(SIGN_IN_PATH)}
             outlined
           >
-            Log In
+            <span>Log In</span>
           </Btn>
-          <Btn variantBtn="tertiary" onClick={() => navigate(SIGN_UP_PATH)}>
-            Sign Up
+          <Btn variantBtn="secondary" onClick={() => navigate(SIGN_UP_PATH)}>
+            <span>Sign Up</span>
           </Btn>
         </>
       ) : (
-        <Btn variantBtn="tertiary" onClick={signOutClick}>
-          Sign Out
+        <Btn variantBtn="secondary" onClick={signOutClick}>
+          <span>Sign Out</span>
         </Btn>
       )}
     </>

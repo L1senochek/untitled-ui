@@ -2,11 +2,14 @@ import styles from './top-section.module.scss';
 import Btn from '@/components/Btn/Btn';
 import IconVideo from '@/components/Icons/IconVideo/IconVideo';
 import ICursorPosition from '@/model/components/Home/topSection/cursorPosition';
+import { useAppSelector } from '@/store/hooks';
+import { selectAuth } from '@/store/slices/authSlice/authSlice';
 import { SIGN_UP_PATH, VIDEO_TUTORIALS_PATH } from '@/utils/const/const';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
 const TopSection: React.FC = (): JSX.Element => {
+  const isAuth = useAppSelector<boolean>(selectAuth);
   const navigate = useNavigate();
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
   const [cursorPosition, setCursorPosition] = useState<ICursorPosition>({
@@ -41,9 +44,11 @@ const TopSection: React.FC = (): JSX.Element => {
             <IconVideo />
             <span>Demo</span>
           </Btn>
-          <Btn variantBtn="primary" onClick={() => navigate(SIGN_UP_PATH)}>
-            Sign up
-          </Btn>
+          {!isAuth ? (
+            <Btn variantBtn="primary" onClick={() => navigate(SIGN_UP_PATH)}>
+              Sign up
+            </Btn>
+          ) : null}
         </div>
       </div>
       <div className={styles.topsection__container}>
