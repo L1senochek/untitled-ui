@@ -1,0 +1,8 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.cta');
+
+.cta {
+  padding-bottom: 96px;
+}

@@ -4,6 +4,7 @@ import SocialProofSection from '@/components/Home/SocialProofSection/SocialProof
 import FeaturesFirstSection from '@/components/Home/FeaturesFirstSection/FeaturesFirstSection';
 import FeaturesSecondSection from '@/components/Home/FeaturesSecondSection/FeaturesSecondSection';
 import MetricsSection from '@/components/Home/MetricsSection/MetricsSection';
+import CTAFirstSection from '@/components/Home/CTAFirstSection/CTAFirstSection';
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ const Home: React.FC = (): JSX.Element => {
       <FeaturesFirstSection />
       <FeaturesSecondSection />
       <MetricsSection />
+      <CTAFirstSection />
     </div>
   );
 };

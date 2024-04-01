@@ -42,7 +42,7 @@ const MetricsSection: React.FC = (): JSX.Element => {
                 className={`${styles.metrics__item}${
                   isVisible ? ` ${styles.slidethrough}` : ''
                 }`}
-                key={`metric${index}`}
+                key={`metricItem${index}`}
               >
                 <h2 className={styles.metrics__number}>{item.number}</h2>
                 <p className={styles.metrics__text}>{item.text}</p>
@@ -50,7 +50,7 @@ const MetricsSection: React.FC = (): JSX.Element => {
               {index !== metricItems.length - 1 && (
                 <hr
                   className={styles.metrics__divider}
-                  key={`metricHR${index}`}
+                  key={`metricDivider${index}HR`}
                 />
               )}
             </>
