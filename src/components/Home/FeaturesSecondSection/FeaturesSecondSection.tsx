@@ -42,7 +42,7 @@ const FeaturesSecondSection: React.FC = (): JSX.Element => {
           (badges: ISocialBadges, index: number): JSX.Element => (
             <Link
               className={styles.featuressection__badges_wrapperitem}
-              key={index}
+              key={`badges${index}`}
               to={badges.link}
               target="_blank"
             >

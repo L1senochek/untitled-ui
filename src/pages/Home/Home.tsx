@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
 import styles from './home.module.scss';
-import { UI_KIT_PATH } from '@/utils/const/const';
 import TopSection from '@/components/Home/TopSection/TopSection';
 import SocialProofSection from '@/components/Home/SocialProofSection/SocialProofSection';
 import FeaturesFirstSection from '@/components/Home/FeaturesFirstSection/FeaturesFirstSection';
 import FeaturesSecondSection from '@/components/Home/FeaturesSecondSection/FeaturesSecondSection';
+import MetricsSection from '@/components/Home/MetricsSection/MetricsSection';
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -13,6 +12,7 @@ const Home: React.FC = (): JSX.Element => {
       <SocialProofSection />
       <FeaturesFirstSection />
       <FeaturesSecondSection />
+      <MetricsSection />
     </div>
   );
 };

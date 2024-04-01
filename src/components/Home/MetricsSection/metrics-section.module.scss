@@ -1,0 +1,76 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.metrics');
+
+.metrics {
+  padding: 96px 0;
+  gap: 64px;
+  width: 100%;
+  &__featuredicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    background-color: $brand-color-100;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: $brand-color-50;
+    border-width: 8px;
+    & > svg > path {
+      stroke: $brand-color-600;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 30px;
+  }
+  &__number {
+    font-size: 72px;
+    font-weight: bold;
+    color: $brand-color-600;
+  }
+  &__text {
+    font-size: 20px;
+    color: $gray-color-900;
+  }
+  &__divider {
+    width: 1px;
+    height: 100%;
+    background-color: $gray-color-200;
+    border-style: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(214, 187, 251, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(214, 187, 251, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(214, 187, 251, 0);
+  }
+}

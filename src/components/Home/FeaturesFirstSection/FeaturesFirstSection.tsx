@@ -34,7 +34,7 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
       />
       {containers.map((container, index) => (
         <div
-          key={index}
+          key={`container${index}`}
           className={`${styles.featuressection__container}${
             index % 2 !== 0 ? ` ${styles.left}` : ''
           }`}
