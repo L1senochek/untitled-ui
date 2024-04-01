@@ -45,6 +45,9 @@
     align-items: center;
     gap: 12px;
     padding: 0 30px;
+    &.slidethrough {
+      animation: slideThrough 1s ease-in-out forwards;
+    }
   }
   &__number {
     font-size: 72px;
@@ -72,5 +75,16 @@
   }
   100% {
     box-shadow: 0 0 0 0 rgba(214, 187, 251, 0);
+  }
+}
+
+@keyframes slideThrough {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
   }
 }

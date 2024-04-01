@@ -3,10 +3,28 @@ import styles from './metrics-section.module.scss';
 import IconZap from '@/components/Icons/IconZap/IconZap';
 import IMetricItems from '@/model/components/Home/metricItems/metricItems';
 import { metricItems } from './metricItems/metricItems';
+import { useEffect, useRef, useState } from 'react';
 
 const MetricsSection: React.FC = (): JSX.Element => {
+  const metricsRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect((): (() => void) => {
+    const handleScroll = (): void => {
+      if (metricsRef.current) {
+        const top = metricsRef.current.getBoundingClientRect().top;
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+        setIsVisible(top < windowHeight && top > 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return (): void => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className={styles.metrics}>
+    <div className={styles.metrics} ref={metricsRef}>
       <ContentSubheading
         subheading={
           <div className={styles.metrics__featuredicon}>
@@ -20,7 +38,12 @@ const MetricsSection: React.FC = (): JSX.Element => {
         {metricItems.map(
           (item: IMetricItems, index: number): JSX.Element => (
             <>
-              <div className={styles.metrics__item} key={`metric${index}`}>
+              <div
+                className={`${styles.metrics__item}${
+                  isVisible ? ` ${styles.slidethrough}` : ''
+                }`}
+                key={`metric${index}`}
+              >
                 <h2 className={styles.metrics__number}>{item.number}</h2>
                 <p className={styles.metrics__text}>{item.text}</p>
               </div>
