@@ -24,7 +24,7 @@ const MetricsSection: React.FC = (): JSX.Element => {
   }, []);
 
   return (
-    <div className={styles.metrics} ref={metricsRef}>
+    <div className={styles.metrics}>
       <ContentSubheading
         subheading={
           <div className={styles.metrics__featuredicon}>
@@ -34,7 +34,7 @@ const MetricsSection: React.FC = (): JSX.Element => {
         heading="Unleash the full power of data"
         text="Everything you need to convert, engage, and retain more users."
       />
-      <div className={styles.metrics__container}>
+      <div className={styles.metrics__container} ref={metricsRef}>
         {metricItems.map(
           (item: IMetricItems, index: number): JSX.Element => (
             <>
