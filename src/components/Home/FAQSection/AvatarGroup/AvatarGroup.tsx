@@ -20,7 +20,7 @@ const AvatarGroup: React.FC = (): JSX.Element => {
             }
             iconTooltip={
               <div className={styles.avatargroup__icon}>
-                <img src={avatar.src} alt={avatar.name} />
+                <img src={avatar.src} alt={avatar.name} loading="lazy" />
               </div>
             }
             dark

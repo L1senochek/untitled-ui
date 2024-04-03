@@ -9,6 +9,7 @@ export const avatars: IAvatars[] = [
         <img
           src="./src/assets/svg/companyLogo/Company=Layers.svg"
           alt="Layers"
+          loading="lazy"
         />
         <span>Layers</span>
       </>
@@ -22,6 +23,7 @@ export const avatars: IAvatars[] = [
         <img
           src="./src/assets/svg/companyLogo/Company=Circooles.svg"
           alt="Circooles"
+          loading="lazy"
         />
         <span>Circooles</span>
       </>
@@ -35,6 +37,7 @@ export const avatars: IAvatars[] = [
         <img
           src="./src/assets/svg/companyLogo/Company=Catalog.svg"
           alt="Catalog"
+          loading="lazy"
         />
         <span>Catalog</span>
       </>
@@ -48,6 +51,7 @@ export const avatars: IAvatars[] = [
         <img
           src="./src/assets/svg/companyLogo/Company=Quotient.svg"
           alt="Quotient"
+          loading="lazy"
         />
         <span>Quotient</span>
       </>
@@ -61,6 +65,7 @@ export const avatars: IAvatars[] = [
         <img
           src="./src/assets/svg/companyLogo/Company=Sisyphus.svg"
           alt="Sisyphus"
+          loading="lazy"
         />
         <span>Sisyphus</span>
       </>
