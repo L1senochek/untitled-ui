@@ -1,4 +1,4 @@
-import IFAQItems from '@/model/components/Home/FAQItems/FAQItems';
+import IFAQItems from '@/model/components/Home/FAQSections/FAQItems';
 import styles from './questions-answers.module.scss';
 import { FAQItems, iconAttribute } from './FAQItems/FAQItems';
 import { useState } from 'react';

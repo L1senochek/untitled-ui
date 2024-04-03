@@ -3,6 +3,9 @@
 .tooltip {
   position: relative;
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     bottom: 140%;
     left: 50%;

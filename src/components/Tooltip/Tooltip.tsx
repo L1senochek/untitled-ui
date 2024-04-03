@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { isValidElement, useState } from 'react';
 import styles from './tooltip.module.scss';
 import IconHelp from '@/components/Icons/IconHelp/IconHelp';
 import ITooltip from '@/model/components/Tooltip/Tooltip';
@@ -6,6 +6,8 @@ import ITooltip from '@/model/components/Tooltip/Tooltip';
 const Tooltip: React.FC<ITooltip> = ({
   content,
   dark = false,
+  triangle = true,
+  iconTooltip,
 }): JSX.Element => {
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
@@ -20,7 +22,9 @@ const Tooltip: React.FC<ITooltip> = ({
             dark ? ` ${styles.dark}` : ''
           }`}
         >
-          <div className={styles.tooltip__content_triangle}></div>
+          {triangle ? (
+            <div className={styles.tooltip__content_triangle}></div>
+          ) : null}
           {content}
         </div>
       )}
@@ -29,7 +33,7 @@ const Tooltip: React.FC<ITooltip> = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <IconHelp />
+        {isValidElement(iconTooltip) ? iconTooltip : <IconHelp />}
       </div>
     </div>
   );

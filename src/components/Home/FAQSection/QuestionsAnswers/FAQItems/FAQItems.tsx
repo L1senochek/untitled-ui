@@ -1,5 +1,5 @@
-import IFAQItems from '@/model/components/Home/FAQItems/FAQItems';
-import IIconAttribute from '@/model/components/Home/FAQItems/IconAttribute';
+import IFAQItems from '@/model/components/Home/FAQSections/FAQItems';
+import IIconAttribute from '@/model/components/Home/FAQSections/IconAttribute';
 
 export const iconAttribute: IIconAttribute = {
   plus: {
