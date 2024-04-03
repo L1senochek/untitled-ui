@@ -48,6 +48,12 @@
     &.slidethrough {
       animation: slideThrough 1s ease-in-out forwards;
     }
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
   }
   &__number {
     font-size: 72px;
@@ -61,6 +67,8 @@
   &__divider {
     width: 1px;
     height: 100%;
+    min-height: 100px;
+    margin: 0;
     background-color: $gray-color-200;
     border-style: none;
   }

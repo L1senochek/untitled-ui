@@ -37,7 +37,10 @@ const MetricsSection: React.FC = (): JSX.Element => {
       <div className={styles.metrics__container} ref={metricsRef}>
         {metricItems.map(
           (item: IMetricItems, index: number): JSX.Element => (
-            <>
+            <div
+              className={styles.metrics__item_wrapper}
+              key={`metricItems${index}`}
+            >
               <div
                 className={`${styles.metrics__item}${
                   isVisible ? ` ${styles.slidethrough}` : ''
@@ -53,7 +56,7 @@ const MetricsSection: React.FC = (): JSX.Element => {
                   key={`metricDivider${index}HR`}
                 />
               )}
-            </>
+            </div>
           )
         )}
       </div>
