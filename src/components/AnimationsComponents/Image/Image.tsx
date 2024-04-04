@@ -7,7 +7,7 @@ const AnimationImage: React.FC<IImageProps> = ({
   alt,
   index,
   scrolling,
-}: IImageProps) => {
+}: IImageProps): JSX.Element => {
   return (
     <div
       className={`${styles.animationimage}${

@@ -6,22 +6,24 @@ import ICheckItemsListProps from '@/model/components/AnimationsComponents/checkI
 const AnimationCheckItemsList: React.FC<ICheckItemsListProps> = ({
   checkItems,
   scrolling,
-}: ICheckItemsListProps) => {
+}: ICheckItemsListProps): JSX.Element => {
   return (
     <div className={styles.itemlist__checkitems}>
-      {checkItems.map((item: ICheckItems, index: number) => (
-        <div
-          className={`${styles.itemlist__item}${
-            scrolling ? ` ${styles.animate}` : ''
-          }`}
-          key={item.text + index}
-        >
-          <div className={styles.itemlist__checkmarkwrapper}>
-            <IconCheckMark />
+      {checkItems.map(
+        (item: ICheckItems, index: number): JSX.Element => (
+          <div
+            className={`${styles.itemlist__item}${
+              scrolling ? ` ${styles.animate}` : ''
+            }`}
+            key={item.text + index}
+          >
+            <div className={styles.itemlist__checkmarkwrapper}>
+              <IconCheckMark />
+            </div>
+            <div className={styles.itemlist__checktext}>{item.text}</div>
           </div>
-          <div className={styles.itemlist__checktext}>{item.text}</div>
-        </div>
-      ))}
+        )
+      )}
     </div>
   );
 };
