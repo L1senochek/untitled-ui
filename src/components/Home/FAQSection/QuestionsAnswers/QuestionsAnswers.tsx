@@ -22,8 +22,8 @@ const QuestionsAnswers: React.FC = (): JSX.Element => {
           <div
             key={`FAQItems${index}`}
             className={styles.faq__item}
-            onClick={() => handleToggleAnswer(index)}
-            onMouseEnter={() => handleMouseEnter(index)}
+            onClick={(): void => handleToggleAnswer(index)}
+            onMouseEnter={(): void => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
             {index !== 0 && <hr className={styles.faq__divider} />}

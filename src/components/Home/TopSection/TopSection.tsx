@@ -38,14 +38,17 @@ const TopSection: React.FC = (): JSX.Element => {
         <div className={styles.topsection__btns}>
           <Btn
             variantBtn="primary"
-            onClick={() => navigate(VIDEO_TUTORIALS_PATH)}
+            onClick={(): void => navigate(VIDEO_TUTORIALS_PATH)}
             outlined
           >
             <IconVideo />
             <span>Demo</span>
           </Btn>
           {!isAuth ? (
-            <Btn variantBtn="primary" onClick={() => navigate(SIGN_UP_PATH)}>
+            <Btn
+              variantBtn="primary"
+              onClick={(): void => navigate(SIGN_UP_PATH)}
+            >
               Sign up
             </Btn>
           ) : null}
@@ -58,8 +61,8 @@ const TopSection: React.FC = (): JSX.Element => {
           }`}
           alt="Macbook Pro 16"
           src="./src/assets/img/MacbookPro16.png"
-          onMouseEnter={() => setIsZoomed(true)}
-          onMouseLeave={() => setIsZoomed(false)}
+          onMouseEnter={(): void => setIsZoomed(true)}
+          onMouseLeave={(): void => setIsZoomed(false)}
           onMouseMove={handleMouseMove}
         />
         {isZoomed && (

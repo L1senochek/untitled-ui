@@ -38,7 +38,7 @@ const SocialProofSection: React.FC = (): JSX.Element => {
         className={`${styles.socialproof__text} ${
           isHoverText ? styles.hovered : ''
         }`}
-        onMouseEnter={() => setIsHoverText(!isHoverText)}
+        onMouseEnter={(): void => setIsHoverText(!isHoverText)}
       >
         {!isHoverText
           ? 'Join 4,000+ companies already growing'
