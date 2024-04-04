@@ -15,6 +15,10 @@
     &.hovered {
       margin-right: 16px;
     }
+    & > div > div:not(.avatargroup__tooltip),
+    & > div > div:first-child:not(.avatargroup__tooltip) {
+      animation: hoverAnimationTooltip 1.5s ease-in-out;
+    }
   }
   &__tooltip {
     display: flex;
@@ -61,5 +65,29 @@
   }
   to {
     margin-right: 16px;
+  }
+}
+
+@keyframes hoverAnimationTooltip {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-6deg);
+  }
+  16% {
+    transform: translateX(-50%) translateY(0) rotate(-0deg);
+  }
+  32% {
+    transform: translateX(-50%) translateY(0) rotate(6deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  64% {
+    transform: translateX(-50%) translateY(0) rotate(-6deg);
+  }
+  80% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
   }
 }
