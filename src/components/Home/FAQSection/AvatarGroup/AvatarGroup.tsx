@@ -1,12 +1,24 @@
 import Tooltip from '@/components/Tooltip/Tooltip';
 import styles from './avatar-group.module.scss';
 import { avatars } from './avatars/avatars';
+import { useState } from 'react';
 
 const AvatarGroup: React.FC = (): JSX.Element => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <div className={styles.avatargroup}>
       {avatars.map((avatar, index) => (
-        <div className={styles.avatargroup__item} key={`avatarGroup${index}`}>
+        <div
+          className={`${styles.avatargroup__item} ${
+            hoveredIndex === index && index !== avatars.length - 1
+              ? styles.hovered
+              : ''
+          }`}
+          key={`avatarGroup${index}`}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
           <Tooltip
             content={
               <div className={styles.avatargroup__tooltip}>

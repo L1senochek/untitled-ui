@@ -3,14 +3,18 @@
 .avatargroup {
   display: flex;
   align-items: center;
+  min-width: 250px;
   &__item {
     background-color: #fff;
     border: 2px solid #fff;
     border-radius: 50%;
     margin-top: 0;
-    margin-right: -1rem;
-    transition: margin 0.5s;
+    margin-right: -16px;
     position: relative;
+    transition: margin 0.5s;
+    &.hovered {
+      margin-right: 16px;
+    }
   }
   &__tooltip {
     display: flex;
@@ -48,5 +52,14 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+
+@keyframes moveRight {
+  from {
+    margin-right: -16px;
+  }
+  to {
+    margin-right: 16px;
   }
 }
