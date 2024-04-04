@@ -1,0 +1,42 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.cta');
+
+.cta {
+  position: relative;
+  padding: 96px 0;
+  gap: 96px;
+  width: 100%;
+  min-height: 512px;
+  &__leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    gap: 40px;
+    left: 32px;
+    transition: left 1s ease;
+  }
+  &__heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: $brand-color-900;
+    max-width: 60%;
+    text-align: left;
+  }
+  &__supporttext {
+    font-size: 20px;
+    color: $brand-color-700;
+  }
+  &__rightside {
+    & > div > img {
+      top: 96px;
+    }
+  }
+  &__btnwrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}

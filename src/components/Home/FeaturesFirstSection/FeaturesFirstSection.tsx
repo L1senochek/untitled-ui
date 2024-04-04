@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './features-first-section.module.scss';
 import { containers } from './checkItems/checkItems';
 import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
-import CheckItemsList from '@/components/AnimationsComponents/CheckItemsList/CheckItemsList';
+import AnimationCheckItemsList from '@/components/AnimationsComponents/CheckItemsList/CheckItemsList';
 import AnimationImage from '@/components/AnimationsComponents/Image/Image';
 import PulseIcon from '@/components/AnimationsComponents/PulseIcon/PulseIcon';
+import IContainers from '@/model/components/Home/FeaturesFirstSection/containers';
 
 const FeaturesFirstSection: React.FC = (): JSX.Element => {
   const featuresSectionRef = useRef<HTMLDivElement>(null);
@@ -33,42 +34,44 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
         heading="Analytics that feels like it’s from the future"
         text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups."
       />
-      {containers.map((container, index) => (
-        <div
-          key={`container${index}`}
-          className={`${styles.featuressection__container}${
-            index % 2 !== 0 ? ` ${styles.left}` : ''
-          }`}
-        >
+      {containers.map(
+        (container: IContainers, index: number): JSX.Element => (
           <div
-            className={`${styles.featuressection__content}${
+            key={`container${index}`}
+            className={`${styles.featuressection__container}${
               index % 2 !== 0 ? ` ${styles.left}` : ''
             }`}
           >
-            <div className={styles.featuressection__content_wrapper}>
-              <PulseIcon icon={container.content.icon} />
-              <div className={styles.featuressection__content_text}>
-                <h2 className={styles.featuressection__content_heading}>
-                  {container.content.heading}
-                </h2>
-                <p className={styles.featuressection__content_supportingtext}>
-                  {container.content.subheading}
-                </p>
+            <div
+              className={`${styles.featuressection__content}${
+                index % 2 !== 0 ? ` ${styles.left}` : ''
+              }`}
+            >
+              <div className={styles.featuressection__content_wrapper}>
+                <PulseIcon icon={container.content.icon} />
+                <div className={styles.featuressection__content_text}>
+                  <h2 className={styles.featuressection__content_heading}>
+                    {container.content.heading}
+                  </h2>
+                  <p className={styles.featuressection__content_supportingtext}>
+                    {container.content.subheading}
+                  </p>
+                </div>
               </div>
+              <AnimationCheckItemsList
+                checkItems={container.content.checkItems}
+                scrolling={scrolling}
+              />
             </div>
-            <CheckItemsList
-              checkItems={container.content.checkItems}
+            <AnimationImage
+              src={container.imgMockup}
+              alt={container.alt}
+              index={index}
               scrolling={scrolling}
             />
           </div>
-          <AnimationImage
-            src={container.imgMockup}
-            alt={container.alt}
-            index={index}
-            scrolling={scrolling}
-          />
-        </div>
-      ))}
+        )
+      )}
     </div>
   );
 };

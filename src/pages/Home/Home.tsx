@@ -6,6 +6,7 @@ import FeaturesSecondSection from '@/components/Home/FeaturesSecondSection/Featu
 import MetricsSection from '@/components/Home/MetricsSection/MetricsSection';
 import CTAFirstSection from '@/components/Home/CTAFirstSection/CTAFirstSection';
 import FAQSection from '@/components/Home/FAQSection/FAQSection';
+import CTALastSection from '@/components/Home/CTALastSection/CTALastSection';
 
 const Home: React.FC = (): JSX.Element => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = (): JSX.Element => {
       <MetricsSection />
       <CTAFirstSection />
       <FAQSection />
+      <CTALastSection />
     </div>
   );
 };
