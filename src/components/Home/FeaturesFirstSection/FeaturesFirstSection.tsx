@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './features-first-section.module.scss';
-import IconCheckMark from '@/components/Icons/IconCheckMark/IconCheckMark';
 import { containers } from './checkItems/checkItems';
-import ICheckItems from '@/model/components/Home/FeaturesFirstSection/checkItems';
-import ContentSubheading from '../ContentSubheading/ContentSubheading';
+import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
+import CheckItemsList from '@/components/AnimationsComponents/CheckItemsList/CheckItemsList';
+import AnimationImage from '@/components/AnimationsComponents/Image/Image';
+import PulseIcon from '@/components/AnimationsComponents/PulseIcon/PulseIcon';
 
 const FeaturesFirstSection: React.FC = (): JSX.Element => {
   const featuresSectionRef = useRef<HTMLDivElement>(null);
@@ -45,59 +46,27 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
             }`}
           >
             <div className={styles.featuressection__content_wrapper}>
-              <div className={styles.featuressection__content_iconwrapper}>
-                <div
-                  className={styles.featuressection__content_iconwrapper_pulse}
-                >
-                  {container.content.icon}
-                </div>
-              </div>
+              <PulseIcon icon={container.content.icon} />
               <div className={styles.featuressection__content_text}>
-                <h1 className={styles.featuressection__content_heading}>
+                <h2 className={styles.featuressection__content_heading}>
                   {container.content.heading}
-                </h1>
+                </h2>
                 <p className={styles.featuressection__content_supportingtext}>
                   {container.content.subheading}
                 </p>
               </div>
             </div>
-            <div className={styles.featuressection__content_checkitems}>
-              {container.content.checkItems.map(
-                (item: ICheckItems, index: number) => (
-                  <div
-                    className={`${styles.featuressection__content_item}${
-                      scrolling ? ` ${styles.animate}` : ''
-                    }`}
-                    key={item.text + index}
-                  >
-                    <div
-                      className={
-                        styles.featuressection__content_checkmarkwrapper
-                      }
-                    >
-                      <IconCheckMark />
-                    </div>
-                    <div className={styles.featuressection__content_checktext}>
-                      {item.text}
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-          <div
-            className={`${styles.featuressection__contentimg}${
-              index % 2 === 0 ? ` ${styles.right}` : ` ${styles.left}`
-            }`}
-          >
-            <img
-              className={`${
-                index % 2 === 0 ? ` ${styles.right}` : ` ${styles.left}`
-              }${scrolling ? ` ${styles.scrolling}` : ''}`}
-              src={container.imgMockup}
-              alt={container.alt}
+            <CheckItemsList
+              checkItems={container.content.checkItems}
+              scrolling={scrolling}
             />
           </div>
+          <AnimationImage
+            src={container.imgMockup}
+            alt={container.alt}
+            index={index}
+            scrolling={scrolling}
+          />
         </div>
       ))}
     </div>

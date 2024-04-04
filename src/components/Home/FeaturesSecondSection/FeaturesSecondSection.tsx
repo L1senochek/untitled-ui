@@ -1,5 +1,5 @@
 import Btn from '@/components/Btn/Btn';
-import ContentSubheading from '@/components/Home/ContentSubheading/ContentSubheading';
+import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
 import styles from './features-second-section.module.scss';
 import { socialBadges } from './socialBadges/socialBadges';
 import ISocialBadges from '@/model/components/Home/socialBadges/socialBadges';

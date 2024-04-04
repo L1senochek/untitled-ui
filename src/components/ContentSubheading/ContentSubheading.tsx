@@ -1,10 +1,5 @@
+import IContentSubheadingProps from '@/model/components/contentSubheading/contentSubheading';
 import styles from './content-subheading.module.scss';
-
-interface IContentSubheadingProps {
-  subheading: string | React.ReactNode;
-  heading: string;
-  text: string;
-}
 
 const ContentSubheading: React.FC<IContentSubheadingProps> = ({
   subheading,
@@ -13,7 +8,7 @@ const ContentSubheading: React.FC<IContentSubheadingProps> = ({
 }): JSX.Element => {
   return (
     <div className={styles.content}>
-      {typeof subheading === 'string' ? (
+      {!subheading ? null : typeof subheading === 'string' ? (
         <h2 className={styles.content__subheading}>{subheading}</h2>
       ) : (
         <div>{subheading}</div>

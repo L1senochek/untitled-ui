@@ -34,38 +34,9 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;
-    }
-    &_iconwrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      background-color: $brand-color-100;
-      border-radius: 50%;
-      border-color: $brand-color-50;
-      border-width: 8px;
-      border-style: solid;
-      &_pulse {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+      & > div:nth-child(1) {
         width: 48px;
         height: 48px;
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          right: 0px;
-          bottom: 0px;
-          border-radius: 50%;
-          animation: pulse 1.5s infinite;
-        }
-      }
-      & > svg > path {
-        stroke: $brand-color-600;
       }
     }
     &_text {
@@ -90,78 +61,6 @@
       line-height: 28px;
       color: $gray-color-500;
     }
-    &_checkitems {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-      & div.animate:nth-child(1) {
-        animation: slideIn 1s forwards;
-      }
-      & div.animate:nth-child(2) {
-        animation: slideIn 1s forwards 0.5s;
-      }
-      & div.animate:nth-child(3) {
-        animation: slideIn 1s forwards 1s;
-      }
-    }
-    &_item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      opacity: 0;
-      transform: translateY(50%);
-      &.animate {
-        animation-delay: 0.5s;
-        animation: slideIn 1s forwards;
-      }
-    }
-    &_checkmarkwrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      margin-left: 16px;
-      background-color: $brand-color-100;
-      border-radius: 14px;
-      border-style: solid;
-      & > svg > path {
-        stroke: $brand-color-600;
-      }
-    }
-    &_checktext {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 28px;
-      color: $gray-color-500;
-      text-wrap: nowrap;
-    }
-  }
-  &__contentimg {
-    width: 100%;
-    height: 100%;
-    & > img {
-      box-shadow: 0px 32px 64px -12px #10182824;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      border-radius: 10px;
-    }
-    & > img.left {
-      left: -4%;
-      transition: left 1s;
-      &.scrolling {
-        left: -10%;
-      }
-    }
-    & > img.right {
-      right: -4%;
-      transition: right 1s;
-      &.scrolling {
-        right: -10%;
-      }
-    }
   }
 }
 
@@ -177,28 +76,12 @@
   }
 }
 
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 1200px) {
   .featuressection {
     &__container {
       flex-direction: column;
       &.left {
         flex-direction: column;
-      }
-    }
-    &__contentimg {
-      & > img {
-        position: static;
       }
     }
   }

@@ -36,7 +36,7 @@
       transform: translateX(0);
       transition:
         opacity 1s ease,
-        transform 2s ease;
+        transform 1s ease;
       &:nth-child(even) {
         transform: translateX(100vw);
       }

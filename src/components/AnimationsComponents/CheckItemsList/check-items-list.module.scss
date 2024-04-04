@@ -1,0 +1,62 @@
+@import '@/styles/variables.scss';
+
+.itemlist {
+  &__checkitems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    & div.animate:nth-child(1) {
+      animation: slideIn 1s forwards;
+    }
+    & div.animate:nth-child(2) {
+      animation: slideIn 1s forwards 0.5s;
+    }
+    & div.animate:nth-child(3) {
+      animation: slideIn 1s forwards 1s;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(50%);
+    &.animate {
+      animation-delay: 0.5s;
+      animation: slideIn 1s forwards;
+    }
+  }
+  &__checkmarkwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-left: 16px;
+    background-color: $brand-color-100;
+    border-radius: 14px;
+    border-style: solid;
+    & > svg > path {
+      stroke: $brand-color-600;
+    }
+  }
+  &__checktext {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $gray-color-500;
+    text-wrap: nowrap;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

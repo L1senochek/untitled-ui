@@ -1,9 +1,10 @@
-import ContentSubheading from '@/components/Home/ContentSubheading/ContentSubheading';
+import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
 import styles from './metrics-section.module.scss';
 import IconZap from '@/components/Icons/IconZap/IconZap';
 import IMetricItems from '@/model/components/Home/metricItems/metricItems';
 import { metricItems } from './metricItems/metricItems';
 import { useEffect, useRef, useState } from 'react';
+import PulseIcon from '@/components/AnimationsComponents/PulseIcon/PulseIcon';
 
 const MetricsSection: React.FC = (): JSX.Element => {
   const metricsRef = useRef<HTMLDivElement>(null);
@@ -26,11 +27,7 @@ const MetricsSection: React.FC = (): JSX.Element => {
   return (
     <div className={styles.metrics}>
       <ContentSubheading
-        subheading={
-          <div className={styles.metrics__featuredicon}>
-            <IconZap />
-          </div>
-        }
+        subheading={<PulseIcon icon={<IconZap />} />}
         heading="Unleash the full power of data"
         text="Everything you need to convert, engage, and retain more users."
       />
