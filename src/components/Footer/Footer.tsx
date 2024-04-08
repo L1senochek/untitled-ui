@@ -17,8 +17,9 @@ const Footer: React.FC = (): JSX.Element => {
       }
     };
     handleResize();
+
     window.addEventListener('resize', handleResize);
-    console.log(screenWidth, footerWidth);
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
