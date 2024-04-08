@@ -1,13 +1,15 @@
 import IFAQItems from '@/model/components/Home/FAQSections/FAQItems';
 import IIconAttribute from '@/model/components/Home/FAQSections/IconAttribute';
+import iconPlus from '@/assets/svg/badges/plusCircle.svg';
+import iconMinus from '@/assets/svg/badges/minusCircle.svg';
 
 export const iconAttribute: IIconAttribute = {
   plus: {
-    src: './src/assets/svg/badges/minusCircle.svg',
+    src: iconPlus,
     name: 'minus circle',
   },
   minus: {
-    src: './src/assets/svg/badges/plusCircle.svg',
+    src: iconMinus,
     name: 'plus circle',
   },
 };

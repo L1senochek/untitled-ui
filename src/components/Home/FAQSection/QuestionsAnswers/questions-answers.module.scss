@@ -57,8 +57,9 @@
       height: 24px;
       background-size: cover;
       transition: transform 1s ease;
+      transform: rotate(-90deg);
       &.minus {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
       }
     }
   }

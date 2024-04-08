@@ -1,72 +1,62 @@
 import IAvatars from '@/model/components/Home/FAQSections/avatars';
+import imgOrlandoDiggs from '@/assets/img/avatars/OrlandoDiggs.png';
+import imgCompanyLayers from '@/assets/svg/companyLogo/Company=Layers.svg';
+import imgKellyMyer from '@/assets/img/avatars/KellyMyer.png';
+import imgCompanyCircooles from '@/assets/svg/companyLogo/Company=Circooles.svg';
+import imgJoshKnight from '@/assets/img/avatars/JoshKnight.png';
+import imgCompanyCatalog from '@/assets/svg/companyLogo/Company=Catalog.svg';
+import imgEvelynHarrison from '@/assets/img/avatars/EvelynHarrison.png';
+import imgCompanyQuotient from '@/assets/svg/companyLogo/Company=Quotient.svg';
+import imgDrewCano from '@/assets/img/avatars/DrewCano.png';
+import imgCompanySisyphus from '@/assets/svg/companyLogo/Company=Sisyphus.svg';
 
 export const avatars: IAvatars[] = [
   {
-    src: './src/assets/img/avatars/OrlandoDiggs.png',
+    src: imgOrlandoDiggs,
     name: 'Orlando Diggs',
     company: (
       <>
-        <img
-          src="./src/assets/svg/companyLogo/Company=Layers.svg"
-          alt="Layers"
-          loading="lazy"
-        />
+        <img src={imgCompanyLayers} alt="Layers" loading="lazy" />
         <span>Layers</span>
       </>
     ),
   },
   {
-    src: './src/assets/img/avatars/KellyMyer.png',
+    src: imgKellyMyer,
     name: 'Kelly Myer',
     company: (
       <>
-        <img
-          src="./src/assets/svg/companyLogo/Company=Circooles.svg"
-          alt="Circooles"
-          loading="lazy"
-        />
+        <img src={imgCompanyCircooles} alt="Circooles" loading="lazy" />
         <span>Circooles</span>
       </>
     ),
   },
   {
-    src: './src/assets/img/avatars/JoshKnight.png',
+    src: imgJoshKnight,
     name: 'Josh Knight',
     company: (
       <>
-        <img
-          src="./src/assets/svg/companyLogo/Company=Catalog.svg"
-          alt="Catalog"
-          loading="lazy"
-        />
+        <img src={imgCompanyCatalog} alt="Catalog" loading="lazy" />
         <span>Catalog</span>
       </>
     ),
   },
   {
-    src: './src/assets/img/avatars/EvelynHarrison.png',
+    src: imgEvelynHarrison,
     name: 'Evelyn Harrison',
     company: (
       <>
-        <img
-          src="./src/assets/svg/companyLogo/Company=Quotient.svg"
-          alt="Quotient"
-          loading="lazy"
-        />
+        <img src={imgCompanyQuotient} alt="Quotient" loading="lazy" />
         <span>Quotient</span>
       </>
     ),
   },
   {
-    src: './src/assets/img/avatars/DrewCano.png',
+    src: imgDrewCano,
     name: 'Drew Cano',
     company: (
       <>
-        <img
-          src="./src/assets/svg/companyLogo/Company=Sisyphus.svg"
-          alt="Sisyphus"
-          loading="lazy"
-        />
+        <img src={imgCompanySisyphus} alt="Sisyphus" loading="lazy" />
         <span>Sisyphus</span>
       </>
     ),

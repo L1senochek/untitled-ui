@@ -16,7 +16,7 @@ import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 import Home from '@/pages/Home/Home';
 import SignUp from '@/pages/SignUp/SignUp';
 import SignIn from '@/pages/SignIn/SignIn';
-import NotFound from '../NotFound/NotFound';
+import NotFound from '@/components/NotFound/NotFound';
 import UIKitLayout from '@/layouts/UIKitLayout/UIKitLayout';
 import UIKit from '@/pages/UIKit/UIKit';
 

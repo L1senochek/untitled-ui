@@ -3,6 +3,12 @@ import IconEmail from '@/components/Icons/IconEmail/IconEmail';
 import IconZap from '@/components/Icons/IconZap/IconZap';
 import ICheckItems from '@/model/components/Home/FeaturesFirstSection/checkItems';
 import IContainers from '@/model/components/Home/FeaturesFirstSection/containers';
+import imgMockupScreenWelcomeBack from '@/assets/img/ScreenMockupWelcomeBack.png';
+import imgScreenWelcomeBack from '@/assets/img/ScreenWelcomeBack.png';
+import imgMockupScreenCustomers from '@/assets/img/ScreenMockupCustomers.png';
+import imgScreenCustomers from '@/assets/img/ScreenCustomers.png';
+import imgMockupScreenOrganizationOverview from '@/assets/img/ScreenMockupOrganizationOverview.png';
+import imgScreenOrganizationOverview from '@/assets/img/ScreenOrganizationOverview.png';
 
 export const checkItemsShareTeamInboxes: ICheckItems[] = [
   { text: 'Leverage automation to move fast' },
@@ -31,8 +37,8 @@ export const containers: IContainers[] = [
         'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',
       checkItems: checkItemsShareTeamInboxes,
     },
-    imgMockup: './src/assets/img/ScreenMockupWelcomeBack.png',
-    img: './src/assets/img/ScreenWelcomeBack.png',
+    imgMockup: imgMockupScreenWelcomeBack,
+    img: imgScreenWelcomeBack,
     alt: 'ScreenWelcomeBack',
   },
   {
@@ -43,8 +49,8 @@ export const containers: IContainers[] = [
         'An all-in-one customer service platform that helps you balance everything your customers need to be happy.',
       checkItems: checkItemsDeliverInstantAnswers,
     },
-    imgMockup: './src/assets/img/ScreenMockupCustomers.png',
-    img: './src/assets/img/ScreenCustomers.png',
+    imgMockup: imgMockupScreenCustomers,
+    img: imgScreenCustomers,
     alt: 'ScreenCustomers',
   },
   {
@@ -55,8 +61,8 @@ export const containers: IContainers[] = [
         'Measure what matters with Untitled`s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.',
       checkItems: checkItemsManageTeam,
     },
-    imgMockup: './src/assets/img/ScreenMockupOrganizationOverview.png',
-    img: './src/assets/img/ScreenOrganizationOverview.png',
+    imgMockup: imgMockupScreenOrganizationOverview,
+    img: imgScreenOrganizationOverview,
     alt: 'ScreenOrganizationOverview',
   },
 ];

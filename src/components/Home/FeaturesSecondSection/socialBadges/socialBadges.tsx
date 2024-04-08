@@ -1,83 +1,99 @@
 import ISocialBadges from '@/model/components/Home/socialBadges/socialBadges';
+import imgNotion from '@/assets/svg/social/notion.svg';
+import imgSlack from '@/assets/svg/social/slack.svg';
+import imgGoogleDrive from '@/assets/svg/social/googleDrive.svg';
+import imgIntercom from '@/assets/svg/social/intercom.svg';
+import imgJira from '@/assets/svg/social/jira.svg';
+import imgDropbox from '@/assets/svg/social/dropbox.svg';
+import imgStripe from '@/assets/svg/social/stripe.svg';
+import imgZapier from '@/assets/svg/social/zapier.svg';
+import imgFigma from '@/assets/svg/social/figma.svg';
+import imgConfluence from '@/assets/svg/social/confluence.svg';
+import imgMailchimp from '@/assets/svg/social/mailchimp.svg';
+import imgZendesk from '@/assets/svg/social/zendesk.svg';
+import imgGoogleCalendar from '@/assets/svg/social/googleCalendar.svg';
+import imgWhatsApp from '@/assets/svg/social/whatsapp.svg';
+import imgDiscord from '@/assets/svg/social/discord.svg';
+import imgBitbucket from '@/assets/svg/social/bitbucket.svg';
 
 export const socialBadges: ISocialBadges[] = [
   {
-    src: './src/assets/svg/social/notion.svg',
+    src: imgNotion,
     name: 'Notion',
     link: 'https://www.notion.so/',
   },
   {
-    src: './src/assets/svg/social/slack.svg',
+    src: imgSlack,
     name: 'Slack',
     link: 'https://slack.com/',
   },
   {
-    src: './src/assets/svg/social/googleDrive.svg',
+    src: imgGoogleDrive,
     name: 'Google Drive',
     link: 'https://drive.google.com/drive/',
   },
   {
-    src: './src/assets/svg/social/intercom.svg',
+    src: imgIntercom,
     name: 'Intercom',
     link: 'https://www.intercom.com/',
   },
   {
-    src: './src/assets/svg/social/jira.svg',
+    src: imgJira,
     name: 'Jira',
     link: 'https://www.atlassian.com/software/jira',
   },
   {
-    src: './src/assets/svg/social/dropbox.svg',
+    src: imgDropbox,
     name: 'Dropbox',
     link: 'https://www.dropbox.com/',
   },
   {
-    src: './src/assets/svg/social/stripe.svg',
+    src: imgStripe,
     name: 'Stripe',
     link: 'https://stripe.com/',
   },
   {
-    src: './src/assets/svg/social/zapier.svg',
+    src: imgZapier,
     name: 'Zapier',
     link: 'https://zapier.com/',
   },
   {
-    src: './src/assets/svg/social/figma.svg',
+    src: imgFigma,
     name: 'Figma',
     link: 'https://www.figma.com/',
   },
   {
-    src: './src/assets/svg/social/confluence.svg',
+    src: imgConfluence,
     name: 'Confluence',
     link: 'https://www.atlassian.com/software/confluence',
   },
   {
-    src: './src/assets/svg/social/mailchimp.svg',
+    src: imgMailchimp,
     name: 'Mailchimp',
     link: 'https://mailchimp.com/',
   },
   {
-    src: './src/assets/svg/social/zendesk.svg',
+    src: imgZendesk,
     name: 'Zendesk',
     link: 'https://www.zendesk.com/',
   },
   {
-    src: './src/assets/svg/social/googleCalendar.svg',
+    src: imgGoogleCalendar,
     name: 'Google Calendar',
     link: 'https://calendar.google.com/',
   },
   {
-    src: './src/assets/svg/social/whatsapp.svg',
+    src: imgWhatsApp,
     name: 'WhatsApp',
     link: 'https://www.whatsapp.com/',
   },
   {
-    src: './src/assets/svg/social/discord.svg',
+    src: imgDiscord,
     name: 'Discord',
     link: 'https://discord.com/',
   },
   {
-    src: './src/assets/svg/social/bitbucket.svg',
+    src: imgBitbucket,
     name: 'Bitbucket',
     link: 'https://bitbucket.org/',
   },

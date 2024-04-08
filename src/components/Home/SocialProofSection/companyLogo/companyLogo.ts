@@ -1,28 +1,34 @@
 import ICompanyLogo from '@/model/components/Home/companyLogo/companyLogo';
+import imgCompanyLayers from '@/assets/svg/companyLogo/Company=Layers.svg';
+import imgCompanySisyphus from '@/assets/svg/companyLogo/Company=Sisyphus.svg';
+import imgCompanyCircooles from '@/assets/svg/companyLogo/Company=Circooles.svg';
+import imgCompanyCatalog from '@/assets/svg/companyLogo/Company=Catalog.svg';
+import imgCompanyQuotient from '@/assets/svg/companyLogo/Company=Quotient.svg';
+import imgCompanyHourglass from '@/assets/svg/companyLogo/Company=Hourglass.svg';
 
 export const companyLogo: ICompanyLogo[] = [
   {
-    img: './src/assets/svg/companyLogo/Company=Layers.svg',
+    img: imgCompanyLayers,
     name: 'Layers',
   },
   {
-    img: './src/assets/svg/companyLogo/Company=Sisyphus.svg',
+    img: imgCompanySisyphus,
     name: 'Sisyphus',
   },
   {
-    img: './src/assets/svg/companyLogo/Company=Circooles.svg',
+    img: imgCompanyCircooles,
     name: 'Circooles',
   },
   {
-    img: './src/assets/svg/companyLogo/Company=Catalog.svg',
+    img: imgCompanyCatalog,
     name: 'Catalog',
   },
   {
-    img: './src/assets/svg/companyLogo/Company=Quotient.svg',
+    img: imgCompanyQuotient,
     name: 'Quotient',
   },
   {
-    img: './src/assets/svg/companyLogo/Company=Hourglass.svg',
+    img: imgCompanyHourglass,
     name: 'Hourglass',
   },
 ];

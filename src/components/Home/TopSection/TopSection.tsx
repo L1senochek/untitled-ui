@@ -7,6 +7,7 @@ import { selectAuth } from '@/store/slices/authSlice/authSlice';
 import { SIGN_UP_PATH, VIDEO_TUTORIALS_PATH } from '@/utils/const/const';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import imgMacbookPro16 from '@/assets/img/MacbookPro16.png';
 
 const TopSection: React.FC = (): JSX.Element => {
   const isAuth = useAppSelector<boolean>(selectAuth);
@@ -60,7 +61,7 @@ const TopSection: React.FC = (): JSX.Element => {
             isZoomed ? ` ${styles.zoomed}` : ''
           }`}
           alt="Macbook Pro 16"
-          src="./src/assets/img/MacbookPro16.png"
+          src={imgMacbookPro16}
           onMouseEnter={(): void => setIsZoomed(true)}
           onMouseLeave={(): void => setIsZoomed(false)}
           onMouseMove={handleMouseMove}
