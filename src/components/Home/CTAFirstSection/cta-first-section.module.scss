@@ -54,3 +54,35 @@
     transition: right 1s ease;
   }
 }
+
+@media (max-width: 1000px) {
+  .cta {
+    &__container {
+      &.visible {
+        & > .cta__rightside {
+          top: auto;
+          bottom: 9%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cta {
+    &__container {
+      min-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .cta {
+    &__leftside {
+      gap: 30px;
+    }
+    &__container {
+      min-height: 400px;
+    }
+  }
+}

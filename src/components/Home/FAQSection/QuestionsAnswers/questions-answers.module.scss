@@ -63,3 +63,15 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .faq {
+    &__content {
+      &_answer {
+        &.showanswer {
+          max-height: 200px;
+        }
+      }
+    }
+  }
+}

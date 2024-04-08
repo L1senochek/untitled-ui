@@ -11,6 +11,7 @@
   &__background {
     position: absolute;
     width: 100vw;
+    width: calc(100vw - 0%);
     height: 100%;
     bottom: 0;
     left: 0;
@@ -25,6 +26,7 @@
 @media (max-width: 875px) {
   .footer {
     padding: 30px;
+    min-height: auto;
     &__container {
       &.actions {
         flex-direction: column;

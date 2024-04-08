@@ -82,9 +82,41 @@
   .featuressection {
     &__container {
       flex-direction: column;
+      min-height: 1000px;
       &.left {
         flex-direction: column;
       }
+    }
+    &__content {
+      max-width: 90%;
+      &.left {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .featuressection {
+    &__content {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .featuressection {
+    &__container {
+      min-height: 830px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .featuressection {
+    &__container {
+      min-height: 900px;
     }
   }
 }

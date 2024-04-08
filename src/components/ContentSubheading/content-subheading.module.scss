@@ -37,3 +37,12 @@
     max-width: max-content;
   }
 }
+
+@media (max-width: 400px) {
+  .content {
+    padding: 0;
+    &__heading {
+      font-size: 30px;
+    }
+  }
+}

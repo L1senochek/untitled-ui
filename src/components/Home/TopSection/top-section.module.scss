@@ -58,3 +58,28 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .topsection {
+    &__img {
+      max-width: 76.8vw;
+      max-height: 44.85vw;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .topsection {
+    &__heading {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .topsection {
+    &__heading {
+      font-size: 40px;
+    }
+  }
+}
