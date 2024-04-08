@@ -27,6 +27,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
+    overflow-x: hidden;
   }
   &__companylogo {
     display: flex;

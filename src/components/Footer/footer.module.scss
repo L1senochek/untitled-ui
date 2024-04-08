@@ -7,15 +7,13 @@
   gap: 40px;
   background-color: $brand-color-800;
   position: relative;
-  &::before {
-    content: '';
+  min-height: 340px;
+  &__background {
     position: absolute;
-    overflow: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    top: 0;
-    left: -100vw;
-    width: 1000vw;
+    bottom: 0;
+    left: 0;
     background-color: $brand-color-800;
     z-index: -1;
   }

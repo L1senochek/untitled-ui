@@ -12,11 +12,12 @@
     justify-items: center;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 32px;
-    position: relative;
     opacity: 0;
+    overflow-x: hidden;
     &.visible {
       opacity: 1;
       & > a {

@@ -13,8 +13,10 @@
     align-items: center;
     position: relative;
     gap: 96px;
-    width: 100%;
     min-height: 512px;
+    width: 100%;
+    overflow-x: hidden;
+    left: 0;
     &.left {
       flex-direction: row-reverse;
     }

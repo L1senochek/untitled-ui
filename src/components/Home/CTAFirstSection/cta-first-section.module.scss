@@ -11,11 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
     min-width: 98%;
     min-height: 212px;
     border-radius: 16px;
     background-color: $brand-color-50;
-    position: relative;
+    overflow-x: hidden;
     &.visible {
       & > .cta__leftside {
         left: 5vw;

@@ -10,6 +10,26 @@ import IContainers from '@/model/components/Home/FeaturesFirstSection/containers
 const FeaturesFirstSection: React.FC = (): JSX.Element => {
   const featuresSectionRef = useRef<HTMLDivElement>(null);
   const [scrolling, setScrolling] = useState<boolean>(false);
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+  const [containerWidth, setContainerWidth] = useState<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect((): (() => void) => {
+    const handleResize = (): void => {
+      setScreenWidth(window.innerWidth);
+      if (containerRef.current) {
+        const width = containerRef.current.offsetWidth;
+        setContainerWidth(width);
+      }
+    };
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [containerWidth, screenWidth]);
 
   useEffect((): (() => void) => {
     const handleScroll = (): void => {
@@ -41,6 +61,12 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
             className={`${styles.featuressection__container}${
               index % 2 !== 0 ? ` ${styles.left}` : ''
             }`}
+            ref={containerRef}
+            style={
+              index % 2 !== 0
+                ? { left: `-${(screenWidth - containerWidth) / 2}px` }
+                : {}
+            }
           >
             <div
               className={`${styles.featuressection__content}${
