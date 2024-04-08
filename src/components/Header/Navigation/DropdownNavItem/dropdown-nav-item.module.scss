@@ -35,7 +35,7 @@
     transition:
       opacity $transition-sec ease,
       transform $transition-sec ease;
-    z-index: 3;
+    z-index: 6;
     &_wrapper {
       display: flex;
       flex-direction: column;
