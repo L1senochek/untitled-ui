@@ -26,7 +26,7 @@ export const FAQItems: IFAQItems[] = [
   {
     questions: 'What is your cancellation policy?',
     answers:
-      'We understand that things change. You can cancel your plan at any time and we’ll refund you the difference already paid.',
+      'We understand that things change. You can cancel your plan at any time and we`ll refund you the difference already paid.',
   },
   {
     questions: 'Can other info be added to an invoice?',

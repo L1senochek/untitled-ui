@@ -8,7 +8,7 @@ const Footer: React.FC = (): JSX.Element => {
   const [footerWidth, setFooterWidth] = useState<number>(0);
   const footerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     const handleResize = (): void => {
       setScreenWidth(window.innerWidth);
       if (footerRef.current) {
@@ -20,7 +20,7 @@ const Footer: React.FC = (): JSX.Element => {
 
     window.addEventListener('resize', handleResize);
 
-    return () => {
+    return (): void => {
       window.removeEventListener('resize', handleResize);
     };
   }, [footerWidth, screenWidth]);

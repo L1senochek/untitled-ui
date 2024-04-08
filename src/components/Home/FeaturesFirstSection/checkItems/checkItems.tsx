@@ -52,7 +52,7 @@ export const containers: IContainers[] = [
       icon: <IconBarChart />,
       heading: 'Manage your team with reports',
       subheading:
-        'Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.',
+        'Measure what matters with Untitled`s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.',
       checkItems: checkItemsManageTeam,
     },
     imgMockup: './src/assets/img/ScreenMockupOrganizationOverview.png',

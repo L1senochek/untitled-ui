@@ -20,7 +20,7 @@ const FAQSection: React.FC = (): JSX.Element => {
             Still have questions?
           </h4>
           <p className={styles.faq__supporting_text}>
-            Can’t find the answer you’re looking for? Please chat to our
+            Can`t find the answer you`re looking for? Please chat to our
             friendly team.
           </p>
         </div>

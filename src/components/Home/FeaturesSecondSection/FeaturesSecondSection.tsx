@@ -31,7 +31,7 @@ const FeaturesSecondSection: React.FC = (): JSX.Element => {
       <ContentSubheading
         subheading="Integrations"
         heading="Get more value from your tools"
-        text="Connect your tools, connect your teams. With over 200 apps already available in our directory, your team’s favourite tools are just a click away."
+        text="Connect your tools, connect your teams. With over 200 apps already available in our directory, your team`s favourite tools are just a click away."
       />
       <div
         className={`${styles.featuressection__badges}${

@@ -51,7 +51,7 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
     <div className={styles.featuressection} ref={featuresSectionRef}>
       <ContentSubheading
         subheading="Features"
-        heading="Analytics that feels like it’s from the future"
+        heading="Analytics that feels like it`s from the future"
         text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups."
       />
       {containers.map(
