@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { INITIAL_PATH } from '@/utils/const/const';
 import styles from './notfound.module.scss';
 import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
 import NavigateButtons from './NavigateButtons/NavigateButtons';
+import imgNotFound from '@/assets/img/404/404Image.png';
+import IconHardDrawnLine from '@/components/Icons/IconHardDrawnLine/IconHardDrawnLine';
 
 const NotFound: React.FC = (): JSX.Element => {
   return (
@@ -17,11 +17,17 @@ const NotFound: React.FC = (): JSX.Element => {
         <NavigateButtons />
       </div>
       <div className={styles.notfound__rightside}>
-        <h2 className={styles.notfound__title}>Page not found!</h2>
-        <h2 className={styles.notfound__message}>404</h2>
-        <Link className={`${styles.notfound__btn} btn`} to={INITIAL_PATH}>
-          Home
-        </Link>
+        <div className={styles.notfound__rightside_wrapper}>
+          <img
+            className={styles.notfound__rightside_notfound}
+            src={imgNotFound}
+            alt={'404 not found'}
+            loading="lazy"
+          />
+          <div className={styles.notfound__rightside_line}>
+            <IconHardDrawnLine />
+          </div>
+        </div>
       </div>
     </div>
   );
