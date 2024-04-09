@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { INITIAL_PATH } from '@/utils/const/const';
 import styles from './notfound.module.scss';
+import BackButton from './BackButton/BackButton';
 
 const NotFound: React.FC = (): JSX.Element => {
   return (
@@ -10,6 +11,7 @@ const NotFound: React.FC = (): JSX.Element => {
       <Link className={`${styles.notfound__btn} btn`} to={INITIAL_PATH}>
         Home
       </Link>
+      <BackButton />
     </div>
   );
 };
