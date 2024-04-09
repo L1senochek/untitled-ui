@@ -17,7 +17,7 @@ html {
   line-height: 1.5;
   font-weight: 400;
   color: $gray-color-900;
-  background-color: $gray-color-25;
+  background-color: $gray-color-50;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,6 +36,7 @@ html {
   height: 100vh;
   margin: 0 auto;
   padding: 1%;
+  padding-top: 0;
   text-align: center;
   box-sizing: border-box;
 }

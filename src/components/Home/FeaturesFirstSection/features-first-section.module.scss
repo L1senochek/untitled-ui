@@ -8,6 +8,8 @@
   gap: 96px;
   width: 100%;
   padding: 96px 0;
+  background-color: #fff;
+  overflow-x: hidden;
   &__container {
     display: flex;
     align-items: center;
@@ -15,7 +17,6 @@
     gap: 96px;
     min-height: 512px;
     width: 100%;
-    overflow-x: hidden;
     left: 0;
     &.left {
       flex-direction: row-reverse;
