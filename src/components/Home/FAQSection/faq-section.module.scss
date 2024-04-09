@@ -1,0 +1,56 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.faq');
+@include flex-direction-column('.faq__head');
+@include flex-direction-column('.faq__supporting');
+@include flex-direction-column('.faq__supporting_wrappertext');
+
+.faq {
+  width: 100%;
+  gap: 64px;
+  padding: 96px 0;
+  &__head {
+    gap: 20px;
+  }
+  &__heading {
+    color: $gray-color-900;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+  &__supporttext {
+    color: $gray-color-500;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  &__supporting {
+    gap: 32px;
+    &_wrappertext {
+      gap: 8px;
+    }
+    &_heading {
+      color: $gray-color-900;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 44px;
+    }
+    &_text {
+      color: $gray-color-500;
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &_buttons {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .faq {
+    width: auto;
+    padding: 0 3%;
+  }
+}

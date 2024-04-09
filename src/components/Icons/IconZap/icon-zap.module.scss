@@ -1,0 +1,7 @@
+@import '@/styles/variables.scss';
+
+.zap {
+  & > path {
+    stroke: $brand-color-600;
+  }
+}

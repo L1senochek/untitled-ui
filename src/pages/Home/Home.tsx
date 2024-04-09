@@ -1,12 +1,24 @@
-import { Link } from 'react-router-dom';
 import styles from './home.module.scss';
-import { UI_KIT_PATH } from '@/utils/const/const';
+import TopSection from '@/components/Home/TopSection/TopSection';
+import SocialProofSection from '@/components/Home/SocialProofSection/SocialProofSection';
+import FeaturesFirstSection from '@/components/Home/FeaturesFirstSection/FeaturesFirstSection';
+import FeaturesSecondSection from '@/components/Home/FeaturesSecondSection/FeaturesSecondSection';
+import MetricsSection from '@/components/Home/MetricsSection/MetricsSection';
+import CTAFirstSection from '@/components/Home/CTAFirstSection/CTAFirstSection';
+import FAQSection from '@/components/Home/FAQSection/FAQSection';
+import CTALastSection from '@/components/Home/CTALastSection/CTALastSection';
 
 const Home: React.FC = (): JSX.Element => {
   return (
     <div className={styles.home}>
-      <h1>welcome</h1>
-      <Link to={UI_KIT_PATH}>UI KIT PATH</Link>
+      <TopSection />
+      <SocialProofSection />
+      <FeaturesFirstSection />
+      <FeaturesSecondSection />
+      <MetricsSection />
+      <CTAFirstSection />
+      <FAQSection />
+      <CTALastSection />
     </div>
   );
 };

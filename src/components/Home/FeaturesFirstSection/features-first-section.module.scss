@@ -1,0 +1,123 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.featuressection');
+@include flex-direction-column('.featuressection__containertitle');
+
+.featuressection {
+  gap: 96px;
+  width: 100%;
+  padding: 96px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 96px;
+    min-height: 512px;
+    width: 100%;
+    left: 0;
+    &.left {
+      flex-direction: row-reverse;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 45%;
+    padding-left: 32px;
+    &.left {
+      padding-left: 0;
+      padding-right: 32px;
+    }
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      & > div:nth-child(1) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    &_heading {
+      display: flex;
+      text-align: left;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 38px;
+      color: $gray-color-900;
+    }
+    &_supportingtext {
+      display: flex;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $gray-color-500;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(214, 187, 251, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(214, 187, 251, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(214, 187, 251, 0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .featuressection {
+    &__container {
+      flex-direction: column;
+      min-height: 1000px;
+      &.left {
+        flex-direction: column;
+      }
+    }
+    &__content {
+      max-width: 90%;
+      &.left {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .featuressection {
+    &__content {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .featuressection {
+    &__container {
+      min-height: 830px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .featuressection {
+    &__container {
+      min-height: 900px;
+    }
+  }
+}

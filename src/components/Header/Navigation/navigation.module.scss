@@ -43,8 +43,12 @@
 
 @media (max-width: 1000px) {
   .navigation {
+    width: 100%;
     &__items {
       font-size: 20px;
+    }
+    &__item {
+      width: 100%;
     }
   }
 }

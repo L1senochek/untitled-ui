@@ -1,0 +1,93 @@
+@import '@/styles/variables.scss';
+
+.avatargroup {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  &__item {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 0;
+    margin-right: -16px;
+    position: relative;
+    transition: margin 0.5s;
+    &.hovered {
+      margin-right: 16px;
+    }
+    & > div > div:not(.avatargroup__tooltip),
+    & > div > div:first-child:not(.avatargroup__tooltip) {
+      animation: hoverAnimationTooltip 1.5s ease-in-out;
+    }
+  }
+  &__tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    gap: 12px;
+    padding: 0 5px;
+    &_message {
+      color: #fff;
+      font-weight: 900;
+      font-size: 20px;
+    }
+    &_company {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      & > img {
+        width: 20px;
+        object-fit: cover;
+        filter: invert(100%) grayscale(100%);
+      }
+      & > span {
+        font-size: 14px;
+      }
+    }
+  }
+  &__icon {
+    width: 50px;
+    height: 50px;
+    & > img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@keyframes moveRight {
+  from {
+    margin-right: -16px;
+  }
+  to {
+    margin-right: 16px;
+  }
+}
+
+@keyframes hoverAnimationTooltip {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-6deg);
+  }
+  16% {
+    transform: translateX(-50%) translateY(0) rotate(-0deg);
+  }
+  32% {
+    transform: translateX(-50%) translateY(0) rotate(6deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  64% {
+    transform: translateX(-50%) translateY(0) rotate(-6deg);
+  }
+  80% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+}

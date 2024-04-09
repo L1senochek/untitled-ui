@@ -6,6 +6,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 :root {
@@ -15,28 +16,29 @@ html {
   font-family: $font-family-work-sans, $font-family-monospace, Helvetica, Arial;
   line-height: 1.5;
   font-weight: 400;
-
-  // color-scheme: dark light;
-  // color: $main-color;
   color: $gray-color-900;
-  // background-color: #242424;
-  background-color: $gray-color-25;
+  background-color: $gray-color-50;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 98%;
-  height: 98vh;
+  align-items: center;
+  width: calc(100vw - 2%);
+  height: 100vh;
   margin: 0 auto;
   padding: 1%;
+  padding-top: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,10 +46,10 @@ body {
   flex-direction: column;
   place-items: center;
   min-width: 320px;
-  max-width: 1280px;
   width: 100%;
   max-height: 100vh;
   margin: 0;
+  box-sizing: border-box;
 }
 
 h1 {

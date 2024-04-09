@@ -1,0 +1,89 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.cta');
+
+.cta {
+  display: flex;
+  width: 100%;
+  padding-bottom: 96px;
+  background-color: #fff;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    min-width: 98%;
+    min-height: 212px;
+    border-radius: 16px;
+    background-color: $brand-color-50;
+    overflow-x: hidden;
+    &.visible {
+      & > .cta__leftside {
+        left: 5vw;
+      }
+      & > .cta__rightside {
+        right: 5vw;
+      }
+    }
+  }
+  &__leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    position: absolute;
+    left: -100vw;
+    top: 25%;
+    transition: left 1s ease;
+  }
+  &__heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: $brand-color-900;
+  }
+  &__supporttext {
+    font-size: 20px;
+    color: $brand-color-700;
+  }
+  &__rightside {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    right: -100vw;
+    top: 25%;
+    transition: right 1s ease;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cta {
+    &__container {
+      &.visible {
+        & > .cta__rightside {
+          top: auto;
+          bottom: 9%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cta {
+    &__container {
+      min-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .cta {
+    &__leftside {
+      gap: 30px;
+    }
+    &__container {
+      min-height: 400px;
+    }
+  }
+}

@@ -35,14 +35,16 @@ const Header: React.FC = (): JSX.Element => {
     <header
       className={`${styles.header}${isSticky ? ` ${styles.sticky}` : ''}`}
     >
-      <div className={styles.header__leftside}>
-        <Link to={INITIAL_PATH}>
-          <Logo />
-        </Link>
-        {windowWidth > 1000 && <Navigation />}
-      </div>
-      <div className={styles.header__rightside}>
-        {windowWidth > 1000 ? <HeaderNavigationBtn /> : <BurgerMenu />}
+      <div className={styles.header__content}>
+        <div className={styles.header__leftside}>
+          <Link to={INITIAL_PATH}>
+            <Logo />
+          </Link>
+          {windowWidth > 1000 && <Navigation />}
+        </div>
+        <div className={styles.header__rightside}>
+          {windowWidth > 1000 ? <HeaderNavigationBtn /> : <BurgerMenu />}
+        </div>
       </div>
     </header>
   );
