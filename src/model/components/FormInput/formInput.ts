@@ -1,6 +1,6 @@
 interface IFormInputProps {
   name: string;
-  validation: Record<string, unknown>;
+  validation?: Record<string, unknown>;
   type?: string;
   titleLabel?: string;
 }
