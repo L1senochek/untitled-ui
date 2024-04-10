@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { useFormContext } from "react-hook-form";
 import styles from './input.module.scss';
 import IInput from '@/model/components/Input/Input';
 import Btn from '@/components/Btn/Btn';
@@ -8,10 +7,11 @@ import IconEyeOff from '@/components/Icons/IconEyeOff/IconEyeOff';
 import IconAlertCircle from '@/components/Icons/IconAlertCircle/IconAlertCircle';
 import IconEmail from '@/components/Icons/IconEmail/IconEmail';
 import IconSearch from '@/components/Icons/IconSearch/IconSearch';
+import { useFormContext } from 'react-hook-form';
 
 const Input: React.FC<IInput> = ({
-  // registerInput,
-  // registerValidation,
+  inputName,
+  validation,
   classNameWrapper,
   titleLabel,
   classNameLabel,
@@ -19,10 +19,14 @@ const Input: React.FC<IInput> = ({
   ...props
 }): JSX.Element => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  // const methods = useFormContext();
-  // const { register, formState } = methods;
-  // const errorMessage = formState.errors[registerInput]?.message || '';
-  // const errorMessage = 'error';
+  const formContext = useFormContext();
+  const { register } = formContext || {};
+  const inputProps = formContext
+    ? {
+        ...register(inputName!, validation),
+        ...props,
+      }
+    : props;
 
   return (
     <div
@@ -46,12 +50,12 @@ const Input: React.FC<IInput> = ({
           }`}
         >
           <input
-            {...props}
+            {...inputProps}
             className={`${styles.input__wrapper_input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
-            // {...register(registerInput, registerValidation)}
             type={showPassword ? 'text' : 'password'}
+            autoComplete="current-password"
           />
           <Btn
             type="button"
@@ -72,11 +76,11 @@ const Input: React.FC<IInput> = ({
         >
           <IconEmail />
           <input
-            {...props}
+            {...inputProps}
             className={`${styles.input__wrapper_input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
-            // {...register(registerInput, registerValidation)}
+            autoComplete="username"
           />
           {errorMessage && <IconAlertCircle />}
         </div>
@@ -84,18 +88,17 @@ const Input: React.FC<IInput> = ({
       {props.type === 'search' && (
         <div className={`${styles.input__wrapper} ${styles.search}`}>
           <IconSearch />
-          <input {...props} className={`${styles.input__wrapper_input}`} />
+          <input {...inputProps} className={`${styles.input__wrapper_input}`} />
         </div>
       )}
       {props.type !== 'email' &&
         props.type !== 'password' &&
         props.type !== 'search' && (
           <input
-            {...props}
+            {...inputProps}
             className={`${styles.input__input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
-            // {...register(registerInput, registerValidation)}
           />
         )}
       <h3
