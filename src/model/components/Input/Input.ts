@@ -12,6 +12,7 @@ type LoginFields = typeof loginFields;
 export type LoginFieldKeys = keyof LoginFields;
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
+  type: string;
   inputName?: string;
   validation?: Record<string, unknown>;
   classNameWrapper?: string;

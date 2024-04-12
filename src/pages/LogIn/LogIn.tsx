@@ -51,6 +51,7 @@ const LogIn: React.FC = (): JSX.Element => {
                   key={`LogInFormFields${field.name}${index}`}
                   inputName={field.name}
                   titleLabel={field.titleLabel}
+                  type={field.type}
                   fieldsForm="login"
                 />
               ))}

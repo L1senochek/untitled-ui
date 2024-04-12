@@ -75,6 +75,7 @@
     visibility: hidden;
     opacity: 0;
     height: $height-error;
+    font-size: 14px;
   }
   &__error_visible {
     visibility: visible;

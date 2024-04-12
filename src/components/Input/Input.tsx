@@ -17,6 +17,7 @@ const Input: React.FC<IInput> = ({
   classNameLabel,
   fieldsForm,
   customErrorMessage,
+  type,
   ...props
 }): JSX.Element => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -55,7 +56,7 @@ const Input: React.FC<IInput> = ({
           {titleLabel}
         </h3>
       )}
-      {props.type === 'password' && (
+      {type === 'password' && (
         <div
           className={`${styles.input__wrapper} ${styles.password}${
             errorMessage ? ` ${styles.error}` : ''
@@ -80,7 +81,7 @@ const Input: React.FC<IInput> = ({
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type === 'email' && (
+      {type === 'email' && (
         <div
           className={`${styles.input__wrapper} ${styles.email}${
             errorMessage ? ` ${styles.error}` : ''
@@ -97,22 +98,20 @@ const Input: React.FC<IInput> = ({
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type === 'search' && (
+      {type === 'search' && (
         <div className={`${styles.input__wrapper} ${styles.search}`}>
           <IconSearch />
           <input {...inputProps} className={`${styles.input__wrapper_input}`} />
         </div>
       )}
-      {props.type !== 'email' &&
-        props.type !== 'password' &&
-        props.type !== 'search' && (
-          <input
-            {...inputProps}
-            className={`${styles.input__input}${
-              errorMessage ? ` ${styles.error}` : ''
-            }`}
-          />
-        )}
+      {type !== 'email' && type !== 'password' && type !== 'search' && (
+        <input
+          {...inputProps}
+          className={`${styles.input__input}${
+            errorMessage ? ` ${styles.error}` : ''
+          }`}
+        />
+      )}
       <h3
         className={`${styles.input__error}${
           errorMessage ? ` ${styles.input__error_visible}` : ''
