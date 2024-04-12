@@ -3,7 +3,7 @@ import styles from './features-first-section.module.scss';
 import { containers } from './checkItems/checkItems';
 import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
 import AnimationCheckItemsList from '@/components/AnimationsComponents/CheckItemsList/CheckItemsList';
-import AnimationImage from '@/components/AnimationsComponents/Image/Image';
+import AnimationImage from '@/components/AnimationsComponents/AnimationImage/AnimationImage';
 import PulseIcon from '@/components/AnimationsComponents/PulseIcon/PulseIcon';
 import IContainers from '@/model/components/Home/FeaturesFirstSection/containers';
 
@@ -94,6 +94,8 @@ const FeaturesFirstSection: React.FC = (): JSX.Element => {
               alt={container.alt}
               index={index}
               scrolling={scrolling}
+              hoverArrow
+              hoverArrowText="Olivia Rhye"
             />
           </div>
         )
