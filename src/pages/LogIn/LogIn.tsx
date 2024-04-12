@@ -6,6 +6,8 @@ import Btn from '@/components/Btn/Btn';
 import Input from '@/components/Input/Input';
 import { schemaLogIn } from '@/utils/validation/schema';
 import ILoginFormData from '@/model/pages/LogIn/loginFormData';
+import styles from './login.module.scss';
+import imgLogIn from '@/assets/img/login/ScreenMockupLogIn.png';
 
 const LogIn: React.FC = (): JSX.Element => {
   const methods = useForm<ILoginFormData>({
@@ -26,22 +28,33 @@ const LogIn: React.FC = (): JSX.Element => {
   };
 
   return (
-    <FormProvider {...methods}>
-      <div>LOG IN</div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {LogInFormFields.map((field, index) => (
-          <Input
-            key={`LogInFormFields${field.name}${index}`}
-            inputName={field.name}
-            titleLabel={field.titleLabel}
-            fieldsForm="login"
-          />
-        ))}
-        <Btn type="submit" variantBtn="primary">
-          Sign in
-        </Btn>
-      </form>
-    </FormProvider>
+    <div className={styles.login}>
+      <div className={styles.login__leftside}>
+        <FormProvider {...methods}>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {LogInFormFields.map((field, index) => (
+              <Input
+                key={`LogInFormFields${field.name}${index}`}
+                inputName={field.name}
+                titleLabel={field.titleLabel}
+                fieldsForm="login"
+              />
+            ))}
+            <Btn type="submit" variantBtn="primary">
+              Sign in
+            </Btn>
+          </form>
+        </FormProvider>
+      </div>
+      <div className={styles.login__rightside}>
+        <img
+          className={styles.login__rightside_img}
+          src={imgLogIn}
+          alt="login"
+          loading="lazy"
+        />
+      </div>
+    </div>
   );
 };
 

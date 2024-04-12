@@ -1,0 +1,44 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.main');
+
+.header {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  flex: 1;
+  &__leftside {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: #fff;
+  }
+  &__rightside {
+    flex: 1;
+    background-color: $gray-color-50;
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  flex: 1;
+  &__leftside {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    background-color: #fff;
+  }
+  &__rightside {
+    flex: 1;
+    background-color: $gray-color-50;
+  }
+}

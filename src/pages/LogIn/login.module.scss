@@ -1,0 +1,24 @@
+@import '@/styles/variables.scss';
+
+.login {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  &__leftside {
+    flex: 1;
+  }
+  &__rightside {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $gray-color-50;
+    flex: 1;
+    &_img {
+      border-radius: 12px;
+      background-size: cover;
+      object-fit: cover;
+      max-height: 700px;
+    }
+  }
+}

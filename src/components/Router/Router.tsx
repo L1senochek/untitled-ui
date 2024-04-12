@@ -19,6 +19,7 @@ import NotFound from '@/components/NotFound/NotFound';
 import UIKitLayout from '@/layouts/UIKitLayout/UIKitLayout';
 import UIKit from '@/pages/UIKit/UIKit';
 import LogIn from '@/pages/LogIn/LogIn';
+import AuthLayout from '@/layouts/AuthLayout/AuthLayout';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,9 +31,11 @@ const Router = createBrowserRouter(
       >
         <Route path="" element={<Navigate to={HOME_PATH} />} />
         <Route path={HOME_PATH} index element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route element={<AuthLayout />}>
         <Route path={SIGN_UP_PATH} element={<SignUp />} />
         <Route path={LOG_IN_PATH} element={<LogIn />} />
-        <Route path="*" element={<NotFound />} />
       </Route>
       <Route
         path={INITIAL_PATH}
