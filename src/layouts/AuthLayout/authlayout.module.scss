@@ -14,6 +14,9 @@
     align-items: center;
     flex: 1;
     background-color: #fff;
+    &_link {
+      padding: 0 10px;
+    }
   }
   &__rightside {
     flex: 1;
@@ -40,10 +43,14 @@
     justify-content: space-between;
     flex: 1;
     background-color: #fff;
+    &_text {
+      padding: 0 1%;
+    }
     &_email {
       display: flex;
       align-items: center;
       gap: 8px;
+      padding: 0 10px;
     }
   }
   &__rightside {

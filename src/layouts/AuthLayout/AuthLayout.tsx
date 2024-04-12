@@ -11,7 +11,7 @@ const AuthLayout: React.FC = (): JSX.Element => {
     <>
       <header className={styles.header}>
         <div className={styles.header__leftside}>
-          <Link to={INITIAL_PATH}>
+          <Link to={INITIAL_PATH} className={styles.header__leftside_link}>
             <Logo />
           </Link>
         </div>
@@ -22,7 +22,7 @@ const AuthLayout: React.FC = (): JSX.Element => {
       </main>
       <footer className={styles.footer}>
         <div className={styles.footer__leftside}>
-          <p>© Untitled UI 2077</p>
+          <p className={styles.footer__leftside_text}>© Untitled UI 2077</p>
           {location.pathname === SIGN_UP_PATH && (
             <div className={styles.footer__leftside_email}>
               <IconEmail />
