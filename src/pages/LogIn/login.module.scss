@@ -7,7 +7,65 @@
   justify-content: center;
   background-color: #fff;
   &__leftside {
+    display: flex;
+    justify-content: center;
     flex: 1;
+    &_form {
+      display: flex;
+      flex-direction: column;
+      padding: 0 32px;
+      width: 100%;
+      max-width: 360px;
+      gap: 32px;
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    &_head {
+      font-size: 44px;
+      font-weight: 900;
+      color: $gray-color-900;
+    }
+    &_supportingtext {
+      color: $gray-color-500;
+    }
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &_remember {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > a {
+        color: $brand-color-700;
+        font-weight: bold;
+      }
+    }
+    &_buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+      & > :last-child {
+        background-color: #fff;
+        border-color: $gray-color-300;
+      }
+    }
+    &_row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      & > a {
+        color: $brand-color-700;
+        font-weight: bold;
+      }
+    }
   }
   &__rightside {
     display: flex;

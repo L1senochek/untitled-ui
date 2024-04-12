@@ -29,6 +29,9 @@
       opacity $transition-sec,
       background-color $transition-sec,
       border-color $transition-sec;
+    &.square {
+      border-radius: 4px;
+    }
     &.disabled {
       background-color: $brand-color-200;
     }

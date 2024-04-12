@@ -96,6 +96,12 @@ export const uiKitElements = [
       labelProps={{ htmlFor: 'firstCheckbox' }}
       inputProps={{ id: 'firstCheckbox' }}
     />
+    <Checkbox
+      labelTitle="example square"
+      labelProps={{ htmlFor: 'firstCheckboxSquare' }}
+      inputProps={{ id: 'firstCheckboxSquare' }}
+      square
+    />
     <Checkbox labelTitle="exmple checked" inputProps={{ checked: true }} />
     <Checkbox labelTitle="exmple disabled" inputProps={{ disabled: true }} />
     <Checkbox

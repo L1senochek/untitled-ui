@@ -8,6 +8,10 @@ import { schemaLogIn } from '@/utils/validation/schema';
 import ILoginFormData from '@/model/pages/LogIn/loginFormData';
 import styles from './login.module.scss';
 import imgLogIn from '@/assets/img/login/ScreenMockupLogIn.png';
+import iconGoogle from '@/assets/svg/social/google.svg';
+import { Link } from 'react-router-dom';
+import { SIGN_UP_PATH } from '@/utils/const/const';
+import Checkbox from '@/components/Checkbox/Checkbox';
 
 const LogIn: React.FC = (): JSX.Element => {
   const methods = useForm<ILoginFormData>({
@@ -31,18 +35,53 @@ const LogIn: React.FC = (): JSX.Element => {
     <div className={styles.login}>
       <div className={styles.login__leftside}>
         <FormProvider {...methods}>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {LogInFormFields.map((field, index) => (
-              <Input
-                key={`LogInFormFields${field.name}${index}`}
-                inputName={field.name}
-                titleLabel={field.titleLabel}
-                fieldsForm="login"
-              />
-            ))}
-            <Btn type="submit" variantBtn="primary">
-              Sign in
-            </Btn>
+          <form
+            className={styles.login__leftside_form}
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <div className={styles.login__leftside_text}>
+              <h2 className={styles.login__leftside_head}>Log in</h2>
+              <p className={styles.login__leftside_supportingtext}>
+                Welcome back! Please enter your details.
+              </p>
+            </div>
+            <div className={styles.login__leftside_content}>
+              {LogInFormFields.map((field, index) => (
+                <Input
+                  key={`LogInFormFields${field.name}${index}`}
+                  inputName={field.name}
+                  titleLabel={field.titleLabel}
+                  fieldsForm="login"
+                />
+              ))}
+              <div className={styles.login__leftside_remember}>
+                <Checkbox
+                  labelTitle="Remember for 30 days"
+                  labelProps={{ htmlFor: 'rememberCheckbox' }}
+                  inputProps={{ id: 'rememberCheckbox' }}
+                  square
+                />
+                <Link to={'/'}>Forgot password</Link>
+              </div>
+              <div className={styles.login__leftside_buttons}>
+                <Btn type="submit" variantBtn="primary">
+                  Sign in
+                </Btn>
+                <Btn variantBtn="primary" outlined>
+                  <img
+                    className={styles.login__leftside_icon}
+                    src={iconGoogle}
+                    alt="google"
+                    loading="lazy"
+                  />
+                  Sign in with Google
+                </Btn>
+              </div>
+            </div>
+            <div className={styles.login__leftside_row}>
+              <p>Don`t have an account?</p>
+              <Link to={SIGN_UP_PATH}>Sign up</Link>
+            </div>
           </form>
         </FormProvider>
       </div>
