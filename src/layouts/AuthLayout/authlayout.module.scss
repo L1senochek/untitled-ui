@@ -7,6 +7,7 @@
   display: flex;
   width: 100%;
   max-width: 1280px;
+  max-height: 100px;
   flex: 1;
   &__leftside {
     display: flex;
@@ -23,6 +24,7 @@
 .main {
   display: flex;
   width: 100%;
+  flex: 1;
   max-width: 1280px;
 }
 
@@ -30,12 +32,19 @@
   display: flex;
   width: 100%;
   max-width: 1280px;
+  max-height: 100px;
   flex: 1;
   &__leftside {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     flex: 1;
     background-color: #fff;
+    &_email {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
   }
   &__rightside {
     flex: 1;
