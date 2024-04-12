@@ -1,7 +1,15 @@
+import { loginFields, registrationFields } from '@/utils/validation/schema';
 import { InputHTMLAttributes } from 'react';
-import { FieldError, FieldValues, UseFormRegister } from 'react-hook-form';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 type Register = UseFormRegister<FieldValues>;
+export type FormTypes = 'register' | 'login';
+
+type RegistrationFields = typeof registrationFields;
+export type RegistrationFieldKeys = keyof RegistrationFields;
+
+type LoginFields = typeof loginFields;
+export type LoginFieldKeys = keyof LoginFields;
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   inputName?: string;
@@ -9,9 +17,10 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   classNameWrapper?: string;
   titleLabel?: string;
   classNameLabel?: string;
-  errorMessage?: string | FieldError;
   error?: object;
   register?: Register;
+  fieldsForm?: FormTypes;
+  customErrorMessage?: string;
 }
 
 export default IInput;

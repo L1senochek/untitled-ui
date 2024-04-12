@@ -7,23 +7,35 @@ import IconEyeOff from '@/components/Icons/IconEyeOff/IconEyeOff';
 import IconAlertCircle from '@/components/Icons/IconAlertCircle/IconAlertCircle';
 import IconEmail from '@/components/Icons/IconEmail/IconEmail';
 import IconSearch from '@/components/Icons/IconSearch/IconSearch';
-import { useFormContext } from 'react-hook-form';
+import { RegisterOptions, useFormContext } from 'react-hook-form';
+import { loginFields, registrationFields } from '@/utils/validation/schema';
 
 const Input: React.FC<IInput> = ({
   inputName,
-  validation,
   classNameWrapper,
   titleLabel,
   classNameLabel,
-  errorMessage,
+  fieldsForm,
+  customErrorMessage,
   ...props
 }): JSX.Element => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const formContext = useFormContext();
   const { register } = formContext || {};
+
+  const errors = formContext?.formState?.errors || {};
+  const errorMessage = errors[inputName!]?.message || customErrorMessage;
+
+  const fields = fieldsForm === 'register' ? registrationFields : loginFields;
+
   const inputProps = formContext
     ? {
-        ...register(inputName!, validation),
+        ...register(
+          inputName as keyof typeof fields,
+          {
+            ...fields[inputName as keyof typeof fields],
+          } as unknown as RegisterOptions
+        ),
         ...props,
       }
     : props;

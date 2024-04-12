@@ -68,7 +68,7 @@ export const uiKitElements = [
       titleLabel="Password"
       type="password"
       placeholder="password"
-      errorMessage="error"
+      customErrorMessage="error"
     />
     <Input type="text" placeholder="example text" />
     <Input titleLabel="search" type="search" placeholder="search" />
