@@ -70,6 +70,7 @@
   &__rightside {
     display: flex;
     justify-content: flex-end;
+    position: relative;
     background-color: $gray-color-50;
     flex: 1;
     &_img {

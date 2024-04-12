@@ -12,6 +12,7 @@ import iconGoogle from '@/assets/svg/social/google.svg';
 import { Link } from 'react-router-dom';
 import { SIGN_UP_PATH } from '@/utils/const/const';
 import Checkbox from '@/components/Checkbox/Checkbox';
+import HoverArrow from '@/components/HoverArrow/HoverArrow';
 
 const LogIn: React.FC = (): JSX.Element => {
   const methods = useForm<ILoginFormData>({
@@ -87,6 +88,7 @@ const LogIn: React.FC = (): JSX.Element => {
         </FormProvider>
       </div>
       <div className={styles.login__rightside}>
+        <HoverArrow text="Olivia Rhye" />
         <img
           className={styles.login__rightside_img}
           src={imgLogIn}
