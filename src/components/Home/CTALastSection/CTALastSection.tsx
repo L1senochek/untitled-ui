@@ -51,6 +51,8 @@ const CTALastSection: React.FC = (): JSX.Element => {
           alt={ctaImage.alt}
           index={0}
           scrolling={scrolling}
+          hoverArrow
+          hoverArrowText="Olivia Rhye"
         />
       </div>
     </div>

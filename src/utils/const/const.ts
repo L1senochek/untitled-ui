@@ -11,3 +11,4 @@ export const BLOGS_PATH = '/blogs';
 export const ABOUT_US_PATH = '/about-us';
 export const LEGAL_PATH = '/legal';
 export const FAQ_PATH = '/faq';
+export const FORGOT_PASSWORD_PATH = '/forgot-password';

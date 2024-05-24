@@ -4,18 +4,22 @@
 @include flex-direction-column('.cta');
 
 .cta {
+  display: flex;
+  align-items: center;
   position: relative;
+  flex-direction: row;
+  left: 0;
   padding: 96px 0;
   gap: 96px;
   width: 100%;
   min-height: 512px;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #fff;
   &__leftside {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: absolute;
+    padding-left: 32px;
     gap: 40px;
     left: 32px;
     transition: left 1s ease;
@@ -24,7 +28,6 @@
     font-size: 40px;
     font-weight: bold;
     color: $brand-color-900;
-    max-width: 60%;
     text-align: left;
   }
   &__supporttext {
@@ -32,9 +35,11 @@
     color: $brand-color-700;
   }
   &__rightside {
-    & > div > img {
-      top: 96px;
-    }
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 48px;
+    padding-left: 60px;
   }
   &__btnwrapper {
     display: flex;
@@ -43,23 +48,19 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .cta {
     min-height: 1000px;
-    overflow: hidden;
+    flex-direction: column;
     &__rightside {
-      & > div > img {
-        top: 45%;
-      }
+      position: static;
     }
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .cta {
-    &__heading {
-      max-width: 100%;
-    }
+    min-height: 1000px;
   }
 }
 

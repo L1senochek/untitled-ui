@@ -10,7 +10,7 @@ import styles from './login.module.scss';
 import imgLogIn from '@/assets/img/login/ScreenMockupLogIn.png';
 import iconGoogle from '@/assets/svg/social/google.svg';
 import { Link } from 'react-router-dom';
-import { SIGN_UP_PATH } from '@/utils/const/const';
+import { FORGOT_PASSWORD_PATH, SIGN_UP_PATH } from '@/utils/const/const';
 import Checkbox from '@/components/Checkbox/Checkbox';
 import HoverArrow from '@/components/HoverArrow/HoverArrow';
 
@@ -63,7 +63,7 @@ const LogIn: React.FC = (): JSX.Element => {
                   inputProps={{ id: 'rememberCheckbox' }}
                   square
                 />
-                <Link to={'/'}>Forgot password</Link>
+                <Link to={FORGOT_PASSWORD_PATH}>Forgot password</Link>
               </div>
               <div className={styles.login__leftside_buttons}>
                 <Btn type="submit" variantBtn="primary">
