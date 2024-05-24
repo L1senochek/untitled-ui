@@ -1,7 +1,7 @@
 import {
   HOME_PATH,
   INITIAL_PATH,
-  SIGN_IN_PATH,
+  LOG_IN_PATH,
   SIGN_UP_PATH,
   UI_KIT_PATH,
 } from '@/utils/const/const';
@@ -15,10 +15,11 @@ import MainLayout from '@/layouts/MainLayout/MainLayout';
 import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 import Home from '@/pages/Home/Home';
 import SignUp from '@/pages/SignUp/SignUp';
-import SignIn from '@/pages/SignIn/SignIn';
 import NotFound from '@/components/NotFound/NotFound';
 import UIKitLayout from '@/layouts/UIKitLayout/UIKitLayout';
 import UIKit from '@/pages/UIKit/UIKit';
+import LogIn from '@/pages/LogIn/LogIn';
+import AuthLayout from '@/layouts/AuthLayout/AuthLayout';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,9 +31,11 @@ const Router = createBrowserRouter(
       >
         <Route path="" element={<Navigate to={HOME_PATH} />} />
         <Route path={HOME_PATH} index element={<Home />} />
-        <Route path={SIGN_UP_PATH} element={<SignUp />} />
-        <Route path={SIGN_IN_PATH} element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route element={<AuthLayout />}>
+        <Route path={SIGN_UP_PATH} element={<SignUp />} />
+        <Route path={LOG_IN_PATH} element={<LogIn />} />
       </Route>
       <Route
         path={INITIAL_PATH}

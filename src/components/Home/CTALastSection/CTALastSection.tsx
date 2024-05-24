@@ -3,7 +3,7 @@ import styles from './cta-last-section.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { ctaCheckItems, ctaImage } from './ctaCheckItems/ctaCheckItems';
 import AnimationCheckItemsList from '@/components/AnimationsComponents/CheckItemsList/CheckItemsList';
-import AnimationImage from '@/components/AnimationsComponents/Image/Image';
+import AnimationImage from '@/components/AnimationsComponents/AnimationImage/AnimationImage';
 
 const CTALastSection: React.FC = (): JSX.Element => {
   const CTARef = useRef<HTMLDivElement>(null);
@@ -51,6 +51,8 @@ const CTALastSection: React.FC = (): JSX.Element => {
           alt={ctaImage.alt}
           index={0}
           scrolling={scrolling}
+          hoverArrow
+          hoverArrowText="Olivia Rhye"
         />
       </div>
     </div>

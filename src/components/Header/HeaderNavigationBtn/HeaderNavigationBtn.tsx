@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SIGN_IN_PATH, SIGN_UP_PATH } from '@/utils/const/const';
+import { LOG_IN_PATH, SIGN_UP_PATH } from '@/utils/const/const';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { selectAuth, setAuth } from '@/store/slices/authSlice/authSlice';
 import Btn from '@/components/Btn/Btn';
@@ -20,7 +20,7 @@ const HeaderNavigationBtn: React.FC = (): JSX.Element => {
         <>
           <Btn
             variantBtn="secondary"
-            onClick={() => navigate(SIGN_IN_PATH)}
+            onClick={() => navigate(LOG_IN_PATH)}
             outlined
           >
             <span>Log In</span>

@@ -9,6 +9,7 @@ interface ICheckbox extends LabelHTMLAttributes<HTMLLabelElement> {
   labelProps?: ICheckboxLabelProps;
   inputProps?: ICheckboxInputProps;
   labelTitle?: string;
+  square?: boolean;
 }
 
 export default ICheckbox;

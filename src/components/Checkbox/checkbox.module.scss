@@ -2,7 +2,7 @@
 
 .checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   &__container {
     display: flex;
@@ -29,6 +29,9 @@
       opacity $transition-sec,
       background-color $transition-sec,
       border-color $transition-sec;
+    &.square {
+      border-radius: 4px;
+    }
     &.disabled {
       background-color: $brand-color-200;
     }

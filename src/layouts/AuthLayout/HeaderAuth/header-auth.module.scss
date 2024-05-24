@@ -1,0 +1,36 @@
+@import '@/styles/variables.scss';
+
+.header {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  max-height: 100px;
+  flex: 1;
+  &__leftside {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: #fff;
+    &_link {
+      padding: 0 32px;
+    }
+  }
+  &__rightside {
+    flex: 1;
+    background-color: $gray-color-50;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__leftside {
+      &_link {
+        padding-top: 30px;
+        & > svg {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}

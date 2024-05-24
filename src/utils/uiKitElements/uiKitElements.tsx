@@ -68,7 +68,7 @@ export const uiKitElements = [
       titleLabel="Password"
       type="password"
       placeholder="password"
-      errorMessage="error"
+      customErrorMessage="error"
     />
     <Input type="text" placeholder="example text" />
     <Input titleLabel="search" type="search" placeholder="search" />
@@ -95,6 +95,12 @@ export const uiKitElements = [
       labelTitle="example default"
       labelProps={{ htmlFor: 'firstCheckbox' }}
       inputProps={{ id: 'firstCheckbox' }}
+    />
+    <Checkbox
+      labelTitle="example square"
+      labelProps={{ htmlFor: 'firstCheckboxSquare' }}
+      inputProps={{ id: 'firstCheckboxSquare' }}
+      square
     />
     <Checkbox labelTitle="exmple checked" inputProps={{ checked: true }} />
     <Checkbox labelTitle="exmple disabled" inputProps={{ disabled: true }} />

@@ -7,6 +7,7 @@ const Checkbox: React.FC<ICheckbox> = ({
   labelTitle,
   labelProps,
   inputProps,
+  square = false,
 }): JSX.Element => {
   const [isChecked, setChecked] = useState<boolean>(
     inputProps?.checked || false
@@ -22,9 +23,11 @@ const Checkbox: React.FC<ICheckbox> = ({
         }`}
       >
         <div
-          className={`${styles.checkbox__checkmark} ${
-            isChecked ? styles.checked : ''
-          } ${inputProps?.disabled ? styles.disabled : ''}`}
+          className={`${styles.checkbox__checkmark}${
+            square ? ` ${styles.square}` : ''
+          } ${isChecked ? styles.checked : ''} ${
+            inputProps?.disabled ? styles.disabled : ''
+          }`}
         >
           <IconCheckMark />
         </div>

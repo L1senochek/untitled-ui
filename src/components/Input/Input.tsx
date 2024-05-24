@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import { useFormContext } from "react-hook-form";
 import styles from './input.module.scss';
 import IInput from '@/model/components/Input/Input';
 import Btn from '@/components/Btn/Btn';
@@ -8,21 +7,39 @@ import IconEyeOff from '@/components/Icons/IconEyeOff/IconEyeOff';
 import IconAlertCircle from '@/components/Icons/IconAlertCircle/IconAlertCircle';
 import IconEmail from '@/components/Icons/IconEmail/IconEmail';
 import IconSearch from '@/components/Icons/IconSearch/IconSearch';
+import { RegisterOptions, useFormContext } from 'react-hook-form';
+import { loginFields, registrationFields } from '@/utils/validation/schema';
 
 const Input: React.FC<IInput> = ({
-  // registerInput,
-  // registerValidation,
+  inputName,
   classNameWrapper,
   titleLabel,
   classNameLabel,
-  errorMessage,
+  fieldsForm,
+  customErrorMessage,
+  type,
   ...props
 }): JSX.Element => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  // const methods = useFormContext();
-  // const { register, formState } = methods;
-  // const errorMessage = formState.errors[registerInput]?.message || '';
-  // const errorMessage = 'error';
+  const formContext = useFormContext();
+  const { register } = formContext || {};
+
+  const errors = formContext?.formState?.errors || {};
+  const errorMessage = errors[inputName!]?.message || customErrorMessage;
+
+  const fields = fieldsForm === 'register' ? registrationFields : loginFields;
+
+  const inputProps = formContext
+    ? {
+        ...register(
+          inputName as keyof typeof fields,
+          {
+            ...fields[inputName as keyof typeof fields],
+          } as unknown as RegisterOptions
+        ),
+        ...props,
+      }
+    : props;
 
   return (
     <div
@@ -39,19 +56,19 @@ const Input: React.FC<IInput> = ({
           {titleLabel}
         </h3>
       )}
-      {props.type === 'password' && (
+      {type === 'password' && (
         <div
           className={`${styles.input__wrapper} ${styles.password}${
             errorMessage ? ` ${styles.error}` : ''
           }`}
         >
           <input
-            {...props}
+            {...inputProps}
             className={`${styles.input__wrapper_input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
-            // {...register(registerInput, registerValidation)}
             type={showPassword ? 'text' : 'password'}
+            autoComplete="current-password"
           />
           <Btn
             type="button"
@@ -64,7 +81,7 @@ const Input: React.FC<IInput> = ({
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type === 'email' && (
+      {type === 'email' && (
         <div
           className={`${styles.input__wrapper} ${styles.email}${
             errorMessage ? ` ${styles.error}` : ''
@@ -72,32 +89,29 @@ const Input: React.FC<IInput> = ({
         >
           <IconEmail />
           <input
-            {...props}
+            {...inputProps}
             className={`${styles.input__wrapper_input}${
               errorMessage ? ` ${styles.error}` : ''
             }`}
-            // {...register(registerInput, registerValidation)}
+            autoComplete="username"
           />
           {errorMessage && <IconAlertCircle />}
         </div>
       )}
-      {props.type === 'search' && (
+      {type === 'search' && (
         <div className={`${styles.input__wrapper} ${styles.search}`}>
           <IconSearch />
-          <input {...props} className={`${styles.input__wrapper_input}`} />
+          <input {...inputProps} className={`${styles.input__wrapper_input}`} />
         </div>
       )}
-      {props.type !== 'email' &&
-        props.type !== 'password' &&
-        props.type !== 'search' && (
-          <input
-            {...props}
-            className={`${styles.input__input}${
-              errorMessage ? ` ${styles.error}` : ''
-            }`}
-            // {...register(registerInput, registerValidation)}
-          />
-        )}
+      {type !== 'email' && type !== 'password' && type !== 'search' && (
+        <input
+          {...inputProps}
+          className={`${styles.input__input}${
+            errorMessage ? ` ${styles.error}` : ''
+          }`}
+        />
+      )}
       <h3
         className={`${styles.input__error}${
           errorMessage ? ` ${styles.input__error_visible}` : ''

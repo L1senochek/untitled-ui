@@ -16,6 +16,7 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 32px;
+    padding: 10px;
     opacity: 0;
     overflow-x: hidden;
     &.visible {
