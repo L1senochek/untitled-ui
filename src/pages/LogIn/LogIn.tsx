@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import LogInFormFields from './LogInFormFields/LogInFormFields';
@@ -15,6 +15,7 @@ import Checkbox from '@/components/Checkbox/Checkbox';
 import HoverArrow from '@/components/HoverArrow/HoverArrow';
 
 const LogIn: React.FC = (): JSX.Element => {
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
   const methods = useForm<ILoginFormData>({
     resolver: yupResolver(schemaLogIn),
     mode: 'onChange',
@@ -31,6 +32,15 @@ const LogIn: React.FC = (): JSX.Element => {
       }
     }
   };
+
+  const handleResize = (): void => setWindowWidth(window.innerWidth);
+
+  useEffect((): (() => void) => {
+    window.addEventListener('resize', handleResize);
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles.login}>
@@ -87,15 +97,17 @@ const LogIn: React.FC = (): JSX.Element => {
           </form>
         </FormProvider>
       </div>
-      <div className={styles.login__rightside}>
-        <HoverArrow text="Olivia Rhye" />
-        <img
-          className={styles.login__rightside_img}
-          src={imgLogIn}
-          alt="login"
-          loading="lazy"
-        />
-      </div>
+      {windowWidth > 1250 && (
+        <div className={styles.login__rightside}>
+          <HoverArrow text="Olivia Rhye" />
+          <img
+            className={styles.login__rightside_img}
+            src={imgLogIn}
+            alt="login"
+            loading="lazy"
+          />
+        </div>
+      )}
     </div>
   );
 };

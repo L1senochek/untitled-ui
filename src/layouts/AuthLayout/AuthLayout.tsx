@@ -1,37 +1,28 @@
-import React from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import styles from './authlayout.module.scss';
-import Logo from '@/components/Logo/Logo';
-import { INITIAL_PATH, SIGN_UP_PATH } from '@/utils/const/const';
-import IconEmail from '@/components/Icons/IconEmail/IconEmail';
+import HeaderAuth from './HeaderAuth/HeaderAuth';
+import FooterAuth from './FooterAuth/FooterAuth';
 
 const AuthLayout: React.FC = (): JSX.Element => {
-  const location = useLocation();
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  const handleResize = (): void => setWindowWidth(window.innerWidth);
+
+  useEffect((): (() => void) => {
+    window.addEventListener('resize', handleResize);
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.header__leftside}>
-          <Link to={INITIAL_PATH} className={styles.header__leftside_link}>
-            <Logo />
-          </Link>
-        </div>
-        <div className={styles.header__rightside}></div>
-      </header>
+      <HeaderAuth windowWidth={windowWidth} />
       <main className={styles.main}>
         <Outlet />
       </main>
-      <footer className={styles.footer}>
-        <div className={styles.footer__leftside}>
-          <p className={styles.footer__leftside_text}>© Untitled UI 2077</p>
-          {location.pathname === SIGN_UP_PATH && (
-            <div className={styles.footer__leftside_email}>
-              <IconEmail />
-              <p>help@untitledui.com</p>
-            </div>
-          )}
-        </div>
-        <div className={styles.footer__rightside}></div>
-      </footer>
+      {windowWidth > 600 && <FooterAuth windowWidth={windowWidth} />}
     </>
   );
 };

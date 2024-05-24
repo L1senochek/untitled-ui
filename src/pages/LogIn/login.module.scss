@@ -81,3 +81,20 @@
     }
   }
 }
+
+@media (max-width: 1250px) {
+  .login {
+    height: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .login {
+    &__leftside {
+      &_remember {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+}
