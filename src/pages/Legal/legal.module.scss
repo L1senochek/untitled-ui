@@ -1,4 +1,33 @@
 @import '@/styles/variables.scss';
 
 .legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  &__tabs {
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    background-color: $gray-color-50;
+    border-color: $gray-color-100;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+  }
+  &__tabbtn {
+    display: flex;
+    padding: 10px 14px;
+    background-color: $gray-color-50;
+    border-color: $gray-color-100;
+    color: $gray-color-500;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    &.activetab {
+      background-color: #fff;
+      color: $gray-color-700;
+    }
+  }
 }
