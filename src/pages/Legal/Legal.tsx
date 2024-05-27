@@ -26,9 +26,8 @@ const Legal: React.FC = (): JSX.Element => {
               <p
                 key={`legalTab${tabText}Answer${i}`}
                 className={styles.legal__content_answer}
-              >
-                {answer}
-              </p>
+                dangerouslySetInnerHTML={{ __html: answer }}
+              ></p>
             )
           )}
         </div>

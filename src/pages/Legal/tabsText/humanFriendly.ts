@@ -51,9 +51,9 @@ const humanFriendlyText: ILegalTabText[] = [
     question: 'How can you contact us about this policy?',
     answers: [
       'Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget diam curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at diam dui eget fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis auctor vulputate hac elementum gravida cursus dis.',
-      '1. Lectus id duis vitae porttitor enim gravida morbi.',
-      '2. Eu turpis posuere semper feugiat volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.',
-      '3. Suspendisse maecenas ac donec scelerisque diam sed est duis purus.',
+      `1. Lectus id duis vitae porttitor enim <u>gravida morbi</u>.`,
+      '2. Eu turpis <u>posuere semper feugiat</u> volutpat elit, ultrices suspendisse. Auctor vel in vitae placerat.',
+      '3. Suspendisse maecenas ac <u>donec scelerisque</u> diam sed est duis purus.',
     ],
   },
 ];
