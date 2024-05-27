@@ -1,16 +1,20 @@
 @import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.legal');
+@include flex-direction-column('.legal__content');
+@include flex-direction-column('.legal__content_item');
 
 .legal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 40px;
+  padding: 96px 0;
+  width: 100%;
   &__tabs {
     display: flex;
     gap: 8px;
     padding: 6px;
-    background-color: $gray-color-50;
-    border-color: $gray-color-100;
+    background-color: $gray-color-100;
+    border-color: $gray-color-200;
     border-style: solid;
     border-width: 1px;
     border-radius: 8px;
@@ -18,16 +22,34 @@
   &__tabbtn {
     display: flex;
     padding: 10px 14px;
-    background-color: $gray-color-50;
-    border-color: $gray-color-100;
+    background-color: $gray-color-100;
+    border-color: $gray-color-200;
     color: $gray-color-500;
     border-style: solid;
     border-width: 1px;
     border-radius: 6px;
     cursor: pointer;
     &.activetab {
-      background-color: #fff;
+      background-color: $gray-color-50;
       color: $gray-color-700;
+    }
+  }
+  &__content {
+    padding-top: 56px;
+    gap: 48px;
+    max-width: 720px;
+    &_item {
+      gap: 24px;
+    }
+    &_question {
+      color: $gray-color-900;
+    }
+    &_answer {
+      display: flex;
+      text-align: left;
+      color: $gray-color-500;
+      width: 100%;
+      line-height: 20px;
     }
   }
 }

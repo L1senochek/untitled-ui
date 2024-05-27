@@ -15,5 +15,13 @@ const legalnonsense: ILegalTabText[] = [
       'Tempore at similique in quisquam consectetur nostrum, consequatur iure ex, excepturi sequi eaque ullam laboriosam earum velit mollitia provident maxime ad. Esse eaque sequi accusamus, fugit ut cupiditate ad mollitia.',
     ],
   },
+  {
+    question: 'Human friendly third text?',
+    answers: [
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quibusdam molestiae deserunt deleniti optio sed veniam et, aspernatur, vitae tempora rem. Aliquam amet, nemo eligendi veritatis maxime quasi iure quibusdam?',
+      'Deleniti eligendi voluptate asperiores aspernatur, harum nisi laudantium, sit aperiam eius molestiae nobis cumque nam porro ullam odit quo iure commodi, culpa vero nemo? Sapiente quis excepturi alias optio assumenda!',
+      'Tempore nobis quos, nemo inventore ea incidunt quibusdam numquam doloremque. Eaque, amet, illo architecto inventore eveniet, consequatur sed labore tempora voluptate molestiae in. Provident voluptas a error dolore non modi!',
+    ],
+  },
 ];
 export default legalnonsense;

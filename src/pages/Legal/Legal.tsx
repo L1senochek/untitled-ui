@@ -14,11 +14,21 @@ const Legal: React.FC = (): JSX.Element => {
   const renderTabText = (tabText: ILegalTabText[]): JSX.Element[] => {
     return tabText.map(
       (text: ILegalTabText, index: number): JSX.Element => (
-        <div key={`legalTab${tabText}${index}`}>
-          {text.question && <h2>{text.question}</h2>}
+        <div
+          key={`legalTab${tabText}${index}`}
+          className={styles.legal__content_item}
+        >
+          {text.question && (
+            <h2 className={styles.legal__content_question}>{text.question}</h2>
+          )}
           {text.answers.map(
             (answer: string, i: number): JSX.Element => (
-              <p key={`legalTab${tabText}Answer${i}`}>{answer}</p>
+              <p
+                key={`legalTab${tabText}Answer${i}`}
+                className={styles.legal__content_answer}
+              >
+                {answer}
+              </p>
             )
           )}
         </div>
@@ -48,10 +58,12 @@ const Legal: React.FC = (): JSX.Element => {
           )
         )}
       </div>
-      {tabs.map(
-        (tab: ITab): false | JSX.Element[] =>
-          activeTab === tab.name && renderTabText(tab.content)
-      )}
+      <div className={styles.legal__content}>
+        {tabs.map(
+          (tab: ITab): false | JSX.Element[] =>
+            activeTab === tab.name && renderTabText(tab.content)
+        )}
+      </div>
     </div>
   );
 };
