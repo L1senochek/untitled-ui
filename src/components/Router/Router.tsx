@@ -1,6 +1,7 @@
 import {
   HOME_PATH,
   INITIAL_PATH,
+  LEGAL_PATH,
   LOG_IN_PATH,
   SIGN_UP_PATH,
   UI_KIT_PATH,
@@ -20,6 +21,7 @@ import UIKitLayout from '@/layouts/UIKitLayout/UIKitLayout';
 import UIKit from '@/pages/UIKit/UIKit';
 import LogIn from '@/pages/LogIn/LogIn';
 import AuthLayout from '@/layouts/AuthLayout/AuthLayout';
+import Legal from '@/pages/Legal/Legal';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +33,7 @@ const Router = createBrowserRouter(
       >
         <Route path="" element={<Navigate to={HOME_PATH} />} />
         <Route path={HOME_PATH} index element={<Home />} />
+        <Route path={LEGAL_PATH} element={<Legal />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route element={<AuthLayout />}>
