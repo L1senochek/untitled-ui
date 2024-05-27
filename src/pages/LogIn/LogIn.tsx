@@ -63,6 +63,7 @@ const LogIn: React.FC = (): JSX.Element => {
                   inputName={field.name}
                   titleLabel={field.titleLabel}
                   type={field.type}
+                  placeholder={field.placeholder}
                   fieldsForm="login"
                 />
               ))}

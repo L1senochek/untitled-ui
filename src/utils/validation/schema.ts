@@ -56,5 +56,5 @@ export const loginFields = {
     }),
 };
 
-export const schemaSignIn = yup.object().shape(registrationFields).required();
+export const schemaSignUp = yup.object().shape(registrationFields).required();
 export const schemaLogIn = yup.object().shape(loginFields).required();

@@ -1,0 +1,103 @@
+@import '@/styles/variables.scss';
+
+.signup {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  &__leftside {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 2% 0;
+    background-color: #fff;
+    &_form {
+      display: flex;
+      flex-direction: column;
+      padding: 0 32px;
+      width: 100%;
+      max-width: 360px;
+      gap: 24px;
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    &_head {
+      font-size: 44px;
+      font-weight: 900;
+      color: $gray-color-900;
+    }
+    &_supportingtext {
+      color: $gray-color-500;
+    }
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &_remember {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > a {
+        color: $brand-color-700;
+        font-weight: bold;
+      }
+    }
+    &_buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+      & > :last-child {
+        background-color: #fff;
+        border-color: $gray-color-300;
+      }
+    }
+    &_row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      & > a {
+        color: $brand-color-700;
+        font-weight: bold;
+      }
+    }
+  }
+  &__rightside {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    background-color: $gray-color-50;
+    flex: 1;
+    &_img {
+      border-radius: 12px;
+      background-size: cover;
+      object-fit: cover;
+      max-height: 700px;
+      animation: animationImg 7s linear infinite;
+    }
+  }
+}
+
+@keyframes animationImg {
+  0% {
+    transform: translateX(0%) translateY(0) rotateY(-25deg);
+  }
+  25% {
+    transform: translateX(0%) translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(0%) translateY(0) rotateY(25deg);
+  }
+  75% {
+    transform: translateX(0%) translateY(0) rotateY(0deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0) rotateY(-25deg);
+  }
+}
