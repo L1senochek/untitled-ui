@@ -79,6 +79,25 @@
       background-size: cover;
       object-fit: cover;
       max-height: 700px;
+      animation: animationImg 7s linear infinite;
     }
+  }
+}
+
+@keyframes animationImg {
+  0% {
+    transform: translateX(0%) translateY(0) rotateY(-25deg);
+  }
+  25% {
+    transform: translateX(0%) translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(0%) translateY(0) rotateY(25deg);
+  }
+  75% {
+    transform: translateX(0%) translateY(0) rotateY(0deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0) rotateY(-25deg);
   }
 }
