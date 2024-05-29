@@ -1,0 +1,12 @@
+@import '@/styles/variables.scss';
+// @import '@/styles/mixin/flex-direction-column.scss';
+
+// @include flex-direction-column('.contacts');
+
+.contacts {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

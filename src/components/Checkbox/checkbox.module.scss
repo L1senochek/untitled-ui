@@ -2,8 +2,15 @@
 
 .checkbox {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
   &__container {
     display: flex;
     border-radius: $checkbox-border-radius;
@@ -61,6 +68,17 @@
   }
   &__title {
     padding-left: 10px;
+  }
+  &__error {
+    color: $error-color-500;
+    visibility: hidden;
+    opacity: 0;
+    height: $height-error;
+    font-size: 14px;
+  }
+  &__error_visible {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

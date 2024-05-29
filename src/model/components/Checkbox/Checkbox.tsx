@@ -8,7 +8,8 @@ interface ICheckboxInputProps extends InputHTMLAttributes<HTMLInputElement> {
 interface ICheckbox extends LabelHTMLAttributes<HTMLLabelElement> {
   labelProps?: ICheckboxLabelProps;
   inputProps?: ICheckboxInputProps;
-  labelTitle?: string;
+  labelTitle?: string | TrustedHTML;
+  registerInputName?: string;
   square?: boolean;
 }
 

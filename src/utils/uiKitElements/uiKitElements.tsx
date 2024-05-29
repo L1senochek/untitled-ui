@@ -79,7 +79,7 @@ export const uiKitElements = [
     <Textarea placeholder="Enter a description..." />
     <Textarea
       placeholder="Enter a description..."
-      errorMessage="this an a error"
+      customErrorMessage="this an a error"
     />
   </div>,
 
