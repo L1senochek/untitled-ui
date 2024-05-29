@@ -9,6 +9,7 @@ import contactFormField from './contactFormField/contactFormField';
 import Btn from '@/components/Btn/Btn';
 import Textarea from '@/components/Textarea/Textarea';
 import Checkbox from '@/components/Checkbox/Checkbox';
+import { LEGAL_PATH } from '@/utils/const/const';
 
 const Contacts: React.FC = (): JSX.Element => {
   const methods = useForm<IContactsFormData>({
@@ -50,31 +51,33 @@ const Contacts: React.FC = (): JSX.Element => {
         </div>
         <FormProvider {...methods}>
           <form
-            className={styles.signup__leftside_form}
+            className={styles.contacts__rightside_form}
             onSubmit={handleSubmit(onSubmit)}
           >
-            {contactFormField.map((field, index) => (
-              <Input
-                key={`ContactFormFields${field.name}${index}`}
-                inputName={field.name}
-                titleLabel={field.titleLabel}
-                type={field.type}
-                placeholder={field.placeholder}
-                fieldsForm="register"
+            <div className={styles.contacts__rightside_form_fields}>
+              {contactFormField.map((field, index) => (
+                <Input
+                  key={`ContactFormFields${field.name}${index}`}
+                  inputName={field.name}
+                  titleLabel={field.titleLabel}
+                  type={field.type}
+                  placeholder={field.placeholder}
+                  fieldsForm="register"
+                />
+              ))}
+              <Textarea
+                inputName="textField"
+                titleLabel="Message"
+                placeholder=""
               />
-            ))}
-            <Textarea
-              inputName="textField"
-              titleLabel="Message"
-              placeholder=""
-            />
-            <Checkbox
-              registerInputName="acceptPolicy"
-              labelTitle="You agree to our friendly <u>privacy policy</u>."
-              labelProps={{ htmlFor: 'firstCheckboxSquare' }}
-              inputProps={{ id: 'firstCheckboxSquare' }}
-              square
-            />
+              <Checkbox
+                registerInputName="acceptPolicy"
+                labelTitle={`You agree to our friendly <a href='${LEGAL_PATH}'><u>privacy policy</u></a>.`}
+                labelProps={{ htmlFor: 'firstCheckboxSquare' }}
+                inputProps={{ id: 'firstCheckboxSquare' }}
+                square
+              />
+            </div>
             <Btn type="submit" variantBtn="primary">
               Send message
             </Btn>

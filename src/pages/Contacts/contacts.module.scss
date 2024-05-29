@@ -1,7 +1,10 @@
 @import '@/styles/variables.scss';
-// @import '@/styles/mixin/flex-direction-column.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
 
-// @include flex-direction-column('.contacts');
+@include flex-direction-column('.contacts__rightside');
+@include flex-direction-column('.contacts__rightside_head');
+@include flex-direction-column('.contacts__rightside_form');
+@include flex-direction-column('.contacts__rightside_form_fields');
 
 .contacts {
   display: flex;
@@ -9,4 +12,42 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 64px;
+  padding: 64px 32px;
+  &__leftside {
+    &_img {
+      max-width: 576px;
+    }
+  }
+  &__rightside {
+    gap: 48px;
+    &_head {
+      gap: 20px;
+    }
+    &_heading {
+      color: $gray-color-900;
+    }
+    &_text {
+      color: $gray-color-500;
+    }
+    &_form {
+      width: 100%;
+      gap: 32px;
+      &_fields {
+        gap: 24px;
+        & > * {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contacts {
+    padding: 64px 0;
+    &__leftside {
+      display: none;
+    }
+  }
 }

@@ -59,11 +59,11 @@ export const loginFields = {
 export const contactsFields = {
   firstName: yup
     .string()
-    .required('Name is required')
+    .required('First name is required')
     .matches(/^[A-Z][a-zA-Z\s]*$/, 'Should start with an uppercase letter'),
   lastName: yup
     .string()
-    .required('Name is required')
+    .required('Last name is required')
     .matches(/^[A-Z][a-zA-Z\s]*$/, 'Should start with an uppercase letter'),
   email: yup
     .string()
@@ -79,7 +79,7 @@ export const contactsFields = {
       /^(\+?\d{1,4}[-\s]?)?(\(?\d{1,3}?\)?[-\s]?)?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,9}$/,
       'Should be a valid phone number'
     ),
-  textField: yup.string().required('Text field is required'),
+  textField: yup.string().required('Message is required'),
   acceptPolicy: yup.boolean().oneOf([true], 'Accepting policy is required'),
 };
 
