@@ -11,7 +11,6 @@
   align-items: center;
   align-items: center;
   justify-content: center;
-  width: 100%;
   gap: 64px;
   padding: 64px 32px;
   &__leftside {
@@ -37,6 +36,8 @@
       gap: 32px;
       &_fields {
         gap: 24px;
+        width: 100%;
+        max-width: 480px;
         & > * {
           width: 100%;
         }

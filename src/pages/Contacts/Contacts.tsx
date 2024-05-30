@@ -20,9 +20,16 @@ const Contacts: React.FC = (): JSX.Element => {
   const { handleSubmit } = methods;
 
   const onSubmit: SubmitHandler<IContactsFormData> = (data): void => {
-    if (methods.formState.isValid) {
+    if (
+      data.firstName &&
+      data.lastName &&
+      data.email &&
+      data.phoneNumber &&
+      data.textField &&
+      data.acceptPolicy
+    ) {
       try {
-        console.log(data);
+        console.log(2, data);
       } catch (err) {
         console.error(err);
       }

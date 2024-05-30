@@ -3,7 +3,6 @@ import styles from './checkbox.module.scss';
 import ICheckbox from '@/model/components/Checkbox/Checkbox';
 import IconCheckMark from '@/components/Icons/IconCheckMark/IconCheckMark';
 import { useFormContext } from 'react-hook-form';
-// import { useFormContext } from 'react-hook-form';
 
 const Checkbox: React.FC<ICheckbox> = ({
   labelTitle,
@@ -15,18 +14,17 @@ const Checkbox: React.FC<ICheckbox> = ({
   const [isChecked, setChecked] = useState<boolean>(
     inputProps?.checked || false
   );
-
   const formContext = useFormContext();
   const { register } = formContext || {};
 
   const errors = formContext?.formState?.errors || {};
   const errorMessage = errors[registerInputName!]?.message;
 
-  const handleChecked = (): void => setChecked(!isChecked);
-
   const checkboxInputProps = formContext
     ? { ...register(`${registerInputName}`), ...inputProps }
     : inputProps;
+
+  const handleChecked = (): void => setChecked((prevState) => !prevState);
 
   return (
     <div className={styles.checkbox}>
@@ -51,8 +49,8 @@ const Checkbox: React.FC<ICheckbox> = ({
               inputProps?.disabled ? ` ${styles.disabled}` : ''
             }`}
             type="checkbox"
-            checked={isChecked}
             onChange={handleChecked}
+            checked={isChecked}
           />
         </div>
         <label
