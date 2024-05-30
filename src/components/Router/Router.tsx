@@ -1,5 +1,6 @@
 import {
   CONTACTS_PATH,
+  FAQ_PATH,
   HOME_PATH,
   INITIAL_PATH,
   LEGAL_PATH,
@@ -24,6 +25,7 @@ import LogIn from '@/pages/LogIn/LogIn';
 import AuthLayout from '@/layouts/AuthLayout/AuthLayout';
 import Legal from '@/pages/Legal/Legal';
 import Contacts from '@/pages/Contacts/Contacts';
+import Faq from '@/pages/FAQ/FAQ';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +39,7 @@ const Router = createBrowserRouter(
         <Route path={HOME_PATH} index element={<Home />} />
         <Route path={LEGAL_PATH} element={<Legal />} />
         <Route path={CONTACTS_PATH} element={<Contacts />} />
+        <Route path={FAQ_PATH} element={<Faq />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route element={<AuthLayout />}>
