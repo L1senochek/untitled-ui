@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.team');
+
+.team {
+  &__header {
+    display: flex;
+  }
+  &__btns {
+    display: flex;
+  }
+  &__images {
+    display: flex;
+  }
+}

@@ -14,7 +14,17 @@ const ContentSubheading: React.FC<IContentSubheadingProps> = ({
         <div>{subheading}</div>
       )}
       <h1 className={styles.content__heading}>{heading}</h1>
-      <p className={styles.content__text}>{text}</p>
+      {Array.isArray(text) ? (
+        text.map(
+          (item: string, index: number): JSX.Element => (
+            <p className={styles.content__text} key={index}>
+              {item}
+            </p>
+          )
+        )
+      ) : (
+        <p className={styles.content__text}>{text}</p>
+      )}
     </div>
   );
 };

@@ -4,6 +4,7 @@
 @include flex-direction-column('.faqsection');
 
 .faqsection {
+  padding: 96px 0;
   gap: 64px;
   &__featureitems {
     display: flex;
@@ -41,5 +42,7 @@
     max-width: 1280px;
     width: 100%;
     box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 16px;
   }
 }

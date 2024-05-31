@@ -2,6 +2,7 @@ import ContentSubheading from '@/components/ContentSubheading/ContentSubheading'
 import styles from './faq.module.scss';
 import Input from '@/components/Input/Input';
 import FaqSection from '@/components/Faq/FaqSection/FaqSection';
+import TeamSection from '@/components/Faq/TeamSection/TeamSection';
 
 const Faq: React.FC = (): JSX.Element => {
   return (
@@ -15,7 +16,7 @@ const Faq: React.FC = (): JSX.Element => {
         <Input type="search" placeholder="Search" />
       </div>
       <FaqSection />
-      <div className={styles.faq__section_team}>Team</div>
+      <TeamSection />
       <div className={styles.faq__section_cta}>news letter cta</div>
     </div>
   );
