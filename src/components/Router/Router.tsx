@@ -25,7 +25,7 @@ import LogIn from '@/pages/LogIn/LogIn';
 import AuthLayout from '@/layouts/AuthLayout/AuthLayout';
 import Legal from '@/pages/Legal/Legal';
 import Contacts from '@/pages/Contacts/Contacts';
-import Faq from '@/pages/FAQ/FAQ';
+import Faq from '@/pages/Faq/Faq';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
