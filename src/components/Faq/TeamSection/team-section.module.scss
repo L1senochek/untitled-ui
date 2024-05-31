@@ -13,10 +13,6 @@
   &__header {
     max-width: 576px;
     gap: 40px;
-    &:first-child {
-      align-items: flex-start;
-      text-align: left;
-    }
   }
   &__btns {
     display: flex;
