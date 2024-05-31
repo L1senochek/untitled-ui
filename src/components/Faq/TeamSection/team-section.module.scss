@@ -1,14 +1,28 @@
 @import '@/styles/variables.scss';
 @import '@/styles/mixin/flex-direction-column.scss';
 
-@include flex-direction-column('.team');
+@include flex-direction-column('.team__header');
 
 .team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 96px 0;
+  gap: 64px;
   &__header {
-    display: flex;
+    max-width: 576px;
+    gap: 40px;
+    &:first-child {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
   &__btns {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
   }
   &__images {
     display: flex;

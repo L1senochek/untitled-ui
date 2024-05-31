@@ -5,9 +5,12 @@ const ContentSubheading: React.FC<IContentSubheadingProps> = ({
   subheading,
   heading,
   text,
+  leftside = false,
 }): JSX.Element => {
   return (
-    <div className={styles.content}>
+    <div
+      className={`${styles.content}${leftside ? ` ${styles.leftside}` : ''}`}
+    >
       {!subheading ? null : typeof subheading === 'string' ? (
         <h2 className={styles.content__subheading}>{subheading}</h2>
       ) : (

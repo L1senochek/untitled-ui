@@ -13,6 +13,7 @@ const TeamSection: React.FC = (): JSX.Element => {
             'Untitled is growing fast, and we are always looking for passionate, dynamic, and talented individuals to join our distributed team all around the world.',
             'Our philisophy is simple — hire a team of diverse, passionate people and foster a culture that empowers you to do you best work. Read more about ',
           ]}
+          leftside
         />
         <div className={styles.team__btns}>
           <Btn variantBtn="secondary" outlined>
@@ -22,6 +23,7 @@ const TeamSection: React.FC = (): JSX.Element => {
         </div>
       </div>
       <div className={styles.team__images}>
+        123
         {/* {teamImages.map(() => ())} */}
       </div>
     </div>
