@@ -6,20 +6,25 @@ import IFaqContent from '@/model/components/Faq/FaqContent';
 const FaqSection: React.FC = (): JSX.Element => {
   return (
     <div className={styles.faqsection}>
-      {faqContent.map(
-        (item: IFaqContent, index: number): JSX.Element => (
-          <div
-            className={styles.faqsection__item}
-            key={`faqContentItem${index}`}
-          >
-            <PulseIcon icon={item.icon} />
-            <div className={styles.faqsection__text}>
-              <h2 className={styles.faqsection__heading}>{item.heading}</h2>
-              <p className={styles.faqsection_subheading}>{item.subheading}</p>
+      <div className={styles.faqsection__featureitems}>
+        {faqContent.map(
+          (item: IFaqContent, index: number): JSX.Element => (
+            <div
+              className={styles.faqsection__item}
+              key={`faqContentItem${index}`}
+            >
+              <PulseIcon icon={item.icon} />
+              <div className={styles.faqsection__text}>
+                <h3 className={styles.faqsection__heading}>{item.heading}</h3>
+                <p className={styles.faqsection__subheading}>
+                  {item.subheading}
+                </p>
+              </div>
             </div>
-          </div>
-        )
-      )}
+          )
+        )}
+      </div>
+      <div className={styles.faqsection__questions}>123</div>
     </div>
   );
 };
