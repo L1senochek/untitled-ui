@@ -4,8 +4,9 @@ import IconHeart from '@/components/Icons/IconHeart/IconHeart';
 import IconPlusCircle from '@/components/Icons/IconPlusCircle/IconPlusCircle';
 import IconRefreshCCW from '@/components/Icons/IconRefreshCCW/IconRefreshCCW';
 import IconSlash from '@/components/Icons/IconSlash/IconSlash';
+import IFaqContent from '@/model/components/Faq/FaqContent';
 
-const faqContent = [
+const faqContent: IFaqContent[] = [
   {
     icon: <IconHeart />,
     heading: 'Is there a free trial available?',

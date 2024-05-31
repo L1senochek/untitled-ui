@@ -2,7 +2,11 @@
 @import '@/styles/mixin/flex-direction-column.scss';
 
 @include flex-direction-column('.faq');
+@include flex-direction-column('.faq__header');
 
 .faq {
-  display: flex;
+  &__header {
+    padding: 96px 0;
+    gap: 32px;
+  }
 }
