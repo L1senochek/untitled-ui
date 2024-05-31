@@ -10,6 +10,8 @@
     flex-wrap: wrap;
     row-gap: 64px;
     column-gap: 32px;
+    width: 100%;
+    max-width: 1280px;
   }
   &__item {
     display: flex;
@@ -33,5 +35,11 @@
   }
   &__questions {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    max-width: 1280px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
