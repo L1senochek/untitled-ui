@@ -1,6 +1,7 @@
 import styles from './team-section.module.scss';
 import ContentSubheading from '@/components/ContentSubheading/ContentSubheading';
 import Btn from '@/components/Btn/Btn';
+import teamImages from './teamImages/teamImages';
 
 const TeamSection: React.FC = (): JSX.Element => {
   return (
@@ -23,8 +24,27 @@ const TeamSection: React.FC = (): JSX.Element => {
         </div>
       </div>
       <div className={styles.team__images}>
-        123
-        {/* {teamImages.map(() => ())} */}
+        {teamImages.map((img, index) =>
+          index === 0 ? (
+            <div
+              className={`${styles.team__img} first`}
+              key={`teamSectionImage${index}`}
+            >
+              <img
+                className={`${styles.team__img} img${index}`}
+                src={img.src}
+                alt={img.alt}
+              />
+            </div>
+          ) : (
+            <img
+              className={`${styles.team__img} img${index}`}
+              key={`teamSectionImage${index}`}
+              src={img.src}
+              alt={img.alt}
+            />
+          )
+        )}
       </div>
     </div>
   );
