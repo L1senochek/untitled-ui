@@ -23,28 +23,30 @@ const TeamSection: React.FC = (): JSX.Element => {
           <Btn variantBtn="secondary">See open roles</Btn>
         </div>
       </div>
-      <div className={styles.team__images}>
-        {teamImages.map((img, index) =>
-          index === 0 ? (
-            <div
-              className={`${styles.team__img} first`}
-              key={`teamSectionImage${index}`}
-            >
+      <div className={styles.team__images_wrapper}>
+        <div className={styles.team__images}>
+          {teamImages.map((img, index) =>
+            index === 0 ? (
+              <div
+                className={`${styles.team__img} first`}
+                key={`teamSectionImage${index}`}
+              >
+                <img
+                  className={`${styles.team__img} img${index}`}
+                  src={img.src}
+                  alt={img.alt}
+                />
+              </div>
+            ) : (
               <img
                 className={`${styles.team__img} img${index}`}
+                key={`teamSectionImage${index}`}
                 src={img.src}
                 alt={img.alt}
               />
-            </div>
-          ) : (
-            <img
-              className={`${styles.team__img} img${index}`}
-              key={`teamSectionImage${index}`}
-              src={img.src}
-              alt={img.alt}
-            />
-          )
-        )}
+            )
+          )}
+        </div>
       </div>
     </div>
   );

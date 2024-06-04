@@ -26,6 +26,12 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 10px;
+    &_wrapper {
+      max-width: 576px;
+      min-width: 375px;
+      width: 100%;
+      overflow-x: hidden;
+    }
   }
   &__img {
     display: grid;
