@@ -5,6 +5,7 @@
 @include flex-direction-column('.faq__header');
 
 .faq {
+  width: 100%;
   &__header {
     padding: 96px 0;
     gap: 32px;

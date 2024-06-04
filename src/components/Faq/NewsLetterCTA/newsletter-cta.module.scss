@@ -12,6 +12,14 @@
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
+    &_inputfield {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &_hint {
+      color: $gray-color-500;
+    }
     &_cta {
       width: 100%;
       overflow: hidden;
@@ -29,6 +37,14 @@
       &_cta {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .newsletter {
+    &__emailcapture {
+      flex-direction: column;
     }
   }
 }
