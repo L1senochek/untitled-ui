@@ -101,3 +101,9 @@
     transform: translateX(0%) translateY(0) rotateY(-25deg);
   }
 }
+
+@media (max-width: 400px) {
+  .signup {
+    padding: 96px 0;
+  }
+}
