@@ -12,5 +12,23 @@
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
+    &_cta {
+      width: 100%;
+      overflow: hidden;
+      max-width: 1280px;
+      max-height: 420px;
+      height: 100%;
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .newsletter {
+    &__emailcapture {
+      &_cta {
+        display: none;
+      }
+    }
   }
 }
