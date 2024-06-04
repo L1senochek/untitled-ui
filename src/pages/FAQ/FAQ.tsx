@@ -3,6 +3,7 @@ import styles from './faq.module.scss';
 import Input from '@/components/Input/Input';
 import FaqSection from '@/components/Faq/FaqSection/FaqSection';
 import TeamSection from '@/components/Faq/TeamSection/TeamSection';
+import NewsLetterCTA from '@/components/Faq/NewsLetterCTA/NewsLetterCTA';
 
 const Faq: React.FC = (): JSX.Element => {
   return (
@@ -17,7 +18,7 @@ const Faq: React.FC = (): JSX.Element => {
       </div>
       <FaqSection />
       <TeamSection />
-      <div className={styles.faq__section_cta}>news letter cta</div>
+      <NewsLetterCTA />
     </div>
   );
 };

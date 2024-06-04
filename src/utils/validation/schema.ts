@@ -10,27 +10,21 @@ export const passwordOne = yup
     message: '1 special character',
   });
 
+export const email = yup
+  .string()
+  .required('Email is required')
+  .matches(
+    /^\S+@\S+\.\S+$/i,
+    'Should be a valid email address(example@example.com)'
+  );
+
 export const registrationFields = {
   name: yup
     .string()
     .required('Name is required')
     .matches(/^[A-Z][a-zA-Z\s]*$/, 'Should start with an uppercase letter'),
-  email: yup
-    .string()
-    .required('Email is required')
-    .matches(
-      /^\S+@\S+\.\S+$/i,
-      'Should be a valid email address(example@example.com)'
-    ),
-  passwordOne: yup
-    .string()
-    .required('Password is required')
-    .matches(/\d+/, { message: '1 number' })
-    .matches(/[a-z]+/, { message: '1 lowercase letter' })
-    .matches(/[A-Z]+/, { message: '1 uppercase letter' })
-    .matches(/[!@#$%^&*()-+]+/, {
-      message: '1 special character',
-    }),
+  email: email,
+  passwordOne: passwordOne,
   passwordTwo: yup
     .string()
     .required('Confirm Password is required')
@@ -38,22 +32,8 @@ export const registrationFields = {
 };
 
 export const loginFields = {
-  email: yup
-    .string()
-    .required('Email is required')
-    .matches(
-      /^\S+@\S+\.\S+$/i,
-      'Should be a valid email address(example@example.com)'
-    ),
-  passwordOne: yup
-    .string()
-    .required('Password is required')
-    .matches(/\d+/, { message: '1 number' })
-    .matches(/[a-z]+/, { message: '1 lowercase letter' })
-    .matches(/[A-Z]+/, { message: '1 uppercase letter' })
-    .matches(/[!@#$%^&*()-+]+/, {
-      message: '1 special character',
-    }),
+  email: email,
+  passwordOne: passwordOne,
 };
 
 export const contactsFields = {
@@ -65,13 +45,7 @@ export const contactsFields = {
     .string()
     .required('Last name is required')
     .matches(/^[A-Z][a-zA-Z\s]*$/, 'Should start with an uppercase letter'),
-  email: yup
-    .string()
-    .required('Email is required')
-    .matches(
-      /^\S+@\S+\.\S+$/i,
-      'Should be a valid email address(example@example.com)'
-    ),
+  email: email,
   phoneNumber: yup
     .string()
     .required('Phone number is required')
@@ -83,6 +57,9 @@ export const contactsFields = {
   acceptPolicy: yup.boolean().oneOf([true], 'Accepting policy is required'),
 };
 
+export const emailField = { email: email };
+
 export const schemaSignUp = yup.object().shape(registrationFields).required();
 export const schemaLogIn = yup.object().shape(loginFields).required();
 export const schemaContacts = yup.object().shape(contactsFields).required();
+export const schemaEmail = yup.object().shape(emailField).required();
