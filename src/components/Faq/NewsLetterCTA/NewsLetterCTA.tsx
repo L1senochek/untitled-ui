@@ -27,29 +27,27 @@ const NewsLetterCTA: React.FC = (): JSX.Element => {
 
   return (
     <div className={styles.newsletter}>
-      <div className={styles.newsletter}>
-        <ContentSubheading
-          subheading=""
-          heading="Sign up for our newsletter"
-          text={
-            'Be the first to know about releases and industry news and insights.'
-          }
-        />
-        <FormProvider {...methods}>
-          <form
-            className={styles.newsletter__emailcapture}
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <div className={styles.newsletter__emailcapture__inputfield}>
-              <Input type="text" placeholder="example text" inputName="email" />
-              <h4 className={styles.newsletter__emailcapture__hint}>
-                We care about your data in our privacy policy
-              </h4>
-            </div>
-            <Btn variantBtn="secondary">Subscribe</Btn>
-          </form>
-        </FormProvider>
-      </div>
+      <ContentSubheading
+        subheading=""
+        heading="Sign up for our newsletter"
+        text={
+          'Be the first to know about releases and industry news and insights.'
+        }
+      />
+      <FormProvider {...methods}>
+        <form
+          className={styles.newsletter__emailcapture}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className={styles.newsletter__emailcapture_inputfield}>
+            <Input type="text" placeholder="example text" inputName="email" />
+            <h4 className={styles.newsletter__emailcapture_hint}>
+              We care about your data in our privacy policy
+            </h4>
+          </div>
+          <Btn variantBtn="secondary">Subscribe</Btn>
+        </form>
+      </FormProvider>
     </div>
   );
 };

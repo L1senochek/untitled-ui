@@ -1,0 +1,16 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin/flex-direction-column.scss';
+
+@include flex-direction-column('.newsletter');
+
+.newsletter {
+  width: 100%;
+  padding: 96px 0;
+  gap: 40px;
+  &__emailcapture {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+  }
+}
